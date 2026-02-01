@@ -1,0 +1,6 @@
+{
+  "name": "comfyui-runner",
+  "kind": "cli",
+  "bin": "comfyui-runner",
+  "workdir": "/home/node/clawd/skills/comfyui-runner"
+}

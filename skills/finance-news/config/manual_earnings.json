@@ -1,0 +1,327 @@
+{
+  "_comment": "Manual earnings dates for stocks not covered by Finnhub API",
+  "_updated": "2026-01-27",
+  "6857.T": {
+    "date": "2026-01-27",
+    "time": "amc",
+    "note": "Q3 FY2025 - Advantest",
+    "source": "marketscreener.com"
+  },
+  "6920.T": {
+    "date": "2026-02-02",
+    "time": "amc",
+    "note": "Q3 FY2025 - Lasertec",
+    "source": "tipranks.com"
+  },
+  "8035.T": {
+    "date": "2026-02-05",
+    "time": "amc",
+    "note": "Q3 FY2025 - Tokyo Electron",
+    "source": "tipranks.com"
+  },
+  "6146.T": {
+    "date": "2026-02-06",
+    "time": "amc",
+    "note": "Q3 FY2025 - Disco Corp",
+    "source": "estimate"
+  },
+  "7741.T": {
+    "date": "2026-01-30",
+    "time": "amc",
+    "note": "Q3 FY2025 - Hoya",
+    "source": "estimate"
+  },
+  "7735.T": {
+    "date": "2026-01-30",
+    "time": "amc",
+    "note": "Q3 FY2025 - Screen Holdings",
+    "source": "estimate"
+  },
+  "4063.T": {
+    "date": "2026-01-31",
+    "time": "amc",
+    "note": "Q3 FY2025 - Shin-Etsu Chemical",
+    "source": "estimate"
+  },
+  "6861.T": {
+    "date": "2026-01-29",
+    "time": "amc",
+    "note": "Q3 FY2025 - Keyence",
+    "source": "estimate"
+  },
+  "9984.T": {
+    "date": "2026-02-07",
+    "time": "amc",
+    "note": "Q3 FY2025 - SoftBank Group",
+    "source": "estimate"
+  },
+  "9983.T": {
+    "date": "2026-01-09",
+    "time": "amc",
+    "note": "Q1 FY2026 - Fast Retailing (Uniqlo)",
+    "source": "estimate"
+  },
+  "D05.SI": {
+    "date": "2026-02-10",
+    "time": "bmo",
+    "note": "Q4 2025 - DBS Group",
+    "source": "estimate"
+  },
+  "O39.SI": {
+    "date": "2026-02-21",
+    "time": "bmo",
+    "note": "Q4 2025 - OCBC Bank",
+    "source": "estimate"
+  },
+  "S68.SI": {
+    "date": "2026-01-23",
+    "time": "bmo",
+    "note": "H1 FY2026 - Singapore Exchange",
+    "source": "estimate"
+  },
+  "AAPL": {
+    "date": "2026-01-30",
+    "time": "amc",
+    "note": "Q1 FY2026"
+  },
+  "MSFT": {
+    "date": "2026-01-29",
+    "time": "amc",
+    "note": "Q2 FY2026"
+  },
+  "META": {
+    "date": "2026-01-29",
+    "time": "amc",
+    "note": "Q4 2025"
+  },
+  "TSLA": {
+    "date": "2026-01-29",
+    "time": "amc",
+    "note": "Q4 2025"
+  },
+  "NVDA": {
+    "date": "2026-02-25",
+    "time": "amc",
+    "note": "Q4 FY2026"
+  },
+  "GOOGL": {
+    "date": "2026-02-04",
+    "time": "amc",
+    "note": "Q4 2025"
+  },
+  "AMZN": {
+    "date": "2026-02-06",
+    "time": "amc",
+    "note": "Q4 2025"
+  },
+  "NFLX": {
+    "date": "2026-01-21",
+    "time": "amc",
+    "note": "Q4 2025"
+  },
+  "V": {
+    "date": "2026-01-30",
+    "time": "amc",
+    "note": "Q1 FY2026"
+  },
+  "MA": {
+    "date": "2026-01-30",
+    "time": "bmo",
+    "note": "Q4 2025"
+  },
+  "ASML": {
+    "date": "2026-01-29",
+    "time": "bmo",
+    "note": "Q4 2025"
+  },
+  "NOW": {
+    "date": "2026-01-29",
+    "time": "amc",
+    "note": "Q4 2025"
+  },
+  "UBER": {
+    "date": "2026-02-05",
+    "time": "bmo",
+    "note": "Q4 2025"
+  },
+  "SHOP": {
+    "date": "2026-02-11",
+    "time": "bmo",
+    "note": "Q4 2025"
+  },
+  "SPOT": {
+    "date": "2026-02-04",
+    "time": "bmo",
+    "note": "Q4 2025"
+  },
+  "NET": {
+    "date": "2026-02-06",
+    "time": "amc",
+    "note": "Q4 2025"
+  },
+  "SNOW": {
+    "date": "2026-02-26",
+    "time": "amc",
+    "note": "Q4 FY2026"
+  },
+  "DKNG": {
+    "date": "2026-02-13",
+    "time": "bmo",
+    "note": "Q4 2025"
+  },
+  "SQ": {
+    "date": "2026-02-20",
+    "time": "amc",
+    "note": "Q4 2025"
+  },
+  "ABNB": {
+    "date": "2026-02-13",
+    "time": "amc",
+    "note": "Q4 2025"
+  },
+  "TEAM": {
+    "date": "2026-01-30",
+    "time": "amc",
+    "note": "Q2 FY2026"
+  },
+  "ZS": {
+    "date": "2026-02-25",
+    "time": "amc",
+    "note": "Q2 FY2026"
+  },
+  "FTNT": {
+    "date": "2026-02-06",
+    "time": "amc",
+    "note": "Q4 2025"
+  },
+  "WDAY": {
+    "date": "2026-02-27",
+    "time": "amc",
+    "note": "Q4 FY2026"
+  },
+  "TTD": {
+    "date": "2026-02-13",
+    "time": "amc",
+    "note": "Q4 2025"
+  },
+  "WMT": {
+    "date": "2026-02-19",
+    "time": "bmo",
+    "note": "Q4 FY2026"
+  },
+  "EA": {
+    "date": "2026-02-03",
+    "time": "amc",
+    "note": "Q3 FY2026"
+  },
+  "ADSK": {
+    "date": "2026-02-26",
+    "time": "amc",
+    "note": "Q4 FY2026"
+  },
+  "ROKU": {
+    "date": "2026-02-13",
+    "time": "amc",
+    "note": "Q4 2025"
+  },
+  "SNAP": {
+    "date": "2026-02-04",
+    "time": "amc",
+    "note": "Q4 2025"
+  },
+  "ETSY": {
+    "date": "2026-02-19",
+    "time": "amc",
+    "note": "Q4 2025"
+  },
+  "KO": {
+    "date": "2026-02-11",
+    "time": "bmo",
+    "note": "Q4 2025"
+  },
+  "BLK": {
+    "date": "2026-01-15",
+    "time": "bmo",
+    "note": "Q4 2025"
+  },
+  "PH": {
+    "date": "2026-01-30",
+    "time": "bmo",
+    "note": "Q2 FY2026"
+  },
+  "SYK": {
+    "date": "2026-01-28",
+    "time": "bmo",
+    "note": "Q4 2025"
+  },
+  "TJX": {
+    "date": "2026-02-26",
+    "time": "bmo",
+    "note": "Q4 FY2026"
+  },
+  "ROST": {
+    "date": "2026-03-04",
+    "time": "amc",
+    "note": "Q4 FY2026"
+  },
+  "ORLY": {
+    "date": "2026-02-05",
+    "time": "amc",
+    "note": "Q4 2025"
+  },
+  "SHW": {
+    "date": "2026-01-30",
+    "time": "bmo",
+    "note": "Q4 2025"
+  },
+  "FISV": {
+    "date": "2026-02-04",
+    "time": "bmo",
+    "note": "Q4 2025"
+  },
+  "MSI": {
+    "date": "2026-02-06",
+    "time": "bmo",
+    "note": "Q4 2025"
+  },
+  "APH": {
+    "date": "2026-01-22",
+    "time": "bmo",
+    "note": "Q4 2025"
+  },
+  "AXON": {
+    "date": "2026-02-25",
+    "time": "amc",
+    "note": "Q4 2025"
+  },
+  "ROP": {
+    "date": "2026-01-30",
+    "time": "bmo",
+    "note": "Q4 2025"
+  },
+  "RACE": {
+    "date": "2026-02-04",
+    "time": "bmo",
+    "note": "Q4 2025"
+  },
+  "TWLO": {
+    "date": "2026-02-12",
+    "time": "amc",
+    "note": "Q4 2025"
+  },
+  "ZM": {
+    "date": "2026-02-24",
+    "time": "amc",
+    "note": "Q4 FY2026"
+  },
+  "U": {
+    "date": "2026-02-20",
+    "time": "amc",
+    "note": "Q4 2025"
+  },
+  "ZI": {
+    "date": "2026-02-10",
+    "time": "amc",
+    "note": "Q4 2025"
+  }
+}

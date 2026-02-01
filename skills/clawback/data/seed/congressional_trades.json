@@ -1,0 +1,148 @@
+{
+  "_description": "Seed data for congressional trades. Loaded on first run if database is empty.",
+  "_updated": "2026-01-31",
+  "trades": [
+    {
+      "ticker": "AAPL",
+      "transaction_type": "purchase",
+      "amount": 15000000.5,
+      "amount_range": "$5,000,001 - $25,000,000",
+      "transaction_date": "12/30/2025",
+      "disclosure_date": "1/23/2026",
+      "representative": "Hon. Nancy Pelosi",
+      "chamber": "house",
+      "source": "house_clerk_pdf",
+      "report_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20033725.pdf",
+      "asset_name": "Apple Inc. - Common Stock (AAPL)"
+    },
+    {
+      "ticker": "AAPL",
+      "transaction_type": "purchase",
+      "amount": 15000000.5,
+      "amount_range": "$5,000,001 - $25,000,000",
+      "transaction_date": "12/24/2025",
+      "disclosure_date": "1/23/2026",
+      "representative": "Hon. Nancy Pelosi",
+      "chamber": "house",
+      "source": "house_clerk_pdf",
+      "report_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20033725.pdf",
+      "asset_name": "Apple Inc. - Common Stock (AAPL)"
+    },
+    {
+      "ticker": "GOOGL",
+      "transaction_type": "purchase",
+      "amount": 3000000.5,
+      "amount_range": "$1,000,001 - $5,000,000",
+      "transaction_date": "12/30/2025",
+      "disclosure_date": "1/23/2026",
+      "representative": "Hon. Nancy Pelosi",
+      "chamber": "house",
+      "source": "house_clerk_pdf",
+      "report_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20033725.pdf",
+      "asset_name": "Alphabet Inc. - Class A Common Stock (GOOGL)"
+    },
+    {
+      "ticker": "AMZN",
+      "transaction_type": "purchase",
+      "amount": 3000000.5,
+      "amount_range": "$1,000,001 - $5,000,000",
+      "transaction_date": "12/24/2025",
+      "disclosure_date": "1/23/2026",
+      "representative": "Hon. Nancy Pelosi",
+      "chamber": "house",
+      "source": "house_clerk_pdf",
+      "report_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20033725.pdf",
+      "asset_name": "Amazon.com, Inc. - Common Stock (AMZN)"
+    },
+    {
+      "ticker": "NVDA",
+      "transaction_type": "purchase",
+      "amount": 3000000.5,
+      "amount_range": "$1,000,001 - $5,000,000",
+      "transaction_date": "12/24/2025",
+      "disclosure_date": "1/23/2026",
+      "representative": "Hon. Nancy Pelosi",
+      "chamber": "house",
+      "source": "house_clerk_pdf",
+      "report_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20033725.pdf",
+      "asset_name": "NVIDIA Corporation - Common Stock (NVDA)"
+    },
+    {
+      "ticker": "SBUX",
+      "transaction_type": "purchase",
+      "amount": 8000.5,
+      "amount_range": "$1,001 - $15,000",
+      "transaction_date": "08/14/2024",
+      "disclosure_date": "8/20/2024",
+      "representative": "C. Scott Franklin",
+      "chamber": "house",
+      "source": "house_clerk_historical"
+    },
+    {
+      "ticker": "DGRO",
+      "transaction_type": "purchase",
+      "amount": 32500.5,
+      "amount_range": "$15,001 - $50,000",
+      "transaction_date": "08/06/2024",
+      "disclosure_date": "8/20/2024",
+      "representative": "C. Scott Franklin",
+      "chamber": "house",
+      "source": "house_clerk_historical"
+    },
+    {
+      "ticker": "FQAL",
+      "transaction_type": "purchase",
+      "amount": 32500.5,
+      "amount_range": "$15,001 - $50,000",
+      "transaction_date": "08/06/2024",
+      "disclosure_date": "8/20/2024",
+      "representative": "C. Scott Franklin",
+      "chamber": "house",
+      "source": "house_clerk_historical"
+    },
+    {
+      "ticker": "LUBYX",
+      "transaction_type": "purchase",
+      "amount": 8000.5,
+      "amount_range": "$1,001 - $15,000",
+      "transaction_date": "08/06/2024",
+      "disclosure_date": "8/20/2024",
+      "representative": "C. Scott Franklin",
+      "chamber": "house",
+      "source": "house_clerk_historical"
+    },
+    {
+      "ticker": "IJR",
+      "transaction_type": "sale",
+      "amount": 8000.5,
+      "amount_range": "$1,001 - $15,000",
+      "transaction_date": "08/06/2024",
+      "disclosure_date": "8/20/2024",
+      "representative": "C. Scott Franklin",
+      "chamber": "house",
+      "source": "house_clerk_historical"
+    },
+    {
+      "ticker": "ONEQ",
+      "transaction_type": "sale",
+      "amount": 32500.5,
+      "amount_range": "$15,001 - $50,000",
+      "transaction_date": "08/06/2024",
+      "disclosure_date": "8/20/2024",
+      "representative": "C. Scott Franklin",
+      "chamber": "house",
+      "source": "house_clerk_historical"
+    },
+    {
+      "ticker": "FFRHX",
+      "transaction_type": "sale",
+      "amount": 8000.5,
+      "amount_range": "$1,001 - $15,000",
+      "transaction_date": "08/06/2024",
+      "disclosure_date": "8/20/2024",
+      "representative": "C. Scott Franklin",
+      "chamber": "house",
+      "source": "house_clerk_historical"
+    }
+  ]
+}

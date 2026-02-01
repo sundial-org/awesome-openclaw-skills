@@ -1,0 +1,9 @@
+{
+  "name": "@workspace/comfyui-runner",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "comfyui-runner": "bin/cli.js"
+  }
+}

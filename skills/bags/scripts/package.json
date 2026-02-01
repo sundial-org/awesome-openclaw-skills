@@ -1,0 +1,17 @@
+{
+  "name": "bags-claim-scripts",
+  "version": "1.0.0",
+  "description": "Helper scripts for Bags fee claiming",
+  "private": true,
+  "scripts": {
+    "check": "./bags-check-claimable.sh",
+    "claim:all": "./bags-claim-all.sh",
+    "claim:standard": "./bags-claim-standard.sh",
+    "claim:v1": "./bags-claim-v1.sh",
+    "claim:v2": "./bags-claim-v2.sh"
+  },
+  "dependencies": {
+    "@solana/web3.js": "^1.95.0",
+    "bs58": "^5.0.0"
+  }
+}

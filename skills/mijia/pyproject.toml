@@ -1,0 +1,12 @@
+[project]
+name = "mijia-skill"
+version = "0.1.0"
+description = "Claude Code skill for controlling Xiaomi Mijia smart home devices"
+requires-python = ">=3.13"
+dependencies = [
+    "mijiaapi>=3.0.5",
+]
+
+[project.urls]
+Homepage = "https://github.com/user/mijia-skill"
+Repository = "https://github.com/user/mijia-skill"

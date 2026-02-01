@@ -1,0 +1,11 @@
+{
+  "name": "@ai-labs-claude-skills/research-paper-writer",
+  "version": "1.0.0",
+  "description": "Claude AI skill: research-paper-writer",
+  "main": "index.js",
+  "files": [
+    "."
+  ],
+  "license": "MIT",
+  "author": "AI Labs"
+}

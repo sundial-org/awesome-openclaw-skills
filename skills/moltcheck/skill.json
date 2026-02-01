@@ -1,0 +1,6 @@
+{
+  "slug": "moltcheck",
+  "name": "MoltCheck",
+  "summary": "Security scanner for Moltbot skills. Scan GitHub repositories for vulnerabilities before installation.",
+  "version": "1.0.1"
+}

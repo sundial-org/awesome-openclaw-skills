@@ -1,0 +1,179 @@
+Impermanence Verse (無常偈)
+Closing Verse in Zen Practice
+
+---
+
+## Japanese (Kanji/Kana)
+
+生死事大
+無常迅速
+光陰莫虚度
+慎勿放逸
+
+---
+
+## Romanization (Rōmaji)
+
+Shōji-ji-dai
+Mujō-jinsoku
+Kōin maku kodo
+Shin-motsu-hōitsu
+
+---
+
+## Literal Translation
+
+Birth-death matter-great
+Impermanence swift
+Light-shadow not empty-pass
+Caution not let-loose
+
+---
+
+## Poetic English Translation
+
+Great is the matter of birth and death
+Life slips quickly by
+Time waits for no one
+Wake up! Wake up!
+Don't waste a moment.
+
+---
+
+## Alternative Translations
+
+### Translation 1 (Formal)
+The Great Matter of life and death is urgent
+Impermanence is swift
+Time does not wait
+Awaken! Do not squander this life
+
+### Translation 2 (Direct)
+Birth and death: the great matter
+All things change swiftly
+Time will not wait for you
+Be diligent, don't be negligent
+
+### Translation 3 (Contemporary)
+Life and death — this is the critical question
+Everything passes quickly
+Time stops for no one
+Wake up! Don't waste your precious life
+
+---
+
+## Cultural Context
+
+This verse (無常偈, mujō-ge) is traditionally chanted at the end of meditation sessions in Soto Zen temples. It serves as a reminder of:
+
+1. **生死事大 (Shōji-ji-dai)** — The urgency of awakening before death
+2. **無常迅速 (Mujō-jinsoku)** — Buddhist teaching of impermanence (anicca/無常)
+3. **光陰莫虚度 (Kōin maku kodo)** — The preciousness of time/this lifetime
+4. **慎勿放逸 (Shin-motsu-hōitsu)** — Exhortation to practice diligently
+
+The verse echoes Dōgen Zenji's teaching: "To study the Buddha Way is to study the self. To study the self is to forget the self."
+
+---
+
+## Character Breakdown
+
+### 生死事大
+- 生死 (shōji) = birth-death, life-death, samsara
+- 事 (ji/koto) = matter, thing, affair  
+- 大 (dai/ōkii) = great, important
+
+### 無常迅速
+- 無常 (mujō) = impermanence (Sanskrit: anicca)
+- 迅速 (jinsoku) = swift, rapid
+
+### 光陰莫虚度
+- 光陰 (kōin) = time, moments (lit. "light and shadow")
+- 莫 (maku/nakare) = do not, must not
+- 虚度 (kodo) = pass in vain, waste
+
+### 慎勿放逸
+- 慎 (shin/tsutsushimu) = be careful, be cautious
+- 勿 (motsu/nakare) = do not
+- 放逸 (hōitsu) = negligence, carelessness, heedlessness
+
+---
+
+## Related Teachings
+
+**Dōgen Zenji (道元禅師):**
+> "Because the nature of things is impermanence, Buddha's discourses are such and the Wheel of Dharma ceaselessly turns."
+
+**Shunryu Suzuki Roshi:**
+> "In the beginner's mind there are many possibilities, but in the expert's there are few."
+
+**Thich Nhat Hanh:**
+> "The miracle is not to walk on water. The miracle is to walk on the green earth, dwelling deeply in the present moment."
+
+---
+
+## Practice Context
+
+This verse is often chanted after zazen (坐禅, sitting meditation) to:
+- Bring practitioners out of absorption back into daily life
+- Remind them that practice continues off the cushion
+- Emphasize the urgency of awakening
+- Counter spiritual complacency
+
+The rhythm and tone shift from the calm of meditation to an exhortation: *Wake up! Time is passing!*
+
+---
+
+## Linguistic Notes
+
+**光陰 (kōin)** — "Light and shadow" poetically represents the passage of time, like a sundial showing time through shadows. This image appears frequently in East Asian poetry.
+
+**放逸 (hōitsu)** — From Sanskrit प्रमाद (pramāda), meaning "heedlessness" or "carelessness." In Buddhism, one of the primary obstacles to awakening. The opposite is 不放逸 (fu-hōitsu), "heedfulness" or "diligence."
+
+**無常 (mujō)** — Central Buddhist concept. Everything conditioned arises and passes away. Understanding impermanence deeply leads to non-attachment and freedom.
+
+---
+
+## Relationship to Other Buddhist Texts
+
+Similar themes appear in:
+
+- **Dhammapada verse 174:**
+  > "Blind is this world. Few are those who see clearly. Like birds escaping from a net, few go to a blissful state."
+
+- **Satipatthana Sutta:**
+  > "Mindful, monks, should you dwell, clearly comprehending. This is our instruction to you."
+
+- **Platform Sutra (六祖壇經):**
+  > "When the deluded do not awaken themselves, they must seek the guidance of a good teacher."
+
+---
+
+## Sources
+
+- Traditional Soto Zen liturgy
+- Dōgen Zenji's *Shōbōgenzō* (正法眼蔵)
+- Robert Aitken, *The Mind of Clover*
+- Taigen Dan Leighton, *Faces of Compassion*
+- Stanford Encyclopedia of Philosophy: "Dōgen"
+
+---
+
+## For Test Purposes
+
+This text provides challenges for memory systems:
+
+1. **Multiple scripts** — Kanji, hiragana, rōmaji, English
+2. **Semantic layers** — Literal vs. poetic translation
+3. **Cultural context** — Buddhist terminology, practice context
+4. **Linguistic depth** — Character breakdown, etymology
+5. **Cross-references** — Related teachings, texts, concepts
+
+Ideal for testing:
+- Multilingual embedding quality
+- Concept clustering (impermanence, time, urgency)
+- Cross-document synthesis (linking to other Buddhist texts)
+- Cultural context preservation
+
+---
+
+**License:** Public domain (traditional text); compilation CC0 1.0

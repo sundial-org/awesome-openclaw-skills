@@ -1,0 +1,28 @@
+{
+  "name": "aap-agent-server",
+  "version": "3.2.0",
+  "description": "WebSocket server for Agent Attestation Protocol - verify AI agents",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./websocket": "./websocket.js"
+  },
+  "files": ["*.js", "README.md"],
+  "keywords": ["aap", "agent", "attestation", "verification", "websocket", "ai"],
+  "author": "ira-hash",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ira-hash/agent-attestation-protocol.git",
+    "directory": "packages/server"
+  },
+  "homepage": "https://github.com/ira-hash/agent-attestation-protocol#readme",
+  "dependencies": {
+    "ws": "^8.16.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

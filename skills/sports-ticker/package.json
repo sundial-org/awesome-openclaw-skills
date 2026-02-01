@@ -1,0 +1,46 @@
+{
+  "name": "@openclaw/sports-ticker",
+  "version": "2.2.0",
+  "description": "Live sports alerts with FREE ESPN API. Track soccer, football, basketball, hockey, baseball, F1 and more with real-time scoring, key events, and multi-team support. No API keys required!",
+  "keywords": [
+    "openclaw",
+    "skill",
+    "sports",
+    "football",
+    "soccer",
+    "basketball",
+    "hockey",
+    "baseball",
+    "f1",
+    "espn",
+    "live-scores",
+    "alerts",
+    "real-time"
+  ],
+  "author": "robbyczgw-cla",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/robbyczgw-cla/sports-ticker.git"
+  },
+  "homepage": "https://clawhub.ai/robbyczgw-cla/sports-ticker",
+  "bugs": {
+    "url": "https://github.com/robbyczgw-cla/sports-ticker/issues"
+  },
+  "openclaw": {
+    "skill": true,
+    "triggers": ["sports", "score", "match", "game"],
+    "capabilities": [
+      "live-alerts",
+      "multi-sport",
+      "real-time"
+    ],
+    "sports": ["soccer", "nfl", "nba", "nhl", "mlb", "f1"]
+  },
+  "files": [
+    "SKILL.md",
+    "README.md",
+    "scripts/",
+    "config/"
+  ]
+}

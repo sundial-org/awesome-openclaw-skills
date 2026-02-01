@@ -1,0 +1,11 @@
+{
+  "owner": "steipete",
+  "slug": "clawdhub",
+  "displayName": "Clawdhub",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1767545308330,
+    "commit": "https://github.com/clawdbot/skills/commit/bb742f5c289f42ed15000e2a4db4663cacd9434b"
+  },
+  "history": []
+}

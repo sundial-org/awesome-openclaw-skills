@@ -1,0 +1,36 @@
+{
+  "name": "@clawdbot/skill-mintgarden",
+  "version": "1.0.0",
+  "description": "Browse, search, and analyze Chia NFTs via MintGarden API",
+  "main": "index.js",
+  "bin": {
+    "mintgarden": "./cli.js",
+    "mg": "./cli.js"
+  },
+  "scripts": {
+    "test": "echo \"No tests yet\" && exit 0"
+  },
+  "keywords": [
+    "chia",
+    "nft",
+    "mintgarden",
+    "blockchain",
+    "clawdbot-skill"
+  ],
+  "author": "Jeff Coleman",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Koba42Corp/mintgarden-skill.git"
+  },
+  "homepage": "https://github.com/Koba42Corp/mintgarden-skill#readme",
+  "bugs": {
+    "url": "https://github.com/Koba42Corp/mintgarden-skill/issues"
+  }
+}

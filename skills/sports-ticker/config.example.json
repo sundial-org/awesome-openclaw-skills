@@ -1,0 +1,56 @@
+{
+  "teams": [
+    {
+      "name": "Tottenham Hotspur",
+      "short_name": "Spurs",
+      "emoji": "🐓",
+      "sport": "soccer",
+      "espn_id": "367",
+      "espn_leagues": ["eng.1", "uefa.champions"],
+      "enabled": true
+    },
+    {
+      "name": "Bayern Munich",
+      "short_name": "Bayern",
+      "emoji": "🔴⚪",
+      "sport": "soccer",
+      "espn_id": "132",
+      "espn_leagues": ["ger.1", "uefa.champions"],
+      "enabled": true
+    },
+    {
+      "name": "Los Angeles Lakers",
+      "short_name": "Lakers",
+      "emoji": "🏀💜💛",
+      "sport": "basketball",
+      "espn_id": "13",
+      "espn_leagues": ["nba"],
+      "enabled": false
+    },
+    {
+      "name": "Kansas City Chiefs",
+      "short_name": "Chiefs",
+      "emoji": "🏈",
+      "sport": "football",
+      "espn_id": "12",
+      "espn_leagues": ["nfl"],
+      "enabled": false
+    },
+    {
+      "name": "New York Rangers",
+      "short_name": "Rangers",
+      "emoji": "🏒",
+      "sport": "hockey",
+      "espn_id": "4",
+      "espn_leagues": ["nhl"],
+      "enabled": false
+    }
+  ],
+  "alerts": {
+    "goals": true,
+    "red_cards": true,
+    "halftime": true,
+    "fulltime": true,
+    "kickoff": true
+  }
+}

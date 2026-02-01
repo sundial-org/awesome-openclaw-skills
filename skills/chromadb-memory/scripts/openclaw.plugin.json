@@ -1,0 +1,61 @@
+{
+  "id": "chromadb-memory",
+  "name": "ChromaDB Memory",
+  "description": "ChromaDB long-term memory with Ollama embeddings. Auto-recall injects relevant context before each turn. Manual search tool also available.",
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "chromaUrl": {
+        "type": "string",
+        "default": "http://localhost:8100"
+      },
+      "collectionId": {
+        "type": "string"
+      },
+      "ollamaUrl": {
+        "type": "string",
+        "default": "http://localhost:11434"
+      },
+      "embeddingModel": {
+        "type": "string",
+        "default": "nomic-embed-text"
+      },
+      "autoRecall": {
+        "type": "boolean",
+        "default": true
+      },
+      "autoRecallResults": {
+        "type": "number",
+        "default": 3
+      },
+      "minScore": {
+        "type": "number",
+        "default": 0.5
+      }
+    },
+    "required": ["collectionId"]
+  },
+  "uiHints": {
+    "chromaUrl": {
+      "label": "ChromaDB URL",
+      "placeholder": "http://localhost:8100"
+    },
+    "collectionId": {
+      "label": "Collection ID",
+      "placeholder": "5a87acc5-..."
+    },
+    "ollamaUrl": {
+      "label": "Ollama URL",
+      "placeholder": "http://localhost:11434"
+    },
+    "embeddingModel": {
+      "label": "Embedding Model",
+      "placeholder": "nomic-embed-text"
+    },
+    "autoRecall": {
+      "label": "Auto-Recall",
+      "help": "Automatically inject relevant ChromaDB memories into context"
+    }
+  }
+}

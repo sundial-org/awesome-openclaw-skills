@@ -1,0 +1,28 @@
+name: book_restaurant
+objective: Reserve a table at a restaurant for a specific time and party size
+flow:
+  - Greet the restaurant staff
+  - Ask for availability for the requested time and party size
+  - If available, make the reservation with name and phone number
+  - If not available, ask for alternative times
+  - Confirm all details (time, party size, any special requests)
+  - Get confirmation number if provided
+  - Thank them and end the call
+
+info_to_gather:
+  - Restaurant name
+  - Date and time confirmed
+  - Party size
+  - Reservation confirmation number
+  - Any special requests (high chair, outdoor seating, etc.)
+  - Cancellation policy (if mentioned)
+
+success_criteria:
+  - Reservation confirmed OR
+  - Alternative times offered if original not available
+  - All details confirmed verbally
+
+system_prompt_addition: |
+  You are calling to make a restaurant reservation. Be polite and clear.
+  Speak slowly so they can understand you. If they ask you to repeat, do so patiently.
+  Get a confirmation number if they offer one.

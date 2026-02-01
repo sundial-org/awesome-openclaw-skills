@@ -1,0 +1,30 @@
+{
+  "name": "trust-protocol",
+  "version": "2.0.0",
+  "description": "Agent Trust Protocol — Bayesian trust scoring for AI agent networks",
+  "author": "FELMONON",
+  "license": "MIT",
+  "homepage": "https://github.com/FELMONON/trust-protocol",
+  "keywords": ["trust", "agents", "identity", "verification", "bayesian", "skillsign", "moltbot", "skill"],
+  "moltbot": {
+    "emoji": "🤝",
+    "category": "security",
+    "requires": {
+      "bins": ["python3"]
+    },
+    "triggers": [
+      "check trust",
+      "trust score",
+      "trust graph",
+      "verify agent",
+      "agent trust",
+      "trust status",
+      "who do I trust",
+      "trust report",
+      "challenge agent"
+    ]
+  },
+  "dependencies": {
+    "skillsign": "https://github.com/FELMONON/skillsign"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "auto-animate",
+  "description": "Zero-config animations for React, Vue, Solid, Svelte, Preact with @formkit/auto-animate (3.28kb). Prevents 15 documented errors including React 19 StrictMode bugs, SSR imports, conditional parents, viewport issues, drag & drop conflicts, and CSS transform bugs. Use when: animating lists/accordions/toasts, troubleshooting SSR animation errors, React 19 StrictMode issues, or need accessible drop-in transitions with auto prefers-reduced-motion.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Jeremy Dawes",
+    "email": "jeremy@jezweb.net"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/jezweb/claude-skills",
+  "keywords": [],
+  "agents": []
+}

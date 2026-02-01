@@ -1,0 +1,35 @@
+{
+  "active": true,
+  "mode": "walk",
+  "started_at": "2026-01-16T19:05:26.707856+00:00",
+  "start_location": "Kippingstra\u00dfe 27, Eimsb\u00fcttel",
+  "current_location": "Kippingstra\u00dfe 27, Eimsb\u00fcttel",
+  "last_direction": "links zur Tankstelle",
+  "events": [
+    {
+      "type": "direction",
+      "content": "links zur Tankstelle",
+      "timestamp": "2026-01-16T19:06:13.032427+00:00",
+      "location": null
+    },
+    {
+      "type": "observation",
+      "content": "Tankstelle",
+      "timestamp": "2026-01-16T19:06:13.069590+00:00",
+      "location": null
+    },
+    {
+      "type": "action",
+      "content": "Gr\u00fcner Tee mit Cola Drink gekauft",
+      "timestamp": "2026-01-16T19:07:09.765500+00:00",
+      "location": null
+    }
+  ],
+  "things_seen": [
+    "Tankstelle"
+  ],
+  "mood": null,
+  "destinations_mentioned": [],
+  "last_checkin": "2026-01-16T19:05:26.707856+00:00",
+  "checkin_count": 0
+}

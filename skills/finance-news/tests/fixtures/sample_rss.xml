@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Test Market News</title>
+    <link>https://example.com</link>
+    <description>Sample RSS feed for testing</description>
+    <item>
+      <title>Apple Stock Rises 5%</title>
+      <link>https://example.com/apple-rises</link>
+      <description>Apple Inc. shares rose 5% today on strong earnings.</description>
+      <pubDate>Mon, 20 Jan 2025 10:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Tesla Announces New Model</title>
+      <link>https://example.com/tesla-model</link>
+      <description>Tesla unveils new electric vehicle model.</description>
+      <pubDate>Mon, 20 Jan 2025 11:30:00 GMT</pubDate>
+    </item>
+  </channel>
+</rss>

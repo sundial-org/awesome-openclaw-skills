@@ -1,0 +1,15 @@
+{
+  "name": "attio",
+  "type": "stdio",
+  "command": "attio-mcp",
+  "args": ["start:stdio"],
+  "env": {
+    "ATTIO_ACCESS_TOKEN": "${ATTIO_ACCESS_TOKEN}",
+    "ATTIO_WORKSPACE_ID": "${ATTIO_WORKSPACE_ID}"
+  },
+  "healthCheck": {
+    "type": "stdio",
+    "command": "attio-mcp",
+    "args": ["--help"]
+  }
+}

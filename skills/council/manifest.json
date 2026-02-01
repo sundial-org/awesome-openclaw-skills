@@ -1,0 +1,39 @@
+{
+  "name": "council",
+  "version": "1.0.1",
+  "description": "Multi-agent deliberation with Memory Bridge. Council Chamber pattern for structured debate.",
+  "author": "Essam Masoudy",
+  "homepage": "https://github.com/emasoudy/clawdbot-skills",
+  "repository": "https://github.com/emasoudy/clawdbot-skills",
+  "license": "MIT",
+  "keywords": ["multi-agent", "deliberation", "council", "memory-bridge", "graphiti"],
+  "clawdhub": {
+    "category": "agents",
+    "featured": true
+  },
+  "dependencies": {
+    "system": ["sqlite3"],
+    "services_optional": ["graphiti"],
+    "clawdbot": ">=2026.1.17"
+  },
+  "install": [
+    {
+      "check": "command -v sqlite3",
+      "install": "apt-get install sqlite3",
+      "platforms": ["linux"]
+    },
+    {
+      "action": "run",
+      "command": "{baseDir}/init-db.sh",
+      "description": "Initialize council database with default members"
+    }
+  ],
+  "features": {
+    "memory_bridge": true,
+    "multi_agent_spawning": true,
+    "chamber_pattern": true,
+    "graphiti_integration": true,
+    "cross_pollination": true
+  },
+  "default_members": 5
+}

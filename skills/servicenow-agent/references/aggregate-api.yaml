@@ -1,0 +1,89 @@
+---
+openapi: "3.0.1"
+info:
+  title: "Aggregate API"
+  description: "Allows you to compute aggregate statistics about existing table and\
+    \ column data"
+  version: "latest"
+externalDocs:
+  url: "https://docs.servicenow.com/?context=CSHelp:REST-Aggregate-API"
+servers:
+- url: "https://onegditservicecenter.gdit.com/"
+paths:
+  /api/now/stats/{tableName}:
+    get:
+      description: "Retrieve statistical calculations for a table"
+      parameters:
+      - name: "tableName"
+        in: "path"
+        required: true
+        schema: {}
+      - name: "sysparm_query"
+        in: "query"
+        description: "An encoded query string"
+        required: false
+        schema: {}
+      - name: "sysparm_avg_fields"
+        in: "query"
+        description: "A comma-separated list of fields for which to calculate the\
+          \ average value"
+        required: false
+        schema: {}
+      - name: "sysparm_count"
+        in: "query"
+        description: "Calculate the number of records (default: false)"
+        required: false
+        schema: {}
+      - name: "sysparm_min_fields"
+        in: "query"
+        description: "A comma-separated list of fields for which to calculate the\
+          \ minimum value"
+        required: false
+        schema: {}
+      - name: "sysparm_max_fields"
+        in: "query"
+        description: "A comma-separated list of fields for which to calculate the\
+          \ maximum value"
+        required: false
+        schema: {}
+      - name: "sysparm_sum_fields"
+        in: "query"
+        description: "A comma-separated list of fields for which to calculate the\
+          \ sum of the values"
+        required: false
+        schema: {}
+      - name: "sysparm_group_by"
+        in: "query"
+        description: "A comma-separated list of fields to group results by"
+        required: false
+        schema: {}
+      - name: "sysparm_order_by"
+        in: "query"
+        description: "A comma-separated list of fields to order results by"
+        required: false
+        schema: {}
+      - name: "sysparm_having"
+        in: "query"
+        description: "An additional query allowing you to filter the data based on\
+          \ an aggregate operation"
+        required: false
+        schema: {}
+      - name: "sysparm_display_value"
+        in: "query"
+        description: "Return the display value (true), actual value (false), or both\
+          \ (all) in grouped results (default: false)"
+        required: false
+        schema: {}
+      - name: "sysparm_query_category"
+        in: "query"
+        description: "Name of the query category (read replica category) to use for\
+          \ queries"
+        required: false
+        schema: {}
+      responses:
+        "200":
+          description: "ok"
+          content:
+            application/json: {}
+            application/xml: {}
+            text/xml: {}

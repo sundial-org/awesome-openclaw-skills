@@ -1,0 +1,229 @@
+# Trading Strategy Configuration
+# This file contains all tunable parameters for the trading system
+# Version: 2.0.1
+
+# Technical Indicators Configuration
+indicators:
+  rsi:
+    period: 14              # RSI calculation period
+    overbought: 70          # Overbought threshold
+    oversold: 30            # Oversold threshold
+
+  macd:
+    fast_period: 12         # Fast EMA period
+    slow_period: 26         # Slow EMA period
+    signal_period: 9        # Signal line period
+
+  bollinger_bands:
+    period: 20              # SMA period for middle band
+    std_multiplier: 2       # Standard deviation multiplier
+
+  atr:
+    period: 14              # Average True Range period
+
+  ema:
+    short_period: 50        # Short-term EMA
+    long_period: 200        # Long-term EMA
+
+  stochastic:
+    k_period: 14            # %K period
+    d_period: 3             # %D smoothing period
+
+# Bayesian Signal Generation
+bayesian:
+  # Prior accuracy rates for each indicator
+  # These represent historical accuracy of each signal
+  prior_accuracies:
+    rsi: 0.65               # 65% historical accuracy
+    macd: 0.68              # 68% historical accuracy
+    bollinger: 0.62         # 62% historical accuracy
+    volume: 0.60            # 60% historical accuracy
+    trend: 0.70             # 70% historical accuracy
+    pattern: 0.65           # 65% historical accuracy
+
+  # Starting prior probability (neutral)
+  initial_prior: 0.50
+
+# Monte Carlo Simulation
+monte_carlo:
+  num_simulations: 10000    # Number of price path simulations
+  days_ahead: 5             # Forecast horizon in days
+  max_exponent: 5.0         # Overflow protection limit
+  min_data_points: 30       # Minimum historical data required
+
+# Pattern Recognition
+patterns:
+  min_pattern_length: 10    # Minimum candles for pattern detection
+  peak_detection:
+    distance: 5             # Minimum distance between peaks
+    prominence_std: 1.0     # Peak prominence threshold (std multipliers)
+
+  similarity_thresholds:
+    double_top_bottom: 0.02    # 2% price similarity
+    head_shoulders: 0.03       # 3% shoulder similarity
+    wedge_decline: 0.03        # 3% minimum decline/rise
+
+  support_resistance:
+    num_levels: 5              # Number of S/R levels to identify
+    cluster_threshold: 0.02    # 2% price clustering threshold
+    min_touches: 2             # Minimum touches to confirm level
+
+# Risk Management
+risk:
+  max_risk_per_trade: 0.02      # 2% maximum risk per trade
+  max_position_size: 0.10       # 10% maximum position size
+  min_risk_reward_ratio: 1.5    # Minimum risk/reward ratio
+  stop_loss_multiplier: 2       # ATR multiplier for stop loss
+  take_profit_multiplier: 3     # ATR multiplier for take profit
+
+# Position Sizing Methods
+position_sizing:
+  default_method: "standard"    # Options: standard, kelly_conservative, kelly_aggressive
+  kelly_fraction: 0.25          # Fraction for Kelly conservative (25%)
+
+# Trading Fees and Costs
+fees:
+  trading_fee: 0.001            # 0.1% taker fee (typical for crypto)
+  slippage: 0.0005              # 0.05% slippage estimate
+
+# Validation Framework
+validation:
+  strict_mode: true             # Enable strict validation
+
+  data_integrity:
+    min_data_points: 20         # Minimum candles required
+    max_z_score: 5.0            # Maximum Z-score for anomaly detection
+    iqr_multiplier: 3.0         # IQR multiplier for outliers
+    max_price_jump: 0.50        # 50% max single-candle move
+    benford_p_value: 0.001      # Benford's Law p-value threshold
+    benford_min_samples: 10     # Minimum samples for Benford test
+
+  data_freshness:
+    max_age_minutes: 5          # Maximum data age in strict mode
+
+  indicator_validation:
+    rsi_range: [0, 100]         # Valid RSI range
+    min_atr: 0                  # Minimum ATR value
+    max_macd_pct: 0.10          # Max MACD as % of price (10%)
+
+  signal_validation:
+    min_confidence: 40          # Minimum confidence to trade (%)
+    max_confidence: 95          # Cap confidence at 95%
+
+# Circuit Breakers
+circuit_breakers:
+  enabled: true
+
+  checks:
+    low_confidence: 40          # Below this = no trade
+    poor_risk_reward: 1.5       # Below this = no trade
+    stale_data_minutes: 5       # Above this = no trade
+    min_timeframes: 2           # Need at least 2 timeframes
+    max_position_size: 0.10     # Above this = no trade
+    max_risk: 0.02              # Above this = no trade
+    negative_sharpe: true       # Reject if Sharpe < 0
+    extreme_z_score: 5.0        # Reject if Z-score > 5
+    min_confidence_variance: 0.20  # Max 20% variance allowed
+
+# Market Categories
+# Symbols to scan in each category
+market_categories:
+  major_coins:
+    - BTC/USDT
+    - ETH/USDT
+    - BNB/USDT
+    - SOL/USDT
+    - XRP/USDT
+
+  ai_tokens:
+    - RENDER/USDT
+    - FET/USDT
+    - AGIX/USDT
+    - OCEAN/USDT
+    - TAO/USDT
+
+  layer1:
+    - ADA/USDT
+    - AVAX/USDT
+    - DOT/USDT
+    - ATOM/USDT
+
+  layer2:
+    - MATIC/USDT
+    - ARB/USDT
+    - OP/USDT
+
+  defi:
+    - UNI/USDT
+    - AAVE/USDT
+    - LINK/USDT
+    - MKR/USDT
+
+  meme:
+    - DOGE/USDT
+    - SHIB/USDT
+    - PEPE/USDT
+
+# Timeframes for Analysis
+timeframes:
+  - "15m"     # Short-term
+  - "1h"      # Medium-term
+  - "4h"      # Longer-term
+
+# Exchanges
+exchanges:
+  default: "binance"
+  fallbacks:
+    - "kraken"
+    - "coinbase"
+    - "bybit"
+
+  settings:
+    timeout: 30000              # 30 seconds
+    rate_limit: true            # Enable rate limiting
+    retry_attempts: 3           # Number of retry attempts
+    retry_delay: 2000           # Delay between retries (ms)
+
+# Backtesting Configuration
+backtesting:
+  initial_capital: 10000        # Starting capital for backtests
+  trading_fee: 0.001            # 0.1% taker fee
+  slippage: 0.0005              # 0.05% slippage
+  risk_per_trade: 0.02          # 2% risk per trade
+  max_position_size: 0.10       # 10% max position
+
+  performance_targets:
+    min_sharpe_ratio: 1.0       # Minimum acceptable Sharpe
+    min_win_rate: 0.50          # Minimum acceptable win rate (50%)
+    min_profit_factor: 1.5      # Minimum acceptable profit factor
+    max_drawdown: 0.20          # Maximum acceptable drawdown (20%)
+
+# Logging Configuration
+logging:
+  level: "INFO"                 # Options: DEBUG, INFO, WARNING, ERROR
+  file: "trading_agent.log"     # Log file name
+  console: true                 # Enable console logging
+  max_size_mb: 10               # Maximum log file size
+  backup_count: 5               # Number of backup log files
+
+# Strategy Configuration
+strategy:
+  name: "Enhanced Bayesian Pattern Strategy"
+  version: "2.0.1"
+  description: "Advanced technical analysis with Bayesian probability, Monte Carlo simulation, and pattern recognition"
+
+  # Strategy behavior
+  aggressive_mode: false        # More lenient entry criteria
+  confirm_patterns: true        # Require pattern confirmation
+  multi_timeframe: true         # Use multiple timeframes
+
+  # Confidence adjustments
+  adjustments:
+    pattern_confirmation: 10    # Bonus for pattern alignment
+    pattern_conflict: -15       # Penalty for pattern conflict
+    monte_carlo_favorable: 5    # Bonus for favorable MC
+    monte_carlo_unfavorable: -10  # Penalty for unfavorable MC
+    high_sharpe: 5              # Bonus for Sharpe > 1.5
+    low_sharpe: -10             # Penalty for Sharpe < 0.5
+    strong_volume: 5            # Bonus for volume confirmation
+    weak_volume: -5             # Penalty for weak volume

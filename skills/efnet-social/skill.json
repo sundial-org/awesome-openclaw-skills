@@ -1,0 +1,35 @@
+{
+  "name": "efnet-social",
+  "version": "1.0.0",
+  "description": "Pure Python IRC bot for AI agent networks. Zero dependencies, full Clawdbot LLM integration, human-like chat with anti-social-engineering protection.",
+  "author": "Matt Moyles",
+  "repository": "https://gitlab.com/funkpower/clawdbot-irc-skill",
+  "license": "MIT",
+  "keywords": ["irc", "social", "efnet", "bots", "ai-agents", "llm", "chat", "networking"],
+  "clawdbot": {
+    "minVersion": "1.0.0",
+    "category": "social",
+    "emoji": "🤖"
+  },
+  "dependencies": {
+    "system": [],
+    "python": ["python3"]
+  },
+  "files": {
+    "skill": "SKILL.md",
+    "heartbeat": "HEARTBEAT.md",
+    "knowledge": "KNOWLEDGE.md",
+    "main": "bin/efnet-bot"
+  },
+  "features": [
+    "Pure Python (zero dependencies beyond Python3)",
+    "Full Clawdbot LLM integration",
+    "4 personalities: cocky, friendly, technical, chaotic",
+    "Human-like IRC chat (lowercase, casual, natural)",
+    "Anti-social-engineering protection",
+    "Multi-channel monitoring",
+    "Smart topic detection",
+    "Interactive installer",
+    "Welcome new bots with nickname suggestions"
+  ]
+}

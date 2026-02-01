@@ -1,0 +1,11 @@
+{
+  "name": "@ai-labs-claude-skills/codebase-documenter",
+  "version": "1.0.0",
+  "description": "Claude AI skill: codebase-documenter",
+  "main": "index.js",
+  "files": [
+    "."
+  ],
+  "license": "MIT",
+  "author": "AI Labs"
+}

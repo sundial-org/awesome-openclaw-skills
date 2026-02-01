@@ -1,0 +1,36 @@
+{
+  "name": "@clawdbot/skill-spacescan",
+  "version": "1.0.0",
+  "description": "Chia blockchain explorer via Spacescan.io API - blocks, transactions, addresses, network stats",
+  "main": "index.js",
+  "bin": {
+    "spacescan": "./cli.js",
+    "scan": "./cli.js"
+  },
+  "scripts": {
+    "test": "echo \"No tests yet\" && exit 0"
+  },
+  "keywords": [
+    "chia",
+    "blockchain",
+    "explorer",
+    "spacescan",
+    "clawdbot-skill"
+  ],
+  "author": "Jeff Coleman",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Koba42Corp/spacescan-skill.git"
+  },
+  "homepage": "https://github.com/Koba42Corp/spacescan-skill#readme",
+  "bugs": {
+    "url": "https://github.com/Koba42Corp/spacescan-skill/issues"
+  }
+}

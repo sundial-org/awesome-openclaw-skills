@@ -1,0 +1,52 @@
+{
+  "name": "stripe-cli-moltbot-skill",
+  "version": "1.0.0",
+  "description": "Stripe CLI wrapper for Moltbot - payments, webhooks, subscriptions, and optional ShapeScale extensions",
+  "main": "scripts/stripe.sh",
+  "author": "Martin Kessler",
+  "license": "MIT",
+  "repository": "https://github.com/mkessler/stripe-cli-skill",
+  "homepage": "https://github.com/mkessler/stripe-cli-skill",
+  "keywords": [
+    "stripe",
+    "payments",
+    "webhooks",
+    "moltbot",
+    "billing",
+    "subscription",
+    "shapescale"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "test": "echo \"No tests specified\" && exit 0",
+    "lint": "bash scripts/stripe.sh help"
+  },
+  "moltbot": {
+    "skill": {
+      "name": "stripe-cli",
+      "description": "Stripe CLI wrapper for payment processing, webhooks, and subscriptions with optional ShapeScale extensions"
+    },
+    "requires": {
+      "bins": ["stripe"],
+      "env": ["STRIPE_SECRET_KEY"]
+    },
+    "install": [
+      {
+        "id": "stripe-cli",
+        "kind": "brew",
+        "formula": "stripe/stripe-cli/stripe",
+        "platforms": ["darwin"],
+        "label": "Install Stripe CLI (macOS)"
+      },
+      {
+        "id": "stripe-cli-deb",
+        "kind": "download",
+        "url": "https://github.com/stripe/stripe-cli/releases/download/v1.34.0/stripe_1.34.0_linux_amd64.deb",
+        "platforms": ["linux"],
+        "label": "Install Stripe CLI (Linux)"
+      }
+    ]
+  }
+}

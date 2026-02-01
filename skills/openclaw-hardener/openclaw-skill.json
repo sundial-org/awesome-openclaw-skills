@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "name": "openclaw-hardener",
+  "version": "0.1.2",
+  "intent": "Hardening + security posture checks for an OpenClaw installation (workspace + ~/.openclaw), including running openclaw security audit, workspace hygiene checks, and generating optional config.patch plans.",
+  "permissions": {
+    "network": {
+      "required": false,
+      "domains": [
+        "clawdhub.com"
+      ]
+    },
+    "filesystem": {
+      "read": [
+        "<repo>/**",
+        "~/.openclaw/**"
+      ],
+      "write": [
+        "<repo>/**",
+        "~/.openclaw/**"
+      ],
+      "deny": [
+        "/etc/**",
+        "/root/**"
+      ]
+    },
+    "subprocess": {
+      "required": true,
+      "allow": [
+        "openclaw",
+        "bash",
+        "git",
+        "jq",
+        "trufflehog",
+        "semgrep",
+        "python3"
+      ]
+    }
+  },
+  "expectedWrites": [
+    "~/.openclaw/**"
+  ],
+  "dependencies": {
+    "ecosystems": [
+      "python"
+    ],
+    "lockfilesRequired": false,
+    "banInstallHooks": true
+  }
+}

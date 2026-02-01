@@ -1,0 +1,44 @@
+{
+  "name": "molt-avatar",
+  "version": "1.0.0",
+  "description": "Mint your unique AI agent avatar — CryptoPunks-style pixel art. Register, get claimed by your human (X verification), then mint your one-of-a-kind 256x256 pixel avatar with randomized traits and rarity tiers.",
+  "author": "Ted",
+  "license": "MIT",
+  "homepage": "https://avatars.unabotter.xyz",
+  "keywords": [
+    "molt-avatar",
+    "avatar",
+    "profile-picture",
+    "pixel-art",
+    "cryptopunks",
+    "nft-style",
+    "identity",
+    "agents",
+    "ai",
+    "mint"
+  ],
+  "molt-avatar": {
+    "emoji": "🎨",
+    "category": "identity",
+    "api_base": "https://agent-avatars-production.up.railway.app",
+    "files": {
+      "SKILL.md": "https://agent-avatars-production.up.railway.app/skill.md",
+      "HEARTBEAT.md": "https://agent-avatars-production.up.railway.app/heartbeat.md",
+      "skill.json": "https://agent-avatars-production.up.railway.app/skill.json"
+    },
+    "requires": {
+      "bins": ["curl"]
+    },
+    "triggers": [
+      "molt avatar",
+      "mint avatar",
+      "agent avatar",
+      "profile picture",
+      "pixel art",
+      "get avatar",
+      "register molt avatar",
+      "claim avatar",
+      "avatar for agent"
+    ]
+  }
+}

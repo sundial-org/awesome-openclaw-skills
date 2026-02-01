@@ -1,0 +1,134 @@
+{
+  "name": "dropbox",
+  "displayName": "Dropbox Manager",
+  "description": "Manage Dropbox files via MCP server - list, search, upload, and download files with Swift-native implementation",
+  "version": "1.0.0",
+  "author": "Ryan Lisse",
+  "license": "MIT",
+  "tags": ["file-management", "cloud-storage", "mcp", "dropbox", "swift"],
+  "platforms": ["macOS"],
+  "requirements": {
+    "swift": ">=5.9",
+    "macOS": ">=14.0"
+  },
+  "repository": "https://github.com/ryanlisse/Dropbook",
+  "documentation": "SKILL.md",
+  "installation": {
+    "type": "source",
+    "steps": [
+      "Clone the repository",
+      "Run `swift build`",
+      "Configure environment variables"
+    ]
+  },
+  "configuration": {
+    "environment": [
+      {
+        "name": "DROPBOX_APP_KEY",
+        "required": true,
+        "description": "Dropbox application key"
+      },
+      {
+        "name": "DROPBOX_APP_SECRET",
+        "required": true,
+        "description": "Dropbox application secret"
+      },
+      {
+        "name": "DROPBOX_ACCESS_TOKEN",
+        "required": true,
+        "description": "Dropbox access token for API authentication"
+      }
+    ]
+  },
+  "mcp": {
+    "server": "dropbook",
+    "transport": "stdio",
+    "tools": [
+      {
+        "name": "list_directory",
+        "description": "List files and folders in a Dropbox directory",
+        "parameters": {
+          "path": {
+            "type": "string",
+            "optional": true,
+            "default": "/",
+            "description": "Directory path to list"
+          }
+        }
+      },
+      {
+        "name": "search",
+        "description": "Search for files in Dropbox by name or content",
+        "parameters": {
+          "query": {
+            "type": "string",
+            "required": true,
+            "description": "Search query string"
+          },
+          "path": {
+            "type": "string",
+            "optional": true,
+            "default": "/",
+            "description": "Path to search within"
+          }
+        }
+      },
+      {
+        "name": "upload",
+        "description": "Upload a file to Dropbox",
+        "parameters": {
+          "localPath": {
+            "type": "string",
+            "required": true,
+            "description": "Absolute path to local file"
+          },
+          "remotePath": {
+            "type": "string",
+            "required": true,
+            "description": "Destination path in Dropbox"
+          },
+          "overwrite": {
+            "type": "boolean",
+            "optional": true,
+            "default": false,
+            "description": "Overwrite existing file"
+          }
+        }
+      },
+      {
+        "name": "download",
+        "description": "Download a file from Dropbox",
+        "parameters": {
+          "remotePath": {
+            "type": "string",
+            "required": true,
+            "description": "File path in Dropbox"
+          },
+          "localPath": {
+            "type": "string",
+            "required": true,
+            "description": "Local destination path"
+          }
+        }
+      }
+    ]
+  },
+  "examples": [
+    {
+      "description": "List directory contents",
+      "code": "list_directory(path: \"/Documents\")"
+    },
+    {
+      "description": "Search for files",
+      "code": "search(query: \"invoice\", path: \"/Finance\")"
+    },
+    {
+      "description": "Upload file",
+      "code": "upload(localPath: \"/tmp/report.pdf\", remotePath: \"/Reports/report.pdf\", overwrite: true)"
+    },
+    {
+      "description": "Download file",
+      "code": "download(remotePath: \"/Docs/notes.txt\", localPath: \"/tmp/notes.txt\")"
+    }
+  ]
+}

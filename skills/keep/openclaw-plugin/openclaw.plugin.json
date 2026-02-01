@@ -1,0 +1,70 @@
+{
+  "id": "memory-keep",
+  "kind": "memory",
+  "name": "Keep",
+  "description": "Semantic memory - remember everything, find by meaning",
+  "version": "0.1.0",
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "pythonPath": {
+        "type": "string",
+        "description": "Path to Python executable (uses system python if not set)"
+      },
+      "halfLifeDays": {
+        "type": "number",
+        "default": 30,
+        "description": "ACT-R decay half-life in days"
+      },
+      "indexingMode": {
+        "type": "string",
+        "enum": ["document", "chunked", "hybrid", "bm25_only"],
+        "default": "document",
+        "description": "Embedding granularity (summary always stored):
+          document = embed summary only (fast)
+          chunked = embed chunks (OpenClaw-compatible)
+          hybrid = embed both (best recall)
+          bm25_only = keyword search only"
+      },
+      "embeddingProvider": {
+        "type": "string",
+        "enum": ["sentence-transformers", "openai", "mlx"],
+        "default": "sentence-transformers",
+        "description": "Embedding provider (sentence-transformers is local)"
+      },
+      "embeddingModel": {
+        "type": "string",
+        "description": "Model name for embeddings (provider-specific)"
+      },
+      "hybridSearch": {
+        "type": "object",
+        "properties": {
+          "enabled": { "type": "boolean", "default": true },
+          "vectorWeight": { "type": "number", "default": 0.7 },
+          "textWeight": { "type": "number", "default": 0.3 }
+        }
+      },
+      "cache": {
+        "type": "object",
+        "properties": {
+          "enabled": { "type": "boolean", "default": true },
+          "maxEntries": { "type": "integer", "default": 50000 }
+        }
+      }
+    }
+  },
+  "uiHints": {
+    "halfLifeDays": {
+      "label": "Decay Half-Life (days)",
+      "placeholder": "30"
+    },
+    "indexingMode": {
+      "label": "Indexing Mode",
+      "description": "document=fast, chunked=OpenClaw-compatible, hybrid=best recall"
+    },
+    "embeddingProvider": {
+      "label": "Embedding Provider"
+    }
+  }
+}

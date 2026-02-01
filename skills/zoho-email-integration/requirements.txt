@@ -1,0 +1,30 @@
+# Zoho Email Integration - Python Requirements
+
+# REST API support (v2.0.0+)
+requests>=2.31.0
+
+# OAuth2 uses Python standard library for IMAP/SMTP mode
+# REST API mode requires requests library for HTTP operations
+
+# Standard library modules (documented for reference):
+
+# Email operations:
+# - imaplib (email reading via IMAP)
+# - smtplib (email sending via SMTP)
+# - email (email parsing and composition)
+
+# OAuth2 authentication (v1.2.0+):
+# - urllib.request (HTTP requests for token exchange)
+# - urllib.parse (URL encoding)
+# - http.server (OAuth2 callback server)
+# - webbrowser (browser automation for OAuth2 flow)
+# - base64 (XOAUTH2 encoding)
+
+# Utilities:
+# - json (JSON output formatting and token storage)
+# - socket (timeout handling)
+# - datetime (date filtering)
+# - time (timestamp handling for OAuth2)
+# - re (HTML to text conversion)
+# - os (file operations)
+# - sys (command-line interface)

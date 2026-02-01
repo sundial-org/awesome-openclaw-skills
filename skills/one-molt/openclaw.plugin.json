@@ -1,0 +1,24 @@
+{
+  "id": "onemolt",
+  "name": "OneMolt",
+  "description": "One molt per human - cryptographically prove your identity with Ed25519 signatures and WorldID proof-of-personhood",
+  "version": "1.0.0",
+  "skills": ["./"],
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "identityServer": {
+        "type": "string",
+        "description": "URL of the OneMolt identity registry server",
+        "default": "https://onemolt.ai"
+      }
+    }
+  },
+  "uiHints": {
+    "identityServer": {
+      "label": "Identity Server URL",
+      "placeholder": "https://onemolt.ai"
+    }
+  }
+}

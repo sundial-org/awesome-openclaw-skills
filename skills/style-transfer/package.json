@@ -1,0 +1,26 @@
+{
+  "name": "style-transfer",
+  "version": "1.0.0",
+  "description": "Professional artistic style transfer via OpenAI Images API. Transform images into specific art styles, eras, and visual aesthetics.",
+  "main": "SKILL.md",
+  "keywords": [
+    "style-transfer",
+    "art",
+    "image-editing",
+    "openai",
+    "image-generation",
+    "artistic-styles",
+    "oil-painting",
+    "cyberpunk",
+    "vintage",
+    "visual-aesthetics"
+  ],
+  "author": "jack happy",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "files": [
+    "SKILL.md"
+  ]
+}

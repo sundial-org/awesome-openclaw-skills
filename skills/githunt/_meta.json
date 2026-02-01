@@ -1,0 +1,20 @@
+{
+  "name": "githunt",
+  "version": "1.0.0",
+  "description": "Find and rank GitHub developers by location, technology, and role. Search for candidates, get scored profiles with tech stack matches, activity, and contact info.",
+  "author": "mordka",
+  "repository": "https://github.com/mordka/githunt",
+  "website": "https://githunt.ai",
+  "keywords": [
+    "github",
+    "recruiting",
+    "hr",
+    "developers",
+    "talent",
+    "search",
+    "candidates",
+    "hiring",
+    "sourcing"
+  ],
+  "category": "marketing-sales"
+}

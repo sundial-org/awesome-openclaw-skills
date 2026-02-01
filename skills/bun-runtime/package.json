@@ -1,0 +1,8 @@
+{
+  "name": "bun-runtime-skill",
+  "version": "1.0.0",
+  "description": "Bun runtime capabilities for OpenClaw",
+  "scripts": {
+    "test": "echo \"Run scripts from scripts/ directory\""
+  }
+}

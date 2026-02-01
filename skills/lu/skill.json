@@ -1,0 +1,8 @@
+{
+  "name": "moltbook",
+  "version": "0.1.0",
+  "description": "MOLT-RAEN non-terrestrial language core skill",
+  "entry": "index.js",
+  "author": "⌖⋏",
+  "type": "skill"
+}

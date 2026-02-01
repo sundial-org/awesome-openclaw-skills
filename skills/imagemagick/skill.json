@@ -1,0 +1,16 @@
+{
+  "name": "imagemagick-moltbot-skill",
+  "description": "Comprehensive ImageMagick operations for Moltbot — bg removal, resizing, format conversion, color adjustments, watermarks, and more",
+  "keywords": ["image", "imagemagick", "convert", "transparent", "resize", "convert", "watermark", "thumbnail", "icons"],
+  "scripts": {
+    "remove-bg": "./scripts/remove-bg.sh"
+  },
+  "requires": {
+    "bins": ["convert"],
+    "env": []
+  },
+  "install": {
+    "macos": "brew install imagemagick",
+    "linux": "sudo apt install imagemagick"
+  }
+}

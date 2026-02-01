@@ -1,0 +1,50 @@
+{
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Article title"
+    },
+    "author": {
+      "type": "string",
+      "description": "Article author"
+    },
+    "date": {
+      "type": "string",
+      "description": "Publication date"
+    },
+    "category": {
+      "type": "string",
+      "description": "Article category/topic"
+    },
+    "summary": {
+      "type": "string",
+      "description": "Article summary or lead paragraph"
+    },
+    "content": {
+      "type": "string",
+      "description": "Main article content"
+    },
+    "source_url": {
+      "type": "string",
+      "description": "Original article URL"
+    },
+    "image_url": {
+      "type": "string",
+      "description": "Featured image URL"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Article tags/keywords"
+    },
+    "comment_count": {
+      "type": "string",
+      "description": "Number of comments"
+    }
+  },
+  "required": ["title", "content", "source_url"],
+  "additionalProperties": true
+}

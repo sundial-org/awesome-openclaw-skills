@@ -1,0 +1,74 @@
+{
+  "_comment": "ClawBack - Congressional Trade Mirror Bot Configuration",
+  "_instructions": "Copy this to config.json and fill in your values, or use environment variables",
+
+  "broker": {
+    "_comment": "Specify which broker adapter to use. Adapter-specific URLs are built into the adapter code.",
+    "adapter": "etrade",
+    "credentials": {
+      "apiKey": "${BROKER_API_KEY}",
+      "apiSecret": "${BROKER_API_SECRET}"
+    }
+  },
+  "trading": {
+    "accountId": "${BROKER_ACCOUNT_ID}",
+    "initialCapital": 50000,
+    "tradeScalePercentage": 0.05,
+    "maxPositionPercentage": 0.05,
+    "maxPositions": 20,
+    "dailyLossLimit": 0.03,
+    "portfolioStopLoss": 0.15,
+    "positionStopLoss": 0.08,
+    "tradeDelayDays": 3,
+    "holdingPeriodDays": 30,
+    "marketHoursOnly": true,
+    "marketOpen": "09:30",
+    "marketClose": "16:00"
+  },
+  "strategy": {
+    "entryDelayDays": 3,
+    "holdingPeriodDays": 30,
+    "purchasesOnly": true,
+    "minimumTradeSize": 50000,
+    "maxSectorExposure": 0.25,
+    "prioritizeLeadership": true,
+    "multiMemberBonus": true
+  },
+  "congress": {
+    "dataSource": "official",
+    "pollIntervalHours": 24,
+    "minimumTradeSize": 50000,
+    "tradeTypes": ["purchase"],
+    "includeSenate": true,
+    "targetPoliticians": [
+      {"name": "Nancy Pelosi", "chamber": "house", "priority": 1},
+      {"name": "Dan Crenshaw", "chamber": "house", "priority": 2},
+      {"name": "Tommy Tuberville", "chamber": "senate", "priority": 2},
+      {"name": "Marjorie Taylor Greene", "chamber": "house", "priority": 3}
+    ]
+  },
+  "riskManagement": {
+    "maxDrawdown": 0.15,
+    "dailyLossLimit": 0.03,
+    "positionStopLoss": 0.08,
+    "trailingStopActivation": 0.10,
+    "trailingStopPercent": 0.05,
+    "consecutiveLossLimit": 3
+  },
+  "notifications": {
+    "telegram": {
+      "enabled": false,
+      "botToken": "${TELEGRAM_BOT_TOKEN}",
+      "chatId": "${TELEGRAM_CHAT_ID}"
+    }
+  },
+  "logging": {
+    "level": "info",
+    "file": "logs/trading.log",
+    "maxSize": "10MB",
+    "maxFiles": 10
+  },
+  "database": {
+    "path": "data/trading.db"
+  }
+}

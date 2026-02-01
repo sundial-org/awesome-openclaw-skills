@@ -1,0 +1,10 @@
+{
+  "name": "10 of My Most Popular Text-To-Image Series (+Prompts)",
+  "version": "1.0.0",
+  "description": "generate a bunch of images, then you curate the results to handpick the best ones",
+  "author": "Clawdbot",
+  "type": "Image Generation",
+  "source": "image-generation",
+  "url": "https://www.whytryai.com/p/my-popular-text-to-image-series",
+  "created_at": "2026-01-31T10:07:38.229049"
+}

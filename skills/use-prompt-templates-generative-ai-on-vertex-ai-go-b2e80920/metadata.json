@@ -1,0 +1,10 @@
+{
+  "name": "Use prompt templates | Generative AI on Vertex AI | Google Cloud",
+  "version": "1.0.0",
+  "description": ". In the animal_activity column, enter",
+  "author": "Clawdbot",
+  "type": "Image Generation",
+  "source": "general",
+  "url": "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/prompts/prompt-templates",
+  "created_at": "2026-01-31T10:07:38.221550"
+}

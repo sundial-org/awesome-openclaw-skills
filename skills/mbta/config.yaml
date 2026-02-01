@@ -1,0 +1,96 @@
+# MBTA Transit Configuration
+# 
+# Configure your stops, routes, and walk times.
+# Copy this file and customize for your commute.
+#
+# API Key (optional but recommended for higher rate limits):
+#   Get free at: https://api-v3.mbta.com/portal
+#   Set as: export MBTA_API_KEY=your_key_here
+#
+# Find stop IDs:
+#   python3 scripts/mbta.py stops --search "Alewife"
+#
+# Find route IDs:
+#   python3 scripts/mbta.py routes --type rail
+
+panels:
+  # Example: Red Line at Harvard Square
+  - title: "Harvard Square"
+    walk_minutes: 5
+    services:
+      - label: "Red Line"
+        destination: "to Alewife"
+        route_id: "Red"
+        stop_id: "place-harsq"
+        direction_id: 0
+        limit: 3
+      - label: "Red Line"
+        destination: "to Ashmont/Braintree"
+        route_id: "Red"
+        stop_id: "place-harsq"
+        direction_id: 1
+        limit: 3
+
+  # Example: Orange Line at Back Bay
+  - title: "Back Bay"
+    walk_minutes: 8
+    services:
+      - label: "Orange Line"
+        destination: "to Oak Grove"
+        route_id: "Orange"
+        stop_id: "place-bbsta"
+        direction_id: 1
+        limit: 3
+      - label: "Orange Line"
+        destination: "to Forest Hills"
+        route_id: "Orange"
+        stop_id: "place-bbsta"
+        direction_id: 0
+        limit: 3
+
+# ─────────────────────────────────────────────────────────────
+# Common Station IDs
+# ─────────────────────────────────────────────────────────────
+#
+# Red Line:
+#   place-alfcl   Alewife
+#   place-davis   Davis Square
+#   place-portr   Porter Square
+#   place-harsq   Harvard Square
+#   place-cntsq   Central Square
+#   place-knncl   Kendall/MIT
+#   place-chmnl   Charles/MGH
+#   place-pktrm   Park Street
+#   place-dwnxg   Downtown Crossing
+#   place-sstat   South Station
+#   place-jfk     JFK/UMass
+#   place-asmnl   Ashmont
+#   place-brntn   Braintree
+#
+# Orange Line:
+#   place-ogmnl   Oak Grove
+#   place-mlmnl   Malden Center
+#   place-welln   Wellington
+#   place-sull    Sullivan Square
+#   place-north   North Station
+#   place-state   State
+#   place-dwnxg   Downtown Crossing
+#   place-bbsta   Back Bay
+#   place-ruggles Ruggles
+#   place-forhl   Forest Hills
+#
+# Blue Line:
+#   place-wondl   Wonderland
+#   place-bomnl   Bowdoin
+#   place-state   State
+#   place-aqucl   Aquarium
+#   place-apts    Airport
+#
+# Green Line (common):
+#   place-north   North Station
+#   place-gover   Government Center
+#   place-pktrm   Park Street
+#   place-coecl   Copley
+#   place-kencl   Kenmore
+#   place-fenwy   Fenway
+#   place-longw   Longwood

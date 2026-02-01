@@ -1,0 +1,11 @@
+{
+  "name": "agent-chronicle",
+  "version": "0.3.0",
+  "description": "Chronicle your AI's journey - capture experiences, quotes, curiosities, decisions, and relationships from the agent's perspective",
+  "author": "robbyczgw-cla",
+  "tags": ["chronicle", "journal", "memory", "self-reflection", "ai-perspective", "quotes", "decisions", "curiosity"],
+  "emoji": "📜",
+  "triggers": ["chronicle", "diary", "journal", "daily log", "write entry", "quotes", "curious", "decisions"],
+  "license": "MIT",
+  "repository": "https://github.com/robbyczgw-cla/agent-chronicle"
+}

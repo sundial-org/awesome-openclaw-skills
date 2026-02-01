@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional portfolio">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">Name</a>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Your Name</h1>
+            <p class="hero-subtitle">Your Professional Title</p>
+            <div class="hero-cta">
+                <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                <a href="#projects" class="btn btn-secondary">View Work</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <p>Your bio and professional background.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title">Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <h3>Skill Category 1</h3>
+                        <ul>
+                            <li>Skill 1</li>
+                            <li>Skill 2</li>
+                            <li>Skill 3</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card">
+                        <h3>Skill Category 2</h3>
+                        <ul>
+                            <li>Skill 1</li>
+                            <li>Skill 2</li>
+                            <li>Skill 3</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card">
+                        <h3>Skill Category 3</h3>
+                        <ul>
+                            <li>Skill 1</li>
+                            <li>Skill 2</li>
+                            <li>Skill 3</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <div class="container">
+                <h2 class="section-title">Projects</h2>
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img src="https://via.placeholder.com/400x300" alt="Project">
+                        </div>
+                        <div class="project-content">
+                            <h3>Project Title</h3>
+                            <p>Project description</p>
+                            <a href="#" class="project-link">View Project →</a>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img src="https://via.placeholder.com/400x300" alt="Project">
+                        </div>
+                        <div class="project-content">
+                            <h3>Project Title</h3>
+                            <p>Project description</p>
+                            <a href="#" class="project-link">View Project →</a>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img src="https://via.placeholder.com/400x300" alt="Project">
+                        </div>
+                        <div class="project-content">
+                            <h3>Project Title</h3>
+                            <p>Project description</p>
+                            <a href="#" class="project-link">View Project →</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title">Get In Touch</h2>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Your Name. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" aria-label="GitHub">GitHub</a>
+                <a href="#" aria-label="LinkedIn">LinkedIn</a>
+                <a href="#" aria-label="Twitter">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

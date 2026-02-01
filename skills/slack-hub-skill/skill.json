@@ -1,0 +1,14 @@
+{
+  "name": "slack-hub",
+  "version": "1.0.0",
+  "description": "Professional bidirectional Slack integration for OpenClaw.",
+  "author": "Helix & Meelis",
+  "entrypoint": "slack_hub.py",
+  "dependencies": ["requests"],
+  "permissions": ["network", "env_vars"],
+  "metadata": {
+    "category": "communication",
+    "bounty_id": "102",
+    "hardened": true
+  }
+}

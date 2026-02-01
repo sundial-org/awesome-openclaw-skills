@@ -1,0 +1,173 @@
+{
+  "name": "ActiveCampaign Field Mappings",
+  "description": "Custom field IDs for ActiveCampaign integration. COPY THIS FILE to ~/.config/activecampaign/fields.json and update with your field IDs.",
+  "version": "1.0.0",
+
+  "order_fields": {
+    "order_id": 7,
+    "order_number": 30,
+    "order_date": 8,
+    "order_total": 18,
+    "order_tax": 19,
+    "order_status": 20,
+    "order_subtotal": 39,
+    "order_discount": 38,
+    "order_currency": 49,
+    "payment_method": 35,
+    "payment_amount": 34,
+    "payment_card": 41,
+    "payment_last4": 42
+  },
+
+  "shipping_fields": {
+    "shipping_name": 50,
+    "shipping_address_line_1": 31,
+    "shipping_address_line_2": 32,
+    "shipping_city": 14,
+    "shipping_state": 15,
+    "shipping_postal_code": 33,
+    "shipping_country": 16,
+    "shipping_method": 12,
+    "shipping_cost": 11
+  },
+
+  "billing_fields": {
+    "billing_address_line_1": 43,
+    "billing_address_line_2": 44,
+    "billing_city": 45,
+    "billing_state": 46,
+    "billing_postal_code": 47,
+    "billing_country": 48
+  },
+
+  "subscription_fields": {
+    "subscription_id": 51,
+    "subscription_status": 52,
+    "subscription_plan": 53,
+    "subscription_amount": 54,
+    "subscription_currency": 55,
+    "subscription_interval": 56,
+    "subscription_start": 57,
+    "subscription_trial_end": 58
+  },
+
+  "additional_fields": {
+    "company": 29,
+    "order_product_name": 9,
+    "order_product_id": 36,
+    "order_product_price": 37,
+    "order_quantity": 13,
+    "preorder_batch": 17,
+    "lead_campaign": 10,
+    "last_engaged_date": 22,
+    "notes": 21,
+    "birthday": 26,
+    "challenge_nickname": 28,
+    "source": 3,
+    "title": 65
+  },
+
+  "system_fields": {
+    "admin": 24,
+    "coach": 23,
+    "created_at": 27,
+    "gender": 25
+  },
+
+  "perstag_mappings": {
+    "order": {
+      "ORDER_ID": "order_fields.order_id",
+      "ORDERNUMBER": "order_fields.order_number",
+      "ORDER_DATE": "order_fields.order_date",
+      "ORDER_TOTAL": "order_fields.order_total",
+      "ORDER_TAX": "order_fields.order_tax",
+      "ORDER_STATUS": "order_fields.order_status",
+      "ORDER_SUBTOTAL": "order_fields.order_subtotal",
+      "ORDER_DISCOUNT": "order_fields.order_discount",
+      "ORDER_CURRENCY": "order_fields.order_currency",
+      "PAYMENT_METHOD": "order_fields.payment_method",
+      "PAYMENT_AMOUNT": "order_fields.payment_amount",
+      "ORDER_PAYMENT_CARD": "order_fields.payment_card",
+      "ORDER_PAYMENT_LAST4": "order_fields.payment_last4"
+    },
+    "shipping": {
+      "SHIPPING_NAME": "shipping_fields.shipping_name",
+      "SHIPPING_ADDRESS_LINE_1": "shipping_fields.shipping_address_line_1",
+      "SHIPPING_ADDRESS_LINE_2": "shipping_fields.shipping_address_line_2",
+      "SHIPPING_CITY": "shipping_fields.shipping_city",
+      "SHIPPING_STATE": "shipping_fields.shipping_state",
+      "SHIPPING_POSTAL_CODE": "shipping_fields.shipping_postal_code",
+      "SHIPPING_COUNTRY": "shipping_fields.shipping_country",
+      "SHIPPING_METHOD": "shipping_fields.shipping_method",
+      "SHIPPING_COST": "shipping_fields.shipping_cost"
+    },
+    "billing": {
+      "BILLING_ADDRESS_LINE_1": "billing_fields.billing_address_line_1",
+      "BILLING_ADDRESS_LINE_2": "billing_fields.billing_address_line_2",
+      "BILLING_CITY": "billing_fields.billing_city",
+      "BILLING_STATE": "billing_fields.billing_state",
+      "BILLING_POSTAL_CODE": "billing_fields.billing_postal_code",
+      "BILLING_COUNTRY": "billing_fields.billing_country"
+    },
+    "subscription": {
+      "SUBSCRIPTION_ID": "subscription_fields.subscription_id",
+      "SUBSCRIPTION_STATUS": "subscription_fields.subscription_status",
+      "SUBSCRIPTION_PLAN": "subscription_fields.subscription_plan",
+      "SUBSCRIPTION_AMOUNT": "subscription_fields.subscription_amount",
+      "SUBSCRIPTION_CURRENCY": "subscription_fields.subscription_currency",
+      "SUBSCRIPTION_INTERVAL": "subscription_fields.subscription_interval",
+      "SUBSCRIPTION_START": "subscription_fields.subscription_start",
+      "SUBSCRIPTION_TRIAL_END": "subscription_fields.subscription_trial_end"
+    },
+    "additional": {
+      "COMPANY": "additional_fields.company",
+      "ORDER_PRODUCT_NAME": "additional_fields.order_product_name",
+      "ORDER_PRODUCT_ID": "additional_fields.order_product_id",
+      "ORDER_PRODUCT_PRICE": "additional_fields.order_product_price",
+      "ORDER_QUANTITY": "additional_fields.order_quantity",
+      "PREORDER_BATCH": "additional_fields.preorder_batch",
+      "LEAD_CAMPAIGN": "additional_fields.lead_campaign",
+      "LAST_ENGAGED_DATE": "additional_fields.last_engaged_date",
+      "NOTES": "additional_fields.notes",
+      "BIRTHDAY": "additional_fields.birthday",
+      "CHALLENGE_NICKNAME": "additional_fields.challenge_nickname",
+      "SOURCE": "additional_fields.source",
+      "TITLE": "additional_fields.title"
+    },
+    "system": {
+      "ADMIN": "system_fields.admin",
+      "COACH": "system_fields.coach",
+      "CREATEDAT": "system_fields.created_at",
+      "GENDER": "system_fields.gender"
+    }
+  },
+
+  "lists": {
+    "main_list_id": null,
+    "newsletter_list_id": null,
+    "customers_list_id": null,
+    "leads_list_id": null
+  },
+
+  "tags": {
+    "demo_requested": null,
+    "demo_completed": null,
+    "customer": null,
+    "lead": null,
+    "nurture": null,
+    "close_ready": null,
+    "churned": null,
+    "vip": null
+  },
+
+  "pipelines": {
+    "sales_pipeline_id": null
+  },
+
+  "automations": {
+    "welcome_sequence_id": null,
+    "demo_followup_id": null,
+    "nurture_sequence_id": null,
+    "winback_sequence_id": null
+  }
+}

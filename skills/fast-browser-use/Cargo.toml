@@ -1,0 +1,77 @@
+[[bin]]
+name = "mcp-server"
+path = "src/bin/mcp_server.rs"
+required-features = ["mcp-server"]
+
+[[bin]]
+name = "fast-browser-use"
+path = "src/bin/cli.rs"
+required-features = ["cli"]
+
+[package]
+name = "browser-use"
+version = "0.1.0"
+edition = "2024"
+authors = ["rknoche"]
+description = "A lightweight Rust library for browser automation via Chrome DevTools Protocol (CDP), featuring a built-in Model Context Protocol (MCP) server for AI-driven browser automation"
+license = "MIT"
+repository = "https://github.com/rknoche6/fast-browser-use"
+readme = "README.md"
+keywords = ["browser", "automation", "cdp", "devtools", "mcp"]
+categories = ["web-programming", "development-tools"]
+
+[features]
+default = ["mcp-handler", "cli"]
+mcp-handler = ["rmcp/macros", "rmcp/server"]
+mcp-server = [
+    "mcp-handler",
+    "rmcp/transport-io",
+    "rmcp/transport-sse-server",
+    "rmcp/transport-streamable-http-server",
+    "tokio",
+    "clap",
+    "axum",
+    "tokio-util",
+    "env_logger",
+]
+cli = [
+    "clap",
+    "tokio",
+    "env_logger",
+    "rand",
+]
+
+[dependencies]
+headless_chrome = "1.0.18"
+rmcp = "0.8"
+thiserror = "2.0"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+anyhow = "1.0"
+indexmap = { version = "2.0", features = ["serde"] }
+schemars = "1.1"
+async-trait = "0.1"
+tokio = { version = "1", features = [
+    "rt",
+    "rt-multi-thread",
+    "macros",
+    "sync",
+    "net",
+    "signal",
+    "io-std",
+    "fs",
+], optional = true }
+clap = { version = "4.5", features = ["derive"], optional = true }
+axum = { version = "0.8", optional = true }
+tokio-util = { version = "0.7", optional = true }
+log = "0.4"
+env_logger = { version = "0.11", optional = true }
+html2md = "0.2"
+rand = { version = "0.8", optional = true }
+image = "0.24"
+imageproc = "0.23"
+rusttype = "0.9"
+base64 = "0.21"
+
+[dev-dependencies]
+urlencoding = "2.1"

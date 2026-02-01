@@ -1,0 +1,158 @@
+---
+openapi: "3.0.1"
+info:
+  title: "Attachment API"
+  description: "Allows you to upload, download, and remove attachments and to retrieve\
+    \ attachment metadata"
+  version: "latest"
+externalDocs:
+  url: "https://docs.servicenow.com/?context=CSHelp:REST-Attachment-API"
+servers:
+- url: "https://onegditservicecenter.gdit.com/"
+paths:
+  /api/now/attachment:
+    get:
+      description: "Retrieve metadata for attachments"
+      parameters:
+      - name: "sysparm_query"
+        in: "query"
+        description: "An encoded query string used to filter the results (relative\
+          \ to Attachment table)"
+        required: false
+        schema: {}
+      - name: "sysparm_suppress_pagination_header"
+        in: "query"
+        description: "True to supress pagination header (default: false)"
+        required: false
+        schema: {}
+      - name: "sysparm_limit"
+        in: "query"
+        description: "The maximum number of results returned per page (default: 10,000)"
+        required: false
+        schema: {}
+      - name: "sysparm_query_category"
+        in: "query"
+        description: "Name of the query category (read replica category) to use for\
+          \ queries"
+        required: false
+        schema: {}
+      responses:
+        "200":
+          description: "ok"
+          content:
+            application/json: {}
+            application/xml: {}
+            text/xml: {}
+  /api/now/attachment/file:
+    post:
+      description: "Upload an attachment from a binary request"
+      parameters:
+      - name: "table_name"
+        in: "query"
+        description: "Table to attach the file to"
+        required: true
+        schema: {}
+      - name: "table_sys_id"
+        in: "query"
+        description: "Record to attach the file to"
+        required: true
+        schema: {}
+      - name: "file_name"
+        in: "query"
+        description: "File name for the attachment"
+        required: true
+        schema: {}
+      - name: "encryption_context"
+        in: "query"
+        description: "Encryption Context or Crypto Module to be used if file to be\
+          \ saved encrypted"
+        required: false
+        schema: {}
+      - name: "creation_time"
+        in: "query"
+        description: "Custom creation time for the attachment"
+        required: false
+        schema: {}
+      requestBody:
+        content:
+          '*/*': {}
+      responses:
+        "200":
+          description: "ok"
+          content:
+            application/json: {}
+            application/xml: {}
+            text/xml: {}
+  /api/now/attachment/upload:
+    post:
+      description: "Upload an attachment from a multipart form"
+      parameters: []
+      requestBody:
+        content:
+          multipart/form-data: {}
+      responses:
+        "200":
+          description: "ok"
+          content:
+            application/json: {}
+            application/xml: {}
+            text/xml: {}
+  /api/now/attachment/{sys_id}:
+    get:
+      description: "Retrieve attachment metadata"
+      parameters:
+      - name: "sys_id"
+        in: "path"
+        required: true
+        schema: {}
+      responses:
+        "200":
+          description: "ok"
+          content:
+            application/json: {}
+            application/xml: {}
+            text/xml: {}
+    delete:
+      description: "Delete an attachment"
+      parameters:
+      - name: "sys_id"
+        in: "path"
+        required: true
+        schema: {}
+      responses:
+        "200":
+          description: "ok"
+          content:
+            application/json: {}
+            application/xml: {}
+            text/xml: {}
+  /api/now/attachment/{sys_id}/file:
+    get:
+      description: "Retrieve attachment content"
+      parameters:
+      - name: "sys_id"
+        in: "path"
+        required: true
+        schema: {}
+      responses:
+        "200":
+          description: "ok"
+          content:
+            '*/*': {}
+  /api/now/attachment/{table_sys_id}/{file_name}/file:
+    get:
+      description: "Retrieve first attachment content by file name"
+      parameters:
+      - name: "table_sys_id"
+        in: "path"
+        required: true
+        schema: {}
+      - name: "file_name"
+        in: "path"
+        required: true
+        schema: {}
+      responses:
+        "200":
+          description: "ok"
+          content:
+            '*/*': {}

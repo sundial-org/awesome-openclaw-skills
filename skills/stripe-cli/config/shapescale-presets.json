@@ -1,0 +1,34 @@
+{
+  "clinic_templates": {
+    "standard": {
+      "deposit": 5000,
+      "terms": "net30"
+    },
+    "premium": {
+      "deposit": 10000,
+      "terms": "net30"
+    },
+    "enterprise": {
+      "deposit": 25000,
+      "terms": "net60"
+    }
+  },
+  "subscription_plans": {
+    "monthly": {
+      "amount": 39900,
+      "interval": "month"
+    },
+    "annual": {
+      "amount": 399000,
+      "interval": "year"
+    },
+    "quarterly": {
+      "amount": 119700,
+      "interval": "month",
+      "count": 3
+    }
+  },
+  "tax_rate": 0.0875,
+  "default_currency": "usd",
+  "webhook_endpoint": "http://localhost:4242"
+}

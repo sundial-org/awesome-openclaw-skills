@@ -1,0 +1,33 @@
+[project]
+name = "vision-sandbox"
+version = "1.0.0"
+description = "Agentic Vision via Gemini's native Code Execution sandbox"
+readme = "README.md"
+authors = [{name = "Jo"}]
+repository = "https://github.com/johanesalxd/vision-sandbox"
+requires-python = ">=3.11"
+dependencies = [
+    "google-genai>=1.0.0",
+]
+
+[project.scripts]
+vision-sandbox = "scripts.vision_executor:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["scripts"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I"] # standard + imports
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "ruff>=0.14.14",
+]

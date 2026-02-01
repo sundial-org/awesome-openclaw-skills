@@ -1,0 +1,18 @@
+# local-whisper - Speech-to-text for OpenClaw
+# Local Whisper - Speech to text
+
+# Core
+python-dotenv>=1.0.0
+
+# OpenAI Whisper API
+openai>=1.12.0
+
+# Groq API (optional - fast & cheap cloud)
+groq>=0.4.0
+
+# Local faster-whisper (optional - CPU-based)
+faster-whisper>=1.0.0
+
+# MLX Lightning Whisper (Apple Silicon - fastest local option)
+# Only works on macOS with M1/M2/M3/M4
+lightning-whisper-mlx>=0.0.10; sys_platform == "darwin" and platform_machine == "arm64"

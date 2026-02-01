@@ -1,0 +1,98 @@
+{
+  "version": "1.0.0",
+  "last_updated": null,
+  "user_config": {
+    "cost_tracking_enabled": true,
+    "prefer_free_when_equal": true,
+    "max_parallel_tasks": 5,
+    "default_complexity_if_unknown": 3,
+    "fallback": {
+      "enabled": true,
+      "retry_delay_seconds": 2,
+      "track_failures": true,
+      "penalize_failures": true,
+      "failure_penalty_points": 5,
+      "notes": "Conservative fallback: Try primary 2x, then first runner-up 2x, then give up"
+    }
+  },
+  "agents": {},
+  "complexity_levels": {
+    "1": {
+      "name": "trivial",
+      "description": "Very simple, single-file, basic logic",
+      "examples": [
+        "Hello world",
+        "Simple variable assignment",
+        "Basic HTML page"
+      ]
+    },
+    "2": {
+      "name": "simple",
+      "description": "Straightforward with few edge cases",
+      "examples": [
+        "Contact form",
+        "Basic CRUD endpoint",
+        "Simple calculator"
+      ]
+    },
+    "3": {
+      "name": "moderate",
+      "description": "Multiple components, some complexity",
+      "examples": [
+        "Form with validation",
+        "API with authentication",
+        "Interactive dashboard"
+      ]
+    },
+    "4": {
+      "name": "complex",
+      "description": "Advanced features, multiple integrations",
+      "examples": [
+        "Real-time system",
+        "Complex state management",
+        "Multi-step wizard"
+      ]
+    },
+    "5": {
+      "name": "very-complex",
+      "description": "Highly sophisticated, novel solutions required",
+      "examples": [
+        "Distributed system",
+        "Advanced algorithms",
+        "Large-scale architecture"
+      ]
+    }
+  },
+  "_setup_instructions": {
+    "step_1": "Run: ./scripts/setup.sh",
+    "step_2": "Or manually add models from config/defaults/",
+    "step_3": "Or create custom agents following the schema below",
+    "agent_schema": {
+      "model_id": "provider/model-name",
+      "provider": "mistral|openai|google|openrouter|perplexity",
+      "context_window": 128000,
+      "enabled": true,
+      "user_cost": {
+        "type": "free|free-tier|pay-per-use|subscription",
+        "input_cost_per_million": 0,
+        "output_cost_per_million": 0,
+        "notes": "Your pricing notes",
+        "verified_date": "YYYY-MM-DD"
+      },
+      "capabilities": {
+        "category-name": {
+          "rating": "1-5 (stars)",
+          "max_complexity": "1-5 (ceiling)",
+          "experience_count": 0,
+          "notes": "Optional notes"
+        }
+      },
+      "performance_metrics": {
+        "tasks_completed": 0,
+        "success_rate": 0.0,
+        "avg_completion_time_minutes": null,
+        "total_tokens_used": 0
+      }
+    }
+  }
+}

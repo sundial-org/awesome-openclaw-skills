@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple Music Authorization - Clawdbot</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+        }
+        .container {
+            max-width: 500px;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+        .logo {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        .subtitle {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 30px;
+        }
+        .status {
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+        .status.loading {
+            background: rgba(255, 193, 7, 0.2);
+            color: #ffc107;
+        }
+        .status.success {
+            background: rgba(76, 175, 80, 0.2);
+            color: #4caf50;
+        }
+        .status.error {
+            background: rgba(244, 67, 54, 0.2);
+            color: #f44336;
+        }
+        .btn {
+            background: linear-gradient(135deg, #fc3c44 0%, #fa233b 100%);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin: 10px;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(252, 60, 68, 0.4);
+        }
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+        .btn.secondary {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        .btn.secondary:hover {
+            box-shadow: 0 5px 20px rgba(255, 255, 255, 0.2);
+        }
+        .token-box {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            padding: 15px;
+            margin: 20px 0;
+            word-break: break-all;
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 11px;
+            max-height: 150px;
+            overflow-y: auto;
+            text-align: left;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .copy-hint {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.5);
+            margin-top: 10px;
+        }
+        .instructions {
+            text-align: left;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        .instructions ol {
+            margin-left: 20px;
+        }
+        .instructions li {
+            margin: 10px 0;
+        }
+        .hidden {
+            display: none;
+        }
+        #tokenDisplay {
+            user-select: all;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">🎵</div>
+        <h1>Apple Music Authorization</h1>
+        <p class="subtitle">Connect your Apple Music account to Clawdbot</p>
+        
+        <div id="statusBox" class="status loading">
+            Initializing MusicKit...
+        </div>
+        
+        <div id="authSection" class="hidden">
+            <button id="authorizeBtn" class="btn" onclick="authorize()">
+                Sign in with Apple Music
+            </button>
+            <p class="copy-hint">You'll be asked to sign in with your Apple ID</p>
+        </div>
+        
+        <div id="successSection" class="hidden">
+            <p style="margin-bottom: 15px;">✅ Authorization successful!</p>
+            <p style="font-size: 14px; color: rgba(255,255,255,0.7); margin-bottom: 15px;">
+                Your Music User Token:
+            </p>
+            <div class="token-box">
+                <span id="tokenDisplay"></span>
+            </div>
+            <button class="btn" onclick="copyToken()">Copy Token</button>
+            <button class="btn secondary" onclick="window.close()">Close Window</button>
+            
+            <div class="instructions">
+                <strong>Next steps:</strong>
+                <ol>
+                    <li>Click "Copy Token" above</li>
+                    <li>Go back to your terminal</li>
+                    <li>Paste the token when prompted</li>
+                </ol>
+            </div>
+        </div>
+        
+        <div id="errorSection" class="hidden">
+            <p id="errorMessage"></p>
+            <button class="btn" onclick="location.reload()">Try Again</button>
+        </div>
+    </div>
+
+    <script src="https://js-cdn.music.apple.com/musickit/v3/musickit.js" async></script>
+    <script>
+        // Get developer token from URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const developerToken = urlParams.get('token');
+        
+        let musicUserToken = null;
+        
+        function showStatus(message, type) {
+            const statusBox = document.getElementById('statusBox');
+            statusBox.textContent = message;
+            statusBox.className = 'status ' + type;
+        }
+        
+        function showSection(sectionId) {
+            ['authSection', 'successSection', 'errorSection'].forEach(id => {
+                document.getElementById(id).classList.add('hidden');
+            });
+            document.getElementById(sectionId).classList.remove('hidden');
+        }
+        
+        function showError(message) {
+            showStatus(message, 'error');
+            document.getElementById('errorMessage').textContent = message;
+            showSection('errorSection');
+        }
+        
+        // Initialize MusicKit when loaded
+        document.addEventListener('musickitloaded', async function() {
+            if (!developerToken) {
+                showError('No developer token provided. Please run setup.sh again.');
+                return;
+            }
+            
+            try {
+                await MusicKit.configure({
+                    developerToken: developerToken,
+                    app: {
+                        name: 'Clawdbot Apple Music',
+                        build: '1.0.0'
+                    }
+                });
+                
+                showStatus('Ready to authorize', 'success');
+                showSection('authSection');
+                
+            } catch (err) {
+                console.error('MusicKit config error:', err);
+                showError('Failed to initialize MusicKit: ' + err.message);
+            }
+        });
+        
+        async function authorize() {
+            const btn = document.getElementById('authorizeBtn');
+            btn.disabled = true;
+            btn.textContent = 'Authorizing...';
+            showStatus('Waiting for Apple Music authorization...', 'loading');
+            
+            try {
+                const music = MusicKit.getInstance();
+                musicUserToken = await music.authorize();
+                
+                if (musicUserToken) {
+                    document.getElementById('tokenDisplay').textContent = musicUserToken;
+                    showStatus('Authorization successful!', 'success');
+                    showSection('successSection');
+                } else {
+                    throw new Error('No token received');
+                }
+            } catch (err) {
+                console.error('Authorization error:', err);
+                btn.disabled = false;
+                btn.textContent = 'Sign in with Apple Music';
+                
+                if (err.message.includes('cancelled') || err.name === 'USER_CANCELLED') {
+                    showStatus('Authorization cancelled. Try again when ready.', 'loading');
+                    showSection('authSection');
+                } else {
+                    showError('Authorization failed: ' + err.message);
+                }
+            }
+        }
+        
+        function copyToken() {
+            const token = document.getElementById('tokenDisplay').textContent;
+            navigator.clipboard.writeText(token).then(() => {
+                const btn = event.target;
+                const originalText = btn.textContent;
+                btn.textContent = 'Copied!';
+                setTimeout(() => {
+                    btn.textContent = originalText;
+                }, 2000);
+            }).catch(err => {
+                // Fallback for older browsers
+                const selection = window.getSelection();
+                const range = document.createRange();
+                range.selectNodeContents(document.getElementById('tokenDisplay'));
+                selection.removeAllRanges();
+                selection.addRange(range);
+                document.execCommand('copy');
+                alert('Token copied to clipboard!');
+            });
+        }
+        
+        // Timeout if MusicKit doesn't load
+        setTimeout(() => {
+            if (!window.MusicKit) {
+                showError('MusicKit failed to load. Please check your internet connection and try again.');
+            }
+        }, 10000);
+    </script>
+</body>
+</html>

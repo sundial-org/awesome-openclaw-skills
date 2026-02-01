@@ -1,0 +1,20 @@
+[project]
+name = "ggshield-skill"
+version = "1.0.0"
+description = "Moltbot skill for secret scanning using GitGuardian's ggshield"
+readme = "SKILL.md"
+license = { text = "MIT" }
+authors = [{ name = "GitGuardian Team" }]
+requires-python = ">=3.10"
+dependencies = [
+    "ggshield>=1.15.0",
+    "pygitguardian>=1.25.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/achillemascia/ggshield-skill"
+Repository = "https://github.com/achillemascia/ggshield-skill"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

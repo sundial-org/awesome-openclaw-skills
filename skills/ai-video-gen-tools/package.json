@@ -1,0 +1,34 @@
+{
+  "name": "ai-video-gen",
+  "version": "1.0.0",
+  "description": "End-to-end AI video generation - create videos from text prompts using image generation, video synthesis, voice-over, and editing. Supports OpenAI DALL-E, Replicate models, LumaAI, Runway, and FFmpeg editing.",
+  "main": "SKILL.md",
+  "scripts": {
+    "test": "cat SKILL.md | head -20"
+  },
+  "keywords": [
+    "video",
+    "ai",
+    "generation",
+    "text-to-video",
+    "image-to-video",
+    "lumaai",
+    "runway",
+    "replicate",
+    "ffmpeg",
+    "voiceover"
+  ],
+  "author": "jack happy",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "files": [
+    "SKILL.md",
+    "generate_video.py",
+    "images_to_video.py",
+    "add_voiceover.py",
+    "QUICK_START.md",
+    "README.md"
+  ]
+}

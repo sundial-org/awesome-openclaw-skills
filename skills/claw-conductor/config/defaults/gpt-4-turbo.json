@@ -1,0 +1,90 @@
+{
+  "model_id": "openai/gpt-4-turbo",
+  "provider": "openai",
+  "context_window": 128000,
+  "enabled": false,
+  "user_cost": {
+    "type": "pay-per-use",
+    "input_cost_per_million": 10.0,
+    "output_cost_per_million": 30.0,
+    "notes": "OpenAI API standard pricing (update during setup)",
+    "verified_date": null
+  },
+  "capabilities": {
+    "code-generation-new-features": {
+      "rating": 5,
+      "max_complexity": 5,
+      "notes": "Expert - high quality code generation"
+    },
+    "bug-detection-fixes": {
+      "rating": 4,
+      "max_complexity": 4
+    },
+    "multi-file-refactoring": {
+      "rating": 4,
+      "max_complexity": 4
+    },
+    "unit-test-generation": {
+      "rating": 4,
+      "max_complexity": 4,
+      "notes": "Advanced - comprehensive but sometimes loses to Llama"
+    },
+    "debugging-complex-issues": {
+      "rating": 4,
+      "max_complexity": 4
+    },
+    "api-development": {
+      "rating": 5,
+      "max_complexity": 5,
+      "notes": "Expert - excellent API design"
+    },
+    "security-vulnerability-detection": {
+      "rating": 4,
+      "max_complexity": 4
+    },
+    "security-fixes": {
+      "rating": 4,
+      "max_complexity": 4
+    },
+    "documentation-generation": {
+      "rating": 5,
+      "max_complexity": 5,
+      "notes": "Expert - clear, comprehensive docs"
+    },
+    "code-review": {
+      "rating": 4,
+      "max_complexity": 4
+    },
+    "frontend-development": {
+      "rating": 5,
+      "max_complexity": 5,
+      "notes": "Expert - strong UI component generation"
+    },
+    "backend-development": {
+      "rating": 5,
+      "max_complexity": 5,
+      "notes": "Expert - handles complex business logic"
+    },
+    "database-operations": {
+      "rating": 4,
+      "max_complexity": 4
+    },
+    "codebase-exploration": {
+      "rating": 4,
+      "max_complexity": 4
+    },
+    "dependency-management": {
+      "rating": 4,
+      "max_complexity": 4
+    },
+    "algorithm-implementation": {
+      "rating": 5,
+      "max_complexity": 5,
+      "notes": "Expert - strong mathematical reasoning"
+    },
+    "boilerplate-generation": {
+      "rating": 5,
+      "max_complexity": 5
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "id": "zhipu-mcp-tools",
+  "name": "Zhipu MCP Tools",
+  "version": "1.0.0",
+  "description": "使用智谱AI MCP服务器提供的多种AI能力，包括网页分析、视觉理解等功能",
+  "author": "Clawd User",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DeepMindOmega/zhipu-ai-comprehensive-mcp"
+  },
+  "main": "index.js",
+  "keywords": [
+    "clawd",
+    "skill",
+    "zhipu",
+    "ai",
+    "mcp",
+    "web-analysis",
+    "vision",
+    "search"
+  ],
+  "dependencies": {
+    "axios": "^1.6.0"
+  },
+  "clawd": {
+    "minVersion": "1.0.0",
+    "compatibility": "full",
+    "permissions": [
+      "network-access",
+      "http-client"
+    ],
+    "integrationPoints": [
+      "tool-call",
+      "api-wrapper"
+    ]
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "files": [
+    "index.js",
+    "plugin.js",
+    "README.md",
+    "SKILL.md",
+    "LICENSE",
+    "package.json"
+  ],
+  "categories": [
+    "ai-tools",
+    "analysis",
+    "utility"
+  ]
+}

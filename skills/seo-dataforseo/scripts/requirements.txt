@@ -1,0 +1,2 @@
+dataforseo-client>=1.0.34
+python-dotenv>=1.0.0

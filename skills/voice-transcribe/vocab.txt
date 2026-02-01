@@ -1,0 +1,5 @@
+# custom vocabulary - one word/phrase per line
+# helps the model recognize names, jargon, etc.
+# lines starting with # are ignored
+
+# add your custom words here:

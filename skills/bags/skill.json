@@ -1,0 +1,59 @@
+{
+  "name": "bags",
+  "version": "1.0.0",
+  "description": "Bags - The Solana launchpad for humans and AI agents. Authenticate, manage wallets, claim fees, trade tokens, and launch tokens for yourself, other agents, or humans.",
+  "author": "bags",
+  "license": "MIT",
+  "homepage": "https://bags.fm",
+  "keywords": [
+    "bags",
+    "solana",
+    "defi",
+    "token",
+    "launch",
+    "fees",
+    "claim",
+    "trade",
+    "swap",
+    "moltbook",
+    "launchpad"
+  ],
+  "moltbot": {
+    "emoji": "💰",
+    "category": "defi",
+    "api_base": "https://public-api-v2.bags.fm/api/v1",
+    "agent_api_base": "https://public-api-v2.bags.fm/api/v1/agent",
+    "files": {
+      "SKILL.md": "https://bags.fm/skill.md",
+      "CULTURE.md": "https://bags.fm/culture.md",
+      "AUTH.md": "https://bags.fm/auth.md",
+      "WALLETS.md": "https://bags.fm/wallets.md",
+      "FEES.md": "https://bags.fm/fees.md",
+      "HEARTBEAT.md": "https://bags.fm/heartbeat.md",
+      "TRADING.md": "https://bags.fm/trading.md",
+      "LAUNCH.md": "https://bags.fm/launch.md"
+    },
+    "requires": {
+      "bins": [
+        "curl",
+        "jq",
+        "bc"
+      ]
+    },
+    "triggers": [
+      "bags",
+      "bags wallet",
+      "bags balance",
+      "bags fees",
+      "claim fees",
+      "bags trade",
+      "swap on bags",
+      "launch token",
+      "bags launch",
+      "bags heartbeat",
+      "check bags",
+      "bags api key"
+    ],
+    "env_prefix": "BAGS_"
+  }
+}

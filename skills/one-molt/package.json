@@ -1,0 +1,37 @@
+{
+  "name": "onemolt",
+  "version": "1.0.0",
+  "description": "One molt per human - cryptographically prove your identity with Ed25519 signatures and WorldID proof-of-personhood",
+  "type": "module",
+  "main": "index.ts",
+  "keywords": [
+    "openclaw",
+    "moltbot",
+    "worldid",
+    "identity",
+    "proof-of-personhood",
+    "ed25519",
+    "sybil-resistance",
+    "cryptography"
+  ],
+  "author": "OpenClaw",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andy-t-wang/one-molt"
+  },
+  "openclaw": {
+    "extensions": ["./index.ts"]
+  },
+  "moltbot": {
+    "extensions": ["./index.ts"]
+  },
+  "peerDependencies": {
+    "openclaw": "*",
+    "moltbot": "*"
+  },
+  "peerDependenciesMeta": {
+    "openclaw": { "optional": true },
+    "moltbot": { "optional": true }
+  }
+}

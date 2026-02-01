@@ -1,0 +1,25 @@
+{
+  "name": "wojak-ink-skill",
+  "version": "1.0.0",
+  "description": "Browse, search, and analyze Wojak Farmers Plot NFTs from wojak.ink",
+  "main": "cli.js",
+  "bin": {
+    "wojak": "./cli.js",
+    "wojak-ink": "./cli.js"
+  },
+  "scripts": {
+    "test": "node cli.js --help"
+  },
+  "keywords": [
+    "wojak",
+    "nft",
+    "chia",
+    "mintgarden",
+    "dexie"
+  ],
+  "author": "Jeff Coleman",
+  "license": "MIT",
+  "dependencies": {
+    "node-fetch": "^2.6.7"
+  }
+}

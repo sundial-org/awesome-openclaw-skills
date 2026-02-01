@@ -1,0 +1,140 @@
+{
+  "model_id": "anthropic/claude-sonnet-4.5",
+  "provider": "anthropic",
+  "context_window": 200000,
+  "enabled": false,
+  "user_cost": {
+    "type": "pay-per-use",
+    "input_cost_per_million": 3.0,
+    "output_cost_per_million": 15.0,
+    "notes": "Claude API standard pricing (update during setup)",
+    "verified_date": null
+  },
+  "capabilities": {
+    "code-generation-new-features": {
+      "rating": 5,
+      "max_complexity": 5,
+      "notes": "Expert - produces most elegant code"
+    },
+    "bug-detection-fixes": {
+      "rating": 5,
+      "max_complexity": 5,
+      "notes": "Expert - best at subtle logic errors"
+    },
+    "multi-file-refactoring": {
+      "rating": 4,
+      "max_complexity": 4,
+      "notes": "Advanced - strong at complex reasoning"
+    },
+    "unit-test-generation": {
+      "rating": 5,
+      "max_complexity": 5,
+      "notes": "Expert - comprehensive edge-case coverage"
+    },
+    "debugging-complex-issues": {
+      "rating": 5,
+      "max_complexity": 5,
+      "notes": "Expert - multi-agent system traces cross-file dependencies best"
+    },
+    "api-development": {
+      "rating": 5,
+      "max_complexity": 5,
+      "notes": "Expert - generates OpenAPI specs and understands patterns deeply"
+    },
+    "security-vulnerability-detection": {
+      "rating": 4,
+      "max_complexity": 4,
+      "notes": "Advanced - 14% TPR, strong IDOR detection"
+    },
+    "security-fixes": {
+      "rating": 4,
+      "max_complexity": 4
+    },
+    "documentation-generation": {
+      "rating": 5,
+      "max_complexity": 5,
+      "notes": "Expert - creates living documentation with rationale"
+    },
+    "code-review": {
+      "rating": 5,
+      "max_complexity": 5,
+      "notes": "Expert - catches subjective issues (naming, stale comments)"
+    },
+    "frontend-development": {
+      "rating": 5,
+      "max_complexity": 5,
+      "notes": "Expert - near-parity with Devstral for UI components"
+    },
+    "backend-development": {
+      "rating": 5,
+      "max_complexity": 5,
+      "notes": "Expert - best at complex business logic"
+    },
+    "database-operations": {
+      "rating": 5,
+      "max_complexity": 5,
+      "notes": "Expert - generates ORM with proper migrations"
+    },
+    "codebase-exploration": {
+      "rating": 5,
+      "max_complexity": 5,
+      "notes": "Expert - uses dedicated subagents"
+    },
+    "dependency-management": {
+      "rating": 4,
+      "max_complexity": 4,
+      "notes": "Advanced - handles package management well"
+    },
+    "legacy-modernization": {
+      "rating": 4,
+      "max_complexity": 4,
+      "notes": "Advanced - strong on refactoring"
+    },
+    "error-correction": {
+      "rating": 5,
+      "max_complexity": 5,
+      "notes": "Expert - multi-agent retry system"
+    },
+    "performance-optimization": {
+      "rating": 5,
+      "max_complexity": 5,
+      "notes": "Expert - identifies algorithmic bottlenecks"
+    },
+    "test-coverage-analysis": {
+      "rating": 5,
+      "max_complexity": 5,
+      "notes": "Expert - achieves 80% coverage sweet spot"
+    },
+    "algorithm-implementation": {
+      "rating": 5,
+      "max_complexity": 5,
+      "notes": "Expert - 100% AIME 2025 score"
+    },
+    "boilerplate-generation": {
+      "rating": 5,
+      "max_complexity": 5,
+      "notes": "Expert - handles scaffolding, CRUD, auth flows"
+    },
+    "ci-cd-integration": {
+      "rating": 4,
+      "max_complexity": 4,
+      "notes": "Advanced - integrates with GitHub Actions"
+    },
+    "configuration-management": {
+      "rating": 4,
+      "max_complexity": 4,
+      "notes": "Advanced - handles complex build scripts"
+    },
+    "real-time-collaboration": {
+      "rating": 5,
+      "max_complexity": 5,
+      "notes": "Expert - message queuing acts like pair programmer"
+    }
+  },
+  "benchmark_scores": {
+    "swe_bench_verified": 77.2,
+    "swe_bench_lite": 39.8,
+    "humaneval": 93.7,
+    "math_benchmark": 78.3
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "game-character-gen",
+  "version": "1.0.0",
+  "description": "Generate professional game character designs via OpenAI Images API. Create diverse characters for RPGs, video games, tabletop games, and interactive media.",
+  "main": "SKILL.md",
+  "keywords": [
+    "gaming",
+    "character-design",
+    "rpg",
+    "game-art",
+    "character-concept",
+    "openai",
+    "image-generation",
+    "fantasy",
+    "cyberpunk",
+    "game-sprites"
+  ],
+  "author": "jack happy",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "files": [
+    "SKILL.md"
+  ]
+}

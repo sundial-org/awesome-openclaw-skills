@@ -1,0 +1,23 @@
+{
+  "name": "dokploy",
+  "version": "1.0.0",
+  "description": "Manage Dokploy deployments, projects, applications, and domains via Dokploy API.",
+  "keywords": ["dokploy", "deployment", "docker", "devops"],
+  "author": "Clawdbot Community",
+  "license": "MIT",
+  "clawdhub": {
+    "slug": "dokploy",
+    "category": "devops",
+    "requires": {
+      "bins": ["curl", "jq"]
+    },
+    "env": ["DOKPLOY_API_URL", "DOKPLOY_API_KEY"]
+  },
+  "scripts": {
+    "dokploy": "./scripts/dokploy.sh",
+    "dokploy-config": "./scripts/dokploy-config.sh",
+    "dokploy-project": "./scripts/dokploy-project.sh",
+    "dokploy-app": "./scripts/dokploy-app.sh",
+    "dokploy-domain": "./scripts/dokploy-domain.sh"
+  }
+}

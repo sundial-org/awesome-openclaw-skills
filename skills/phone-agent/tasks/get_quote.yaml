@@ -1,0 +1,31 @@
+name: get_quote
+objective: Get pricing information from a service provider (photographer, contractor, etc.)
+flow:
+  - Explain you're calling to inquire about their services
+  - Describe what you need briefly
+  - Ask about pricing/packages
+  - Ask about availability
+  - Ask what's included in the price
+  - Ask about payment terms/deposits
+  - Get contact info for follow-up if needed
+
+info_to_gather:
+  - Service provider name
+  - Pricing/packages offered
+  - What's included in each package
+  - Availability for your date
+  - Deposit requirements
+  - Cancellation policy
+  - Contact email/phone for booking
+  - Any current promotions
+
+success_criteria:
+  - Pricing information obtained
+  - Availability confirmed for date range
+  - Clear next steps for booking
+
+system_prompt_addition: |
+  You are calling to get a quote for services. Be professional but friendly.
+  Ask clear questions about pricing and what's included.
+  Don't commit to booking - just gather information.
+  Take notes on everything they tell you about pricing.

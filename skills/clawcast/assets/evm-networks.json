@@ -1,0 +1,161 @@
+{
+  "version": 1,
+  "evmNetworks": [
+    {
+      "key": "ethereum",
+      "name": "Ethereum Mainnet",
+      "chainId": 1,
+      "rpcUrls": [
+        "https://cloudflare-eth.com",
+        "https://rpc.ankr.com/eth",
+        "https://1rpc.io/eth"
+      ],
+      "links": {
+        "chainlist": "https://chainlist.org/chain/1"
+      }
+    },
+    {
+      "key": "arbitrum_one",
+      "name": "Arbitrum One",
+      "chainId": 42161,
+      "rpcUrls": [
+        "https://arb1.arbitrum.io/rpc"
+      ],
+      "links": {
+        "docs": "https://docs.arbitrum.io/build-decentralized-apps/reference/node-providers",
+        "chainlist": "https://chainlist.org/chain/42161"
+      }
+    },
+    {
+      "key": "optimism",
+      "name": "OP Mainnet (Optimism)",
+      "chainId": 10,
+      "rpcUrls": [
+        "https://mainnet.optimism.io"
+      ],
+      "links": {
+        "docs": "https://docs.optimism.io/op-mainnet/network-information/connecting-to-op",
+        "chainlist": "https://chainlist.org/chain/10"
+      }
+    },
+    {
+      "key": "base",
+      "name": "Base",
+      "chainId": 8453,
+      "rpcUrls": [
+        "https://mainnet.base.org",
+        "https://mainnet-preconf.base.org"
+      ],
+      "links": {
+        "docs": "https://docs.base.org/base-chain/quickstart/connecting-to-base",
+        "chainlist": "https://chainlist.org/chain/8453"
+      }
+    },
+    {
+      "key": "polygon_pos",
+      "name": "Polygon PoS",
+      "chainId": 137,
+      "rpcUrls": [
+        "https://polygon-rpc.com/"
+      ],
+      "links": {
+        "docs": "https://docs.polygon.technology/pos/reference/rpc-endpoints/",
+        "chainlist": "https://chainlist.org/chain/137"
+      }
+    },
+    {
+      "key": "bsc",
+      "name": "BNB Smart Chain",
+      "chainId": 56,
+      "rpcUrls": [
+        "https://bsc-dataseed.bnbchain.org",
+        "https://bsc-dataseed.nariox.org",
+        "https://bsc-dataseed.defibit.io",
+        "https://bsc-dataseed.ninicoin.io",
+        "https://bsc.nodereal.io",
+        "https://bsc-dataseed-public.bnbchain.org"
+      ],
+      "links": {
+        "docs": "https://docs.bnbchain.org/bnb-smart-chain/developers/json_rpc/json-rpc-endpoint/",
+        "chainlist": "https://chainlist.org/chain/56"
+      }
+    },
+    {
+      "key": "avalanche_c",
+      "name": "Avalanche C-Chain",
+      "chainId": 43114,
+      "rpcUrls": [
+        "https://api.avax.network/ext/bc/C/rpc"
+      ],
+      "links": {
+        "docs": "https://build.avax.network/docs/primary-network",
+        "chainlist": "https://chainlist.org/chain/43114"
+      }
+    },
+    {
+      "key": "gnosis",
+      "name": "Gnosis Chain",
+      "chainId": 100,
+      "rpcUrls": [
+        "https://rpc.gnosis.gateway.fm",
+        "https://rpc.gnosischain.com",
+        "https://rpc.ankr.com/gnosis"
+      ],
+      "links": {
+        "chainlist": "https://chainlist.org/chain/100"
+      }
+    },
+    {
+      "key": "fantom",
+      "name": "Fantom Opera",
+      "chainId": 250,
+      "rpcUrls": [
+        "https://rpcapi.fantom.network",
+        "https://fantom.rpc.thirdweb.com/"
+      ],
+      "links": {
+        "docs_wallet": "https://docs.fantom.foundation/wallets/metamask",
+        "docs_public_endpoints": "https://docs.fantom.foundation/build-on-opera/api/public-endpoints",
+        "chainlist": "https://chainlist.org/chain/250"
+      }
+    },
+    {
+      "key": "zksync_era",
+      "name": "zkSync Era",
+      "chainId": 324,
+      "rpcUrls": [
+        "https://mainnet.era.zksync.io"
+      ],
+      "wsUrls": [
+        "wss://mainnet.era.zksync.io/ws"
+      ],
+      "links": {
+        "docs": "https://docs.zksync.io/zksync-network/zksync-era/network-details",
+        "chainlist": "https://chainlist.org/chain/324"
+      }
+    },
+    {
+      "key": "linea",
+      "name": "Linea",
+      "chainId": 59144,
+      "rpcUrls": [
+        "https://rpc.linea.build"
+      ],
+      "links": {
+        "chainlist": "https://chainlist.org/chain/59144"
+      }
+    },
+    {
+      "key": "scroll",
+      "name": "Scroll",
+      "chainId": 534352,
+      "rpcUrls": [
+        "https://rpc.scroll.io/"
+      ],
+      "links": {
+        "docs": "https://docs.scroll.io/en/developers/",
+        "chainlist": "https://chainlist.org/chain/534352"
+      }
+    }
+  ]
+}

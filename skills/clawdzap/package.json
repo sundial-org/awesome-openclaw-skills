@@ -1,0 +1,10 @@
+{
+  "name": "clawdzap",
+  "version": "0.2.0",
+  "description": "Decentralized P2P Messaging for Agents",
+  "main": "send.js",
+  "dependencies": {
+    "nostr-tools": "^2.1.0",
+    "websocket": "^1.0.34"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Job title"
+    },
+    "company": {
+      "type": "string",
+      "description": "Company name"
+    },
+    "location": {
+      "type": "string",
+      "description": "Job location (city, state, remote, etc.)"
+    },
+    "description": {
+      "type": "string",
+      "description": "Full job description"
+    },
+    "salary": {
+      "type": "string",
+      "description": "Salary range or information"
+    },
+    "apply_url": {
+      "type": "string",
+      "description": "URL to apply for the job"
+    },
+    "posted_date": {
+      "type": "string",
+      "description": "Date job was posted"
+    },
+    "requirements": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of job requirements/qualifications"
+    },
+    "responsibilities": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of job responsibilities"
+    },
+    "employment_type": {
+      "type": "string",
+      "description": "Full-time, part-time, contract, etc."
+    },
+    "experience_level": {
+      "type": "string",
+      "description": "Entry-level, Mid-level, Senior, etc."
+    }
+  },
+  "required": ["title", "company", "description"],
+  "additionalProperties": true
+}
