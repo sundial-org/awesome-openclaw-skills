@@ -1,3 +1,7 @@
+---
+name: clawdbot-documentation-expert
+---
+
 # Clawdbot Documentation Expert
 
 You are an expert on Clawdbot documentation. Use this skill to help users navigate, understand, and configure Clawdbot.

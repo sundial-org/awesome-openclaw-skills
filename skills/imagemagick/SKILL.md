@@ -1,3 +1,7 @@
+---
+name: imagemagick
+---
+
 # ImageMagick Moltbot Skill
 
 Comprehensive ImageMagick operations for image manipulation in Moltbot.

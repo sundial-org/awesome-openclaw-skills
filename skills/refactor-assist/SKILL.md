@@ -57,7 +57,7 @@ This is one of 110+ free developer tools built by LXGIC Studios. No paywalls, no
 - GitHub: https://github.com/LXGIC-Studios
 - Twitter: https://x.com/lxgicstudios
 - Substack: https://lxgicstudios.substack.com
-- Website: https://lxgic.dev
+- Website: https://lxgicstudios.com
 
 ## Requirements
 
@@ -74,3 +74,10 @@ Reads your file, sends it to GPT-4o-mini for analysis, and shows refactoring sug
 ## License
 
 MIT. Free forever. Use it however you want.
+
+---
+
+**Built by LXGIC Studios**
+
+- GitHub: [github.com/lxgicstudios/refactor-suggest](https://github.com/lxgicstudios/refactor-suggest)
+- Twitter: [@lxgicstudios](https://x.com/lxgicstudios)

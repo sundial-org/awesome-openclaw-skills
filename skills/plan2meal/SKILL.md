@@ -1,3 +1,7 @@
+---
+name: plan2meal
+---
+
 # Plan2Meal Skill
 
 A ClawdHub skill for managing recipes and grocery lists via Plan2Meal, a React Native recipe app.

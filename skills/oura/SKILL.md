@@ -1,3 +1,7 @@
+---
+name: oura
+---
+
 # Oura Ring CLI Skill
 
 ## Description

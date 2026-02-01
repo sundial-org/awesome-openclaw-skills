@@ -1,3 +1,7 @@
+---
+name: lancedb-memory
+---
+
 #!/usr/bin/env python3
 """
 LanceDB integration for long-term memory management.

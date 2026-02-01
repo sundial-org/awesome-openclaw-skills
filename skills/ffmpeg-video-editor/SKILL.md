@@ -1,5 +1,5 @@
 ---
-name: FFmpeg Video Editor
+name: ffmpeg-video-editor
 description: Generate FFmpeg commands from natural language video editing requests - cut, trim, convert, compress, change aspect ratio, extract audio, and more.
 ---
 

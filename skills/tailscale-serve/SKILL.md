@@ -1,3 +1,7 @@
+---
+name: tailscale-serve
+---
+
 # Tailscale Serve Skill
 
 Manage multiple paths with `tailscale serve` without conflicts.

@@ -1,3 +1,0 @@
-openai-whisper>=20231117
-soundfile>=0.12.1
-numpy>=1.21.0
