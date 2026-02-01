@@ -16,26 +16,31 @@ See below for skills to try! 🦞
 
 ## Contents
 
-- [Agent Core & Memory](#agent-core--memory)
-- [Productivity & Tasks](#productivity--tasks)
-- [Developer Tools](#developer-tools)
-- [Web & Search](#web--search)
-- [Communication & Email](#communication--email)
-- [Social Media](#social-media)
-- [Content & Writing](#content--writing)
-- [Video & YouTube](#video--youtube)
-- [Audio & Speech](#audio--speech)
-- [Image Generation](#image-generation)
-- [Finance & Trading](#finance--trading)
-- [Smart Home & Devices](#smart-home--devices)
-- [Notes & Knowledge](#notes--knowledge)
-- [Research & Education](#research--education)
-- [Security](#security)
-- [Documents & Presentations](#documents--presentations)
-- [Health & Wellness](#health--wellness)
-- [Cloud & Infrastructure](#cloud--infrastructure)
-- [Lifestyle & Fun](#lifestyle--fun)
-- [Utilities](#utilities)
+- [Awesome OpenClaw Skills](#awesome-openclaw-skills)
+  - [Install](#install)
+  - [Contents](#contents)
+  - [Agent Core \& Memory](#agent-core--memory)
+  - [Productivity \& Tasks](#productivity--tasks)
+  - [Developer Tools](#developer-tools)
+  - [Web \& Search](#web--search)
+  - [Communication \& Email](#communication--email)
+  - [Social Media](#social-media)
+  - [Content \& Writing](#content--writing)
+  - [Video \& YouTube](#video--youtube)
+  - [Audio \& Speech](#audio--speech)
+  - [Image Generation](#image-generation)
+  - [Finance \& Trading](#finance--trading)
+  - [Smart Home \& Devices](#smart-home--devices)
+  - [Notes \& Knowledge](#notes--knowledge)
+  - [Research \& Education](#research--education)
+  - [Security](#security)
+  - [Documents \& Presentations](#documents--presentations)
+  - [Health \& Wellness](#health--wellness)
+  - [Cloud \& Infrastructure](#cloud--infrastructure)
+  - [Lifestyle \& Fun](#lifestyle--fun)
+  - [Utilities](#utilities)
+  - [Contributing](#contributing)
+  - [License](#license)
 
 ---
 
@@ -118,7 +123,7 @@ See below for skills to try! 🦞
 | [**Context Compressor**](./skills/context-compressor) | `context-compressor` |  | [65](https://www.clawhub.com/maddiedreese/context-compressor) |
 | [**tekin**](./skills/agent-browser-5) | `agent-browser-5` | A fast Rust-based headless browser automation CLI with Node.js fallback that enables AI agents to navigate, click, type, and snapshot pages via structured commands. | [63](https://www.clawhub.com/gwqwghksvq-sketch/agent-browser-5) |
 | [**Satori**](./skills/satori) | `satori` | Persistent long term memory for for continuity in ai sessions between providers and codegen tools. | [63](https://www.clawhub.com/joelachance/satori) |
-| [**Language Learning Tutor**](./skills/language-learning) | `language-learning` | AI language tutor for learning ANY language through conversation, vocab drills, grammar lessons, flashcards, and immersive practice. Use when the user wants to: learn a new language, practice vocab... | [61](https://www.clawhub.com/Alec Gutman/language-learning) |
+| [**Language Learning Tutor**](./skills/language-learning) | `language-learning` | AI language tutor for learning ANY language through conversation, vocab drills, grammar lessons, flashcards, and immersive practice. Use when the user wants to: learn a new language, practice vocab... | [61](https://www.clawhub.com/Chipagosfinest/language-learning) |
 | [**People Memories**](./skills/people-memories) | `people-memories` | Capture short personal notes about people you mention, store them in a lightweight DB, and recall those details whenever you ask about them later. Use when you want to remember preferences, reminde... | [61](https://www.clawhub.com/charbeld/people-memories) |
 | [**Transcript to Content**](./skills/transcript-to-content) | `transcript-to-content` | This skill transforms training and onboarding meeting transcripts into structured learning materials, documentation, and actionable review content. Use this skill when processing meeting transcript... | [61](https://www.clawhub.com/TomsTools11/transcript-to-content) |
 | [**Agent Registry**](./skills/agent-registry) | `agent-registry` | MANDATORY agent discovery system for token-efficient agent loading. Claude MUST use this skill instead of loading agents directly from ~/.claude/agents/ or .claude/agents/. Provides lazy loading vi... | [59](https://www.clawhub.com/MaTriXy/agent-registry) |
@@ -142,7 +147,7 @@ See below for skills to try! 🦞
 | [**Gemini Deep Research**](./skills/gemini-deep-research) | `gemini-deep-research` | Perform complex, long-running research tasks using Gemini Deep Research Agent. Use when asked to research topics requiring multi-source synthesis, competitive analysis, market research, or comprehe... | [668](https://www.clawhub.com/arun-8687/gemini-deep-research) |
 | [**Claude Code Usage**](./skills/claude-code-usage) | `claude-code-usage` | Check Claude Code OAuth usage limits (session & weekly quotas). Use when user asks about Claude Code usage, remaining limits, rate limits, or how much Claude usage they have left. Includes automate... | [610](https://www.clawhub.com/azaidi94/claude-code-usage) |
 | [**Qmd**](./skills/qmd) | `qmd` | Local search/indexing CLI (BM25 + vectors + rerank) with MCP mode. | [601](https://www.clawhub.com/steipete/qmd) |
-| [**Cursor CLI Agent**](./skills/cursor-agent) | `cursor-agent` | A comprehensive skill for using the Cursor CLI agent for various software engineering tasks (updated for 2026 features, includes tmux automation guide). | [583](https://www.clawhub.com/Pushpinder Pal Singh/cursor-agent) |
+| [**Cursor CLI Agent**](./skills/cursor-agent) | `cursor-agent` | A comprehensive skill for using the Cursor CLI agent for various software engineering tasks (updated for 2026 features, includes tmux automation guide). | [583](https://www.clawhub.com/swiftlysingh/cursor-agent) |
 | [**n8n**](./skills/n8n) | `n8n` | Manage n8n workflows and automations via API. Use when working with n8n workflows, executions, or automation tasks - listing workflows, activating/deactivating, checking execution status, manually ... | [573](https://www.clawhub.com/thomasansems/n8n) |
 | [**Openai Image Gen**](./skills/openai-image-gen) | `openai-image-gen` | Batch-generate images via OpenAI Images API. Random prompt sampler + `index.html` gallery. | [572](https://www.clawhub.com/steipete/openai-image-gen) |
 | [**Linear**](./skills/linear) | `linear` | Query and manage Linear issues, projects, and team workflows. | [556](https://www.clawhub.com/ManuelHettich/linear) |
@@ -155,7 +160,7 @@ See below for skills to try! 🦞
 | [**Vercel React Best Practices**](./skills/vercel-react-best-practices) | `vercel-react-best-practices` | React and Next.js performance optimization guidelines from Vercel Engineering. This skill should be used when writing, reviewing, or refactoring React/Next.js code to ensure optimal performance pat... | [333](https://www.clawhub.com/vercel/vercel-react-best-practices) |
 | [**Model Router**](./skills/model-router) | `model-router` | A comprehensive AI model routing system that automatically selects the optimal model for any task. Set up multiple AI providers (Anthropic, OpenAI, Gemini, Moonshot, Z.ai, GLM) with secure API key ... | [323](https://www.clawhub.com/digitaladaption/model-router) |
 | [**Answer Overflow**](./skills/answeroverflow) | `answeroverflow` | Search indexed Discord community discussions via Answer Overflow. Find solutions to coding problems, library issues, and community Q&A that only exist in Discord conversations. | [303](https://www.clawhub.com/RhysSullivan/answeroverflow) |
-| [**Prd**](./skills/prd) | `prd` | Create and manage Product Requirements Documents (PRDs). Use when: (1) Creating structured task lists with user stories, (2) Specifying features with acceptance criteria, (3) Planning feature imple... | [300](https://www.clawhub.com/Benjamin Jesuiter <bjesuiter@gmail.com>/prd) |
+| [**Prd**](./skills/prd) | `prd` | Create and manage Product Requirements Documents (PRDs). Use when: (1) Creating structured task lists with user stories, (2) Specifying features with acceptance criteria, (3) Planning feature imple... | [300](https://www.clawhub.com/bjesuiter/prd) |
 | [**Obsidian Daily**](./skills/obsidian-daily) | `obsidian-daily` | Manage Obsidian Daily Notes via obsidian-cli. Create and open daily notes, append entries (journals, logs, tasks, links), read past notes by date, and search vault content. Handles relative dates l... | [281](https://www.clawhub.com/bastos/obsidian-daily) |
 | [**dexter**](./skills/dexter) | `dexter` | Autonomous financial research agent for stock analysis, financial statements, metrics, prices, SEC filings, and crypto data. | [278](https://www.clawhub.com/igorhvr/dexter) |
 | [**SkillLens Audit**](./skills/skills-audit) | `skills-audit` | Audit locally installed agent skills for security/policy issues using the SkillLens CLI (`skilllens scan`, `skilllens config`). Use when asked to scan a skills directory (Codex/Claude) and produce ... | [264](https://www.clawhub.com/morozRed/skills-audit) |
@@ -244,7 +249,7 @@ See below for skills to try! 🦞
 | [**Linear**](./skills/linear-2) | `linear-2` | Manage Linear projects, issues, and tasks via the Linear API. Use when you need to create, update, search, or manage Linear issues, projects, teams, milestones, comments, or labels. Supports all Li... | [58](https://www.clawhub.com/MaTriXy/linear-2) |
 | [**Get Focus Mode**](./skills/get-focus-mode) | `get-focus-mode` | Get the current macOS Focus mode | [57](https://www.clawhub.com/NickChristensen/get-focus-mode) |
 | [**OmniFocus**](./skills/omnifocus-2) | `omnifocus-2` | Manage OmniFocus tasks via JavaScript for Automation (JXA) scripts. Use when the user asks Clawdbot to interact with OmniFocus, including - (1) Adding tasks to inbox, (2) Listing or searching tasks... | [57](https://www.clawhub.com/shenzo1/omnifocus-2) |
-| [**Zoho**](./skills/zoho) | `zoho` | Interact with Zoho CRM, Projects, and Meeting APIs. Use when managing deals, contacts, leads, tasks, projects, milestones, meeting recordings, or any Zoho workspace data. Triggers on mentions of Zo... | [56](https://www.clawhub.com/Zone 99 team/zoho) |
+| [**Zoho**](./skills/zoho) | `zoho` | Interact with Zoho CRM, Projects, and Meeting APIs. Use when managing deals, contacts, leads, tasks, projects, milestones, meeting recordings, or any Zoho workspace data. Triggers on mentions of Zo... | [56](https://www.clawhub.com/shreefentsar/zoho) |
 | [**Meshy AI**](./skills/meshy-ai) | `meshy-ai` | Use the Meshy.ai REST API to generate assets: (1) text-to-2d (Meshy Text to Image) and (2) image-to-3d, then download outputs locally. Use when the user wants Meshy generations, needs polling async... | [55](https://www.clawhub.com/sabatesduran/meshy-ai) |
 | [**Timesheet - Time Tracking**](./skills/timesheet) | `timesheet` | Track time, manage projects and tasks using timesheet.io CLI | [55](https://www.clawhub.com/FlorianRauscha/timesheet) |
 | [**Basecamp CLI**](./skills/basecamp-cli) | `basecamp-cli` | Manage Basecamp (via bc3 API / 37signals Launchpad) projects, to-dos, messages, and campfires via a TypeScript CLI. Use when you want to list/create/update Basecamp projects and todos from the term... | [54](https://www.clawhub.com/emredoganer/basecamp-cli) |
@@ -280,7 +285,7 @@ See below for skills to try! 🦞
 | [**UI/UX Pro Max**](./skills/ui-ux-pro-max) | `ui-ux-pro-max` | UI/UX design intelligence and implementation guidance for building polished interfaces. Use when the user asks for UI design, UX flows, information architecture, visual style direction, design syst... | [667](https://www.clawhub.com/xobi667/ui-ux-pro-max) |
 | [**Moltbook Agent Registry**](./skills/molt-registry) | `molt-registry` | Official Moltbook Identity Registry interface. Verify yourself, lookup others, and build on-chain reputation. | [635](https://www.clawhub.com/drjmz/molt-registry) |
 | [**Exa Web Search (Free)**](./skills/exa-web-search-free) | `exa-web-search-free` | Free AI search via Exa MCP. Web search for news/info, code search for docs/examples from GitHub/StackOverflow, company research for business intel. No API key needed. | [615](https://www.clawhub.com/Whiteknight07/exa-web-search-free) |
-| [**UI Audit**](./skills/ui-audit) | `ui-audit` | AI skill for automated UI audits. Evaluate interfaces against proven UX principles for visual hierarchy, accessibility, cognitive load, navigation, and more. Based on Making UX Decisions by Tommy G... | [575](https://www.clawhub.com/Tommy Geoco/ui-audit) |
+| [**UI Audit**](./skills/ui-audit) | `ui-audit` | AI skill for automated UI audits. Evaluate interfaces against proven UX principles for visual hierarchy, accessibility, cognitive load, navigation, and more. Based on Making UX Decisions by Tommy G... | [575](https://www.clawhub.com/tommygeoco/ui-audit) |
 | [**Swiftui Ui Patterns**](./skills/swiftui-ui-patterns) | `swiftui-ui-patterns` | Best practices and example-driven guidance for building SwiftUI views and components. Use when creating or refactoring SwiftUI UI, designing tab architecture with TabView, composing screens, or nee... | [549](https://www.clawhub.com/Dimillian/swiftui-ui-patterns) |
 | [**Stock Market Pro**](./skills/stock-market-pro) | `stock-market-pro` | Professional stock price tracking, fundamental analysis, and financial reporting tool. Supports global markets (US, KR, etc.), Crypto, and Forex with real-time data. (1) Real-time quotes, (2) Valua... | [512](https://www.clawhub.com/kys42/stock-market-pro) |
 | [**Heurist Mesh Crypto Analysis Skill**](./skills/heurist-mesh) | `heurist-mesh` | Access Web3 and crypto intelligence via Heurist Mesh MCP. Use when the user asks about cryptocurrency analytics, token information, trending tokens, wallet analysis, Twitter/X crypto intelligence, ... | [482](https://www.clawhub.com/wjw12/heurist-mesh) |
@@ -359,7 +364,7 @@ See below for skills to try! 🦞
 | [**Skill Email Management**](./skills/email-management-expert) | `email-management-expert` | Expert email management assistant for Apple Mail. Use this when the user mentions inbox management, email organization, email triage, inbox zero, organizing emails, managing mail folders, email pro... | [107](https://www.clawhub.com/latisen/email-management-expert) |
 | [**UI Test**](./skills/ui-test) | `ui-test` | Plain English E2E UI testing. Describe tests in natural language, agent executes via browser tool, then exports real Playwright test scripts for CI/CD. Use when asked to create UI tests, test a web... | [106](https://www.clawhub.com/clawd21/ui-test) |
 | [**Dokploy**](./skills/dokploy) | `dokploy` | Manage Dokploy deployments, projects, applications, and domains via the Dokploy API. | [105](https://www.clawhub.com/JoshuaRileyDev/dokploy) |
-| [**Nb**](./skills/nb) | `nb` | Manage notes, bookmarks, and notebooks using the nb CLI. Create, list, search, and organize notes across multiple notebooks with Git-backed versioning. | [105](https://www.clawhub.com/Benjamin Jesuiter <bjesuiter@gmail.com>/nb) |
+| [**Nb**](./skills/nb) | `nb` | Manage notes, bookmarks, and notebooks using the nb CLI. Create, list, search, and organize notes across multiple notebooks with Git-backed versioning. | [105](https://www.clawhub.com/bjesuiter/nb) |
 | [**Canva**](./skills/canva) | `canva` | Create, export, and manage Canva designs via the Connect API. Generate social posts, carousels, and graphics programmatically. | [105](https://www.clawhub.com/abgohel/canva) |
 | [**Weathercli**](./skills/weathercli) | `weathercli` | Get current weather conditions and forecasts for any location worldwide. Returns structured data with temperature, humidity, wind, precipitation, and more. No API key required. | [105](https://www.clawhub.com/pjtf93/weathercli) |
 | [**Email Best Practices**](./skills/email-best-practices) | `email-best-practices` | Use when building email features, emails going to spam, high bounce rates, setting up SPF/DKIM/DMARC authentication, implementing email capture, ensuring compliance (CAN-SPAM, GDPR, CASL), handling... | [104](https://www.clawhub.com/christina-de-martinez/email-best-practices) |
@@ -616,7 +621,7 @@ See below for skills to try! 🦞
 | [**Yt Dlp Downloader**](./skills/yt-dlp-downloader) | `yt-dlp-downloader` | Download videos from YouTube, Bilibili, Twitter, and thousands of other sites using yt-dlp. Use when the user provides a video URL and wants to download it, extract audio (MP3), download subtitles,... | [388](https://www.clawhub.com/apollo1234/yt-dlp-downloader) |
 | [**Instagram**](./skills/instagram) | `instagram` | Instagram platform integration. Post content, manage stories, view insights, and engage with followers. | [357](https://www.clawhub.com/0xterrybit/instagram) |
 | [**TikTok**](./skills/tiktok) | `tiktok` | TikTok platform integration. Manage videos, view analytics, and track engagement. | [141](https://www.clawhub.com/0xterrybit/tiktok) |
-| [**Linkedin Monitor**](./skills/linkedin-monitor) | `linkedin-monitor` | Bulletproof LinkedIn inbox monitoring with progressive autonomy. Monitors messages hourly, drafts replies in your voice, and alerts you to new conversations. Supports 4 autonomy levels from monitor... | [109](https://www.clawhub.com/Dylan Baker / lilAgents/linkedin-monitor) |
+| [**Linkedin Monitor**](./skills/linkedin-monitor) | `linkedin-monitor` | Bulletproof LinkedIn inbox monitoring with progressive autonomy. Monitors messages hourly, drafts replies in your voice, and alerts you to new conversations. Supports 4 autonomy levels from monitor... | [109](https://www.clawhub.com/dylanbaker24/linkedin-monitor) |
 | [**Instagram Skill via cyberdrk/gram CLI**](./skills/gram) | `gram` | Instagram CLI for viewing feeds, posts, profiles, and engagement via cookies. | [99](https://www.clawhub.com/arein/gram) |
 | [**SoloBuddy**](./skills/solobuddy) | `solobuddy` | Build-in-public companion for indie hackers — content workflow, Twitter engagement, project soul creation. A living assistant, not a tool. | [99](https://www.clawhub.com/Humanji7/solobuddy) |
 | [**X Algorithm**](./skills/x-algorithm) | `x-algorithm` | X (Twitter) algorithm rules, viral strategies, and article best practices. Boost engagement, avoid reach death, write posts that actually perform. | [92](https://www.clawhub.com/NextFrontierBuilds/x-algorithm) |
@@ -787,7 +792,7 @@ See below for skills to try! 🦞
 | [**LLM**](./skills/llm) | `llm` | Multi-provider LLM integration. Unified interface for OpenAI, Anthropic, Google, and local models. | [104](https://www.clawhub.com/0xterrybit/llm) |
 | [**Homey**](./skills/homey) | `homey` | Control Athom Homey smart home devices via local (LAN/VPN) or cloud APIs. List/control devices, trigger flows, query zones. Works with Homey Pro, Cloud, and Bridge. | [93](https://www.clawhub.com/maxsumrall/homey) |
 | [**Control Chromecast**](./skills/chromecast) | `chromecast` | Control Chromecast devices on your local network - discover, cast media, control playback, manage queues, and save/restore states | [77](https://www.clawhub.com/morozRed/chromecast) |
-| [**Bridle**](./skills/bridle) | `bridle` | Unified configuration manager for AI coding assistants. Manage profiles, install skills/agents/commands, and switch configurations across Claude Code, OpenCode, Goose, and Amp. | [63](https://www.clawhub.com/Benjamin Jesuiter <bjesuiter@gmail.com>/bridle) |
+| [**Bridle**](./skills/bridle) | `bridle` | Unified configuration manager for AI coding assistants. Manage profiles, install skills/agents/commands, and switch configurations across Claude Code, OpenCode, Goose, and Amp. | [63](https://www.clawhub.com/bjesuiter/bridle) |
 | [**Govee Lights Control**](./skills/govee-lights) | `govee-lights` |  | [57](https://www.clawhub.com/joeynyc/govee-lights) |
 | [**Nest Devices**](./skills/nest-devices) | `nest-devices` | Control Nest smart home devices (thermostat, cameras, doorbell) via the Device Access API. Use when asked to check or adjust home temperature, view camera feeds, check who's at the door, monitor ro... | [53](https://www.clawhub.com/amogower/nest-devices) |
 
@@ -821,7 +826,7 @@ See below for skills to try! 🦞
 | [**1password**](./skills/1password) | `1password` | Set up and use 1Password CLI (op). Use when installing the CLI, enabling desktop app integration, signing in (single or multi-account), or reading/injecting/running secrets via op. | [701](https://www.clawhub.com/steipete/1password) |
 | [**Web Design Guidelines**](./skills/web-design-guidelines) | `web-design-guidelines` | Review UI code for Web Interface Guidelines compliance. Use when asked to "review my UI", "check accessibility", "audit design", "review UX", or "check my site against best practices". | [411](https://www.clawhub.com/Sharanga10/web-design-guidelines) |
 | [**HealthKit Sync**](./skills/healthkit-sync) | `healthkit-sync` | iOS HealthKit data sync CLI commands and patterns. Use when working with healthsync CLI, fetching Apple Health data (steps, heart rate, sleep, workouts), pairing iOS devices over local network, or ... | [381](https://www.clawhub.com/mneves/healthkit-sync) |
-| [**Dont Hack Me**](./skills/dont-hack-me) | `dont-hack-me` | 別駭我！基本安全檢測 — Security self-check for Clawdbot/Moltbot. Run a quick audit of your clawdbot.json to catch dangerous misconfigurations — exposed gateway, missing auth, open DM policy, weak tokens, loo... | [265](https://www.clawhub.com/小安 Ann Agent — Taiwan 台灣/dont-hack-me) |
+| [**Dont Hack Me**](./skills/dont-hack-me) | `dont-hack-me` | 別駭我！基本安全檢測 — Security self-check for Clawdbot/Moltbot. Run a quick audit of your clawdbot.json to catch dangerous misconfigurations — exposed gateway, missing auth, open DM policy, weak tokens, loo... | [265](https://www.clawhub.com/peterokase42/dont-hack-me) |
 | [**Security Monitor**](./skills/security-monitor) | `security-monitor` | Real-time security monitoring for Clawdbot. Detects intrusions, unusual API calls, credential usage patterns, and alerts on breaches. | [256](https://www.clawhub.com/chandrasekar-r/security-monitor) |
 | [**Clawdbot Security Suite**](./skills/security) | `security` | Advanced security validation for Clawdbot - pattern detection, command sanitization, and threat monitoring | [235](https://www.clawhub.com/gtrusler/security) |
 | [**Figma**](./skills/figma) | `figma` | Professional Figma design analysis and asset export. Use for extracting design data, exporting assets in multiple formats, auditing accessibility compliance, analyzing design systems, and generatin... | [163](https://www.clawhub.com/maddiedreese/figma) |
@@ -941,7 +946,7 @@ See below for skills to try! 🦞
 | [**PostgreSQL**](./skills/postgres) | `postgres` | PostgreSQL database management. Run queries, manage schemas, and monitor performance. | [279](https://www.clawhub.com/0xterrybit/postgres) |
 | [**Simple Backup**](./skills/simple-backup) | `simple-backup` | Backup agent brain (workspace) and body (state) to local folder and optionally sync to cloud via rclone. | [278](https://www.clawhub.com/VACInc/simple-backup) |
 | [**Google Calendar**](./skills/google-calendar) | `google-calendar` | Interact with Google Calendar via the Google Calendar API – list upcoming events, create new events, update or delete them. Use this skill when you need programmatic access to your calendar from Op... | [275](https://www.clawhub.com/AdrianMiller99/google-calendar) |
-| [**EZ Cronjob**](./skills/ez-cronjob) | `ez-cronjob` | Fix common cron job failures in Clawdbot/Moltbot - message delivery issues, tool timeouts, timezone bugs, and model fallback problems. | [253](https://www.clawhub.com/Isaac Zarzuri/ez-cronjob) |
+| [**EZ Cronjob**](./skills/ez-cronjob) | `ez-cronjob` | Fix common cron job failures in Clawdbot/Moltbot - message delivery issues, tool timeouts, timezone bugs, and model fallback problems. | [253](https://www.clawhub.com/ProMadGenius/ez-cronjob) |
 | [**Microsoft 365 Integration**](./skills/ms365) | `ms365` |  | [224](https://www.clawhub.com/cvsloane/ms365) |
 | [**Opencode-controller**](./skills/opencode-controller) | `opencode-controller` | Control and operate Opencode via slash commands. Use this skill to manage sessions, select models, switch agents (plan/build), and coordinate coding through Opencode. | [217](https://www.clawhub.com/Karatla/opencode-controller) |
 | [**tldr**](./skills/tldr) | `tldr` | Simplified man pages from tldr-pages. Use this to quickly understand CLI tools. | [200](https://www.clawhub.com/gumadeiras/tldr) |
@@ -961,12 +966,12 @@ See below for skills to try! 🦞
 | [**Overcome Problem**](./skills/overcome-problem) | `overcome-problem` | Break down any problem with structured thinking, action plans, and progress tracking | [140](https://www.clawhub.com/clawd-team/overcome-problem) |
 | [**Relationship Skills**](./skills/relationship-skills) | `relationship-skills` | Improve relationships with communication tools, conflict resolution, and connection ideas | [140](https://www.clawhub.com/clawd-team/relationship-skills) |
 | [**Bluebubbles**](./skills/bluebubbles) | `bluebubbles` | Build or update the BlueBubbles external channel plugin for Clawdbot (extension package, REST send/probe, webhook inbound). | [130](https://www.clawhub.com/kevin19830331/bluebubbles) |
-| [**Tmux Agents**](./skills/tmux-agents) | `tmux-agents` | Manage background coding agents in tmux sessions. Spawn Claude Code or other agents, check progress, get results. | [129](https://www.clawhub.com/Jose Munoz/tmux-agents) |
+| [**Tmux Agents**](./skills/tmux-agents) | `tmux-agents` | Manage background coding agents in tmux sessions. Spawn Claude Code or other agents, check progress, get results. | [129](https://www.clawhub.com/cuba6112/tmux-agents) |
 | [**ClawdLink**](./skills/clawdlink) | `clawdlink` | Encrypted Clawdbot-to-Clawdbot messaging. Send messages to friends' Clawdbots with end-to-end encryption. | [128](https://www.clawhub.com/davemorin/clawdlink) |
 | [**Daily Review Ritual**](./skills/daily-review-2) | `daily-review-2` | End-of-day review to capture progress, insights, and plan tomorrow | [123](https://www.clawhub.com/theflohart/daily-review-2) |
 | [**Claude**](./skills/claude) | `claude` | Anthropic Claude integration. Chat with Claude models via Anthropic API. | [122](https://www.clawhub.com/0xterrybit/claude) |
 | [**Overseerr**](./skills/overseerr) | `overseerr` | Request movies/TV and monitor request status via the Overseerr API (stable Overseerr, not the beta Seerr rewrite). | [119](https://www.clawhub.com/j1philli/overseerr) |
-| [**Mole Mac Cleanup**](./skills/mole-mac-cleanup) | `mole-mac-cleanup` | Mac cleanup & optimization tool combining CleanMyMac, AppCleaner, DaisyDisk features. Deep cleaning, smart uninstaller, disk insights, and project artifact purge. | [117](https://www.clawhub.com/Benjamin Jesuiter <bjesuiter@gmail.com>/mole-mac-cleanup) |
+| [**Mole Mac Cleanup**](./skills/mole-mac-cleanup) | `mole-mac-cleanup` | Mac cleanup & optimization tool combining CleanMyMac, AppCleaner, DaisyDisk features. Deep cleaning, smart uninstaller, disk insights, and project artifact purge. | [117](https://www.clawhub.com/bjesuiter/mole-mac-cleanup) |
 | [**Minimax Usage**](./skills/minimax-usage) | `minimax-usage` | Monitor Minimax Coding Plan usage to stay within API limits. Fetches current usage stats and provides status alerts. | [114](https://www.clawhub.com/TheSethRose/minimax-usage) |
 | [**Morning Routine**](./skills/morning-routine) | `morning-routine` | Build a powerful morning routine with habit checklists, timing, and streak tracking | [114](https://www.clawhub.com/clawd-team/morning-routine) |
 | [**n8n Automation**](./skills/n8n-automation) | `n8n-automation` | Manage n8n workflows from OpenClaw via the n8n REST API. Use when the user asks about n8n workflows, automations, executions, or wants to trigger, list, create, activate, or debug n8n workflows. Su... | [113](https://www.clawhub.com/DILOmcfly/n8n-automation) |
