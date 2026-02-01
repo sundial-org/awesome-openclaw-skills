@@ -9,8 +9,10 @@ Skills are sourced from the OpenClaw ecosystem. We regularly curate the top most
 ## Install
 
 ```bash
-npx sundial-hub add <url>
+npx sundial-hub add <name>
 ```
+
+See below for skills to try! 🦞
 
 ## Contents
 
