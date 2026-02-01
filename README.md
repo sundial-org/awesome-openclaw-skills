@@ -4,7 +4,7 @@
 
 > A curated collection of the top agent skills from [OpenClaw](https://www.clawhub.com/skills), regularly updated with the most popular and useful skills.
 
-Skills are sourced from the OpenClaw ecosystem. We regularly curate the top most popular skills and organize them here for easy discovery.
+These 913 skills are sourced from the OpenClaw ecosystem. We regularly curate the top most popular skills and organize them here for easy discovery.
 
 ## Install
 
