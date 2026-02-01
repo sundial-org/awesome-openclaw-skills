@@ -1,113 +1,260 @@
 ---
 name: reflect
-description: Append to daily notes and create notes in Reflect. Use for capturing thoughts, todos, or syncing information to your knowledge graph.
-homepage: https://reflect.app
+description: Self-improvement through conversation analysis. Extracts learnings from corrections and success patterns, permanently encoding them into agent definitions. Philosophy - Correct once, never again.
+version: "2.0.0"
+user-invocable: true
+triggers:
+  - reflect
+  - self-reflect
+  - review session
+  - what did I learn
+  - extract learnings
+  - analyze corrections
+allowed-tools:
+  - Read
+  - Write
+  - Edit
+  - Grep
+  - Glob
+  - Bash
+metadata:
+  clawdbot:
+    emoji: "🪞"
+    config:
+      stateDirs: ["~/.reflect"]
 ---
 
-# Reflect Notes Skill
+# Reflect - Agent Self-Improvement Skill
 
-Reflect is a networked note-taking app. Notes are E2E encrypted, so the API is **append-only** — we can write but not read note contents.
+Transform your AI assistant into a continuously improving partner. Every correction becomes a permanent improvement that persists across all future sessions.
 
-## Setup
+## Quick Reference
 
-1. Create OAuth credentials at https://reflect.app/developer/oauth
-2. Generate an access token from that interface
-3. Set environment variables:
-   ```bash
-   export REFLECT_TOKEN="your-access-token"
-   export REFLECT_GRAPH_ID="your-graph-id"  # Find via: curl -H "Authorization: Bearer $REFLECT_TOKEN" https://reflect.app/api/graphs
-   ```
+| Command | Action |
+|---------|--------|
+| `reflect` | Analyze conversation for learnings |
+| `reflect on` | Enable auto-reflection |
+| `reflect off` | Disable auto-reflection |
+| `reflect status` | Show state and metrics |
+| `reflect review` | Review pending learnings |
 
-Or store in 1Password and update `scripts/reflect.sh` with your vault/item path.
+## When to Use
 
-## What We Can Do
+- After completing complex tasks
+- When user explicitly corrects behavior ("never do X", "always Y")
+- At session boundaries or before context compaction
+- When successful patterns are worth preserving
 
-1. **Append to daily notes** — Add items to today's note (or a specific date)
-2. **Create new notes** — Create standalone notes with subject + markdown content
-3. **Create links** — Save bookmarks with highlights
-4. **Get links/books** — Retrieve saved links and books
+## Workflow
 
-## API Reference
+### Step 1: Scan Conversation for Signals
 
-Base URL: `https://reflect.app/api`
-Auth: `Authorization: Bearer <access_token>`
+Analyze the conversation for correction signals and learning opportunities.
 
-### Append to Daily Note
+**Signal Confidence Levels:**
 
-```bash
-curl -X PUT "https://reflect.app/api/graphs/$REFLECT_GRAPH_ID/daily-notes" \
-  -H "Authorization: Bearer $REFLECT_TOKEN" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "text": "Your text here",
-    "transform_type": "list-append",
-    "date": "2026-01-25",          # optional, defaults to today
-    "list_name": "[[List Name]]"   # optional, append to specific list
-  }'
+| Confidence | Triggers | Examples |
+|------------|----------|----------|
+| **HIGH** | Explicit corrections | "never", "always", "wrong", "stop", "the rule is" |
+| **MEDIUM** | Approved approaches | "perfect", "exactly", "that's right", accepted output |
+| **LOW** | Observations | Patterns that worked but not explicitly validated |
+
+See [data/signal_patterns.md](data/signal_patterns.md) for full detection rules.
+
+### Step 2: Classify & Match to Target Files
+
+Map each signal to the appropriate target:
+
+| Category | Target Files |
+|----------|--------------|
+| Code Style | `code-reviewer`, `backend-developer`, `frontend-developer` |
+| Architecture | `solution-architect`, `api-architect`, `architecture-reviewer` |
+| Process | `CLAUDE.md`, orchestrator agents |
+| Domain | Domain-specific agents, `CLAUDE.md` |
+| Tools | `CLAUDE.md`, relevant specialists |
+| New Skill | Create new skill file |
+
+See [data/agent_mappings.md](data/agent_mappings.md) for mapping rules.
+
+### Step 3: Check for Skill-Worthy Signals
+
+Some learnings should become new skills rather than agent updates:
+
+**Skill-Worthy Criteria:**
+- Non-obvious debugging (>10 min investigation)
+- Misleading error (root cause different from message)
+- Workaround discovered through experimentation
+- Configuration insight (differs from documented)
+- Reusable pattern (helps in similar situations)
+
+**Quality Gates (must pass all):**
+- [ ] Reusable: Will help with future tasks
+- [ ] Non-trivial: Requires discovery, not just docs
+- [ ] Specific: Can describe exact trigger conditions
+- [ ] Verified: Solution actually worked
+- [ ] No duplication: Doesn't exist already
+
+### Step 4: Generate Proposals
+
+Present findings in structured format:
+
+```markdown
+# Reflection Analysis
+
+## Session Context
+- **Date**: [timestamp]
+- **Messages Analyzed**: [count]
+
+## Signals Detected
+
+| # | Signal | Confidence | Source Quote | Category |
+|---|--------|------------|--------------|----------|
+| 1 | [learning] | HIGH | "[exact words]" | Code Style |
+
+## Proposed Changes
+
+### Change 1: Update [agent-name]
+**Target**: `[file path]`
+**Section**: [section name]
+**Confidence**: HIGH
+
+```diff
++ New rule from learning
 ```
 
-### Create a Note
-
-```bash
-curl -X POST "https://reflect.app/api/graphs/$REFLECT_GRAPH_ID/notes" \
-  -H "Authorization: Bearer $REFLECT_TOKEN" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "subject": "Note Title",
-    "content_markdown": "# Heading\n\nContent here...",
-    "pinned": false
-  }'
+## Review Prompt
+Apply these changes? (Y/N/modify/1,2,3)
 ```
 
-### Create a Link
+### Step 5: Apply with User Approval
 
-```bash
-curl -X POST "https://reflect.app/api/graphs/$REFLECT_GRAPH_ID/links" \
-  -H "Authorization: Bearer $REFLECT_TOKEN" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "url": "https://example.com",
-    "title": "Page Title",
-    "description": "Optional description",
-    "highlights": ["Quote 1", "Quote 2"]
-  }'
+**On `Y` (approve):**
+1. Apply each change using Edit tool
+2. Commit with descriptive message
+3. Update metrics
+
+**On `N` (reject):**
+1. Discard proposed changes
+2. Log rejection for analysis
+
+**On `modify`:**
+1. Present each change individually
+2. Allow editing before applying
+
+**On selective (e.g., `1,3`):**
+1. Apply only specified changes
+2. Commit partial updates
+
+## State Management
+
+State is stored in `~/.reflect/` (configurable via `REFLECT_STATE_DIR`):
+
+```yaml
+# reflect-state.yaml
+auto_reflect: false
+last_reflection: "2026-01-26T10:30:00Z"
+pending_reviews: []
 ```
 
-### Get Links
+### Metrics Tracking
 
-```bash
-curl "https://reflect.app/api/graphs/$REFLECT_GRAPH_ID/links" \
-  -H "Authorization: Bearer $REFLECT_TOKEN"
+```yaml
+# reflect-metrics.yaml
+total_sessions_analyzed: 42
+total_signals_detected: 156
+total_changes_accepted: 89
+acceptance_rate: 78%
+confidence_breakdown:
+  high: 45
+  medium: 32
+  low: 12
+most_updated_agents:
+  code-reviewer: 23
+  backend-developer: 18
+skills_created: 5
 ```
 
-## Helper Script
+## Safety Guardrails
 
-Use `scripts/reflect.sh` for common operations:
+### Human-in-the-Loop
+- NEVER apply changes without explicit user approval
+- Always show full diff before applying
+- Allow selective application
 
-```bash
-# Append to daily note
-./scripts/reflect.sh daily "Remember to review PR #6"
+### Incremental Updates
+- ONLY add to existing sections
+- NEVER delete or rewrite existing rules
+- Preserve original structure
 
-# Append to specific list in daily note  
-./scripts/reflect.sh daily "Buy milk" "[[Shopping]]"
+### Conflict Detection
+- Check if proposed rule contradicts existing
+- Warn user if conflict detected
+- Suggest resolution strategy
 
-# Create a new note
-./scripts/reflect.sh note "Meeting Notes" "# Standup\n\n- Discussed X\n- Action item: Y"
+## Output Locations
 
-# Save a link
-./scripts/reflect.sh link "https://example.com" "Example Site" "Great resource"
+**Project-level (versioned with repo):**
+- `.claude/reflections/YYYY-MM-DD_HH-MM-SS.md` - Full reflection
+- `.claude/skills/{name}/SKILL.md` - New skills
+
+**Global (user-level):**
+- `~/.reflect/learnings.yaml` - Learning log
+- `~/.reflect/reflect-metrics.yaml` - Aggregate metrics
+
+## Examples
+
+### Example 1: Code Style Correction
+
+**User says**: "Never use `var` in TypeScript, always use `const` or `let`"
+
+**Signal detected**:
+- Confidence: HIGH (explicit "never" + "always")
+- Category: Code Style
+- Target: `frontend-developer.md`
+
+**Proposed change**:
+```diff
+## Style Guidelines
++ * Use `const` or `let` instead of `var` in TypeScript
 ```
 
-## Use Cases
+### Example 2: Process Preference
 
-- **Capture todos** from chat → append to daily note
-- **Save interesting links** mentioned in conversation
-- **Create meeting notes** or summaries
-- **Sync reminders** to Reflect for persistence
-- **Backlink to lists** like `[[Ideas]]` or `[[Project Name]]`
+**User says**: "Always run tests before committing"
 
-## Limitations
+**Signal detected**:
+- Confidence: HIGH (explicit "always")
+- Category: Process
+- Target: `CLAUDE.md`
 
-- **Cannot read note contents** (E2E encrypted)
-- **Append-only** — can't edit or delete existing content
-- **No search** — can't query existing notes
+**Proposed change**:
+```diff
+## Commit Hygiene
++ * Run test suite before creating commits
+```
+
+### Example 3: New Skill from Debugging
+
+**Context**: Spent 30 minutes debugging a React hydration mismatch
+
+**Signal detected**:
+- Confidence: HIGH (non-trivial debugging)
+- Category: New Skill
+- Quality gates: All passed
+
+**Proposed skill**: `react-hydration-fix/SKILL.md`
+
+## Troubleshooting
+
+**No signals detected:**
+- Session may not have had corrections
+- Check if using natural language corrections
+
+**Conflict warning:**
+- Review the existing rule cited
+- Decide if new rule should override
+- Can modify before applying
+
+**Agent file not found:**
+- Check agent name spelling
+- May need to create agent file first

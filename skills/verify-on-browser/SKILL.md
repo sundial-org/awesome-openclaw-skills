@@ -1,4 +1,5 @@
 ---
+name: verify-on-browser
 description: Control browser via Chrome DevTools Protocol - full CDP access
 ---
 

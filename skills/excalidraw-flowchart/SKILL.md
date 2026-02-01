@@ -1,5 +1,5 @@
 ---
-name: Excalidraw Flowchart
+name: excalidraw-flowchart
 slug: excalidraw-flowchart
 version: 1.1.0
 description: Create Excalidraw flowcharts from descriptions. Use when user asks to "create a flowchart", "draw a diagram", "visualize a process", "make a flow diagram", "architecture diagram", or discusses workflow/process visualization. Supports DSL, DOT/Graphviz, and JSON formats.

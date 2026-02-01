@@ -1,3 +1,7 @@
+---
+name: ms365
+---
+
 # Microsoft 365 Integration
 
 ## Description

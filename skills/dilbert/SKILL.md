@@ -1,3 +1,7 @@
+---
+name: dilbert
+---
+
 # Dilbert Skill
 
 **Name:** dilbert

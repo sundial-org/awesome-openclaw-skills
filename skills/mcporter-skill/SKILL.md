@@ -1,8 +1,9 @@
 ---
-name: mcporter
+name: mcporter-skill
 description: Use the mcporter CLI to list, configure, auth, and call MCP servers/tools directly (HTTP or stdio), including ad-hoc servers, config edits, and CLI/type generation.
 homepage: https://github.com/pdxfinder/mcporter
 metadata: {"clawdbot":{"emoji":"🔌","os":["darwin","linux","windows"],"requires":{"bins":["mcporter"]},"install":[{"id":"brew","kind":"brew","formula":"pdxfinder/tap/mcporter","bins":["mcporter"],"label":"Install mcporter (brew)"}]}}
+---
 
 # mcporter
 

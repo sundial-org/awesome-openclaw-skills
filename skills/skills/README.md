@@ -1,1 +1,0 @@
-# SATORI SKILLS
