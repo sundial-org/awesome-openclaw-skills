@@ -1,0 +1,47 @@
+{
+  "name": "@clawdhub/homey",
+  "version": "1.1.2",
+  "description": "Control Athom Homey smart home devices via local (LAN/VPN) or cloud APIs",
+  "main": "bin/homeycli.js",
+  "bin": {
+    "homeycli": "./bin/homeycli"
+  },
+  "scripts": {
+    "test": "node bin/homeycli.js --help",
+    "release:patch": "node scripts/release.js patch",
+    "release:minor": "node scripts/release.js minor",
+    "release:major": "node scripts/release.js major",
+    "release:prerelease": "node scripts/release.js prerelease"
+  },
+  "keywords": [
+    "homeycli",
+    "homey-cli",
+    "homey",
+    "athom",
+    "homey-api",
+    "homey cloud api",
+    "smart-home",
+    "clawdbot",
+    "clawdhub"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/maxsumrall/homeycli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/maxsumrall/homeycli/issues"
+  },
+  "homepage": "https://maxsumrall.github.io/homeycli/",
+  "author": "Max Sumrall",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "cli-table3": "^0.6.3",
+    "commander": "^12.0.0",
+    "homey-api": "^3.15.0",
+    "multicast-dns": "^7.2.5"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

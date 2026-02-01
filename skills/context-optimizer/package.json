@@ -1,0 +1,20 @@
+{
+  "name": "context-pruner",
+  "version": "1.0.0",
+  "description": "Advanced context pruning and management optimized for DeepSeek's 64k context window",
+  "main": "lib/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "node lib/index.test.js"
+  },
+  "keywords": ["context", "pruning", "deepseek", "ai", "memory", "compression"],
+  "author": "Clawdbot",
+  "license": "MIT",
+  "dependencies": {
+    "tiktoken": "^1.0.15",
+    "@xenova/transformers": "^2.17.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.6"
+  }
+}

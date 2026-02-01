@@ -1,0 +1,815 @@
+# ============================================================================
+# Voice.ai Text-to-Speech Skill
+# ============================================================================
+# A comprehensive skill for Voice.ai's TTS API with voice cloning,
+# speech generation, streaming, and voice management capabilities.
+#
+# Version: 1.0.0
+# Author: Nick Gill (https://github.com/gizmoGremlin)
+# License: MIT
+# Documentation: https://voice.ai/docs
+# ============================================================================
+
+skill:
+  name: voice-ai-tts
+  display_name: "Voice.ai Text-to-Speech"
+  description: |
+    High-quality voice synthesis with voice cloning, streaming audio generation,
+    multilingual support (11 languages), and flexible audio formats using the
+    Voice.ai Developer API. Features include instant voice cloning, real-time
+    streaming, WebSocket support for low-latency applications, and comprehensive
+    voice management.
+  version: "1.0.0"
+  author: "Nick Gill (https://github.com/gizmoGremlin)"
+  icon: "🎙️"
+  category: "audio"
+  tags:
+    - text-to-speech
+    - tts
+    - voice-cloning
+    - audio-generation
+    - speech-synthesis
+    - ai-voice
+    - streaming
+    - websocket
+
+# ============================================================================
+# Authentication Configuration
+# ============================================================================
+
+authentication:
+  type: bearer
+  header: Authorization
+  prefix: "Bearer "
+  description: |
+    Voice.ai uses Bearer token authentication. Get your API key from
+    https://voice.ai/dashboard and pass it as: Authorization: Bearer <your-api-key>
+  environment_variable: VOICE_AI_API_KEY
+  required: true
+
+# ============================================================================
+# API Configuration
+# ============================================================================
+
+api:
+  base_url: "https://dev.voice.ai"
+  version: "v1"
+  content_type: "application/json"
+  timeout: 60000
+  rate_limit:
+    requests_per_minute: 60
+    description: "Rate limits vary by plan. Check your dashboard for details."
+
+# ============================================================================
+# Available Models
+# ============================================================================
+
+models:
+  - id: "voiceai-tts-v1-latest"
+    name: "Voice.ai TTS v1 (Latest)"
+    description: "Latest English TTS model with highest quality"
+    languages: ["en"]
+    
+  - id: "voiceai-tts-v1-2025-12-19"
+    name: "Voice.ai TTS v1 (2025-12-19)"
+    description: "Stable English TTS model snapshot"
+    languages: ["en"]
+    
+  - id: "voiceai-tts-multilingual-v1-latest"
+    name: "Voice.ai Multilingual v1 (Latest)"
+    description: "Latest multilingual TTS model"
+    languages: ["en", "es", "fr", "de", "it", "pt", "pl", "ru", "nl", "sv", "ca"]
+    
+  - id: "voiceai-tts-multilingual-v1-2025-01-14"
+    name: "Voice.ai Multilingual v1 (2025-01-14)"
+    description: "Stable multilingual TTS model snapshot"
+    languages: ["en", "es", "fr", "de", "it", "pt", "pl", "ru", "nl", "sv", "ca"]
+
+# ============================================================================
+# Popular Voices
+# ============================================================================
+
+voices:
+  - id: "d1bf0f33-8e0e-4fbf-acf8-45c3c6262513"
+    name: "Ellie"
+    gender: female
+    style: "Youthful, vibrant fashion vlogger"
+    
+  - id: "f9e6a5eb-a7fd-4525-9e92-75125249c933"
+    name: "Oliver"
+    gender: male
+    style: "Friendly British, conversational"
+    
+  - id: "4388040c-8812-42f4-a264-f457a6b2b5b9"
+    name: "Lilith"
+    gender: female
+    style: "Soft, feminine"
+    
+  - id: "dbb271df-db25-4225-abb0-5200ba1426bc"
+    name: "Smooth Calm Voice"
+    gender: male
+    style: "Deep, smooth narrator"
+    
+  - id: "72d2a864-b236-402e-a166-a838ccc2c273"
+    name: "Corpse Husband"
+    gender: male
+    style: "Deep, distinctive YouTuber"
+    
+  - id: "559d3b72-3e79-4f11-9b62-9ec702a6c057"
+    name: "Skadi"
+    gender: female
+    style: "Anime, Arknights character"
+    
+  - id: "ed751d4d-e633-4bb0-8f5e-b5c8ddb04402"
+    name: "Zhongli"
+    gender: male
+    style: "Deep, Genshin Impact character"
+    
+  - id: "a931a6af-fb01-42f0-a8c0-bd14bc302bb1"
+    name: "Flora"
+    gender: female
+    style: "High pitch, cheerful"
+    
+  - id: "bd35e4e6-6283-46b9-86b6-7cfa3dd409b9"
+    name: "Master Chief"
+    gender: male
+    style: "Deep heroic, Halo character"
+
+# ============================================================================
+# Audio Formats
+# ============================================================================
+
+audio_formats:
+  basic:
+    - mp3: "MP3 at 32kHz (default)"
+    - wav: "WAV at 32kHz"
+    - pcm: "Raw PCM 16-bit signed little-endian at 32kHz"
+  
+  mp3_variants:
+    - mp3_22050_32: "MP3 22.05kHz, 32kbps"
+    - mp3_24000_48: "MP3 24kHz, 48kbps"
+    - mp3_44100_32: "MP3 44.1kHz, 32kbps"
+    - mp3_44100_64: "MP3 44.1kHz, 64kbps"
+    - mp3_44100_96: "MP3 44.1kHz, 96kbps"
+    - mp3_44100_128: "MP3 44.1kHz, 128kbps"
+    - mp3_44100_192: "MP3 44.1kHz, 192kbps"
+  
+  opus_variants:
+    - opus_48000_32: "Opus 48kHz, 32kbps"
+    - opus_48000_64: "Opus 48kHz, 64kbps"
+    - opus_48000_96: "Opus 48kHz, 96kbps"
+    - opus_48000_128: "Opus 48kHz, 128kbps"
+    - opus_48000_192: "Opus 48kHz, 192kbps"
+  
+  pcm_variants:
+    - pcm_8000: "PCM 8kHz"
+    - pcm_16000: "PCM 16kHz"
+    - pcm_22050: "PCM 22.05kHz"
+    - pcm_24000: "PCM 24kHz"
+    - pcm_32000: "PCM 32kHz"
+    - pcm_44100: "PCM 44.1kHz"
+    - pcm_48000: "PCM 48kHz"
+  
+  wav_variants:
+    - wav_16000: "WAV 16kHz"
+    - wav_22050: "WAV 22.05kHz"
+    - wav_24000: "WAV 24kHz"
+  
+  telephony:
+    - alaw_8000: "A-law 8kHz (telephony)"
+    - ulaw_8000: "μ-law 8kHz (telephony)"
+
+# ============================================================================
+# Tools / Actions
+# ============================================================================
+
+tools:
+
+  # --------------------------------------------------------------------------
+  # List Voices
+  # --------------------------------------------------------------------------
+  - name: list_voices
+    display_name: "List Voices"
+    description: |
+      Retrieve a list of available voices including public voices and your
+      cloned voices. Returns voice metadata including ID, name, language,
+      and visibility status.
+    method: GET
+    endpoint: "/api/v1/tts/voices"
+    parameters:
+      - name: limit
+        type: integer
+        required: false
+        default: 10
+        description: "Maximum number of voices to return (default: 10)"
+      - name: offset
+        type: integer
+        required: false
+        default: 0
+        description: "Offset for pagination"
+      - name: visibility
+        type: string
+        required: false
+        enum: ["PUBLIC", "PRIVATE"]
+        description: "Filter by voice visibility"
+    response:
+      type: object
+      properties:
+        voices:
+          type: array
+          items:
+            type: object
+            properties:
+              voice_id:
+                type: string
+                description: "Unique voice identifier"
+              name:
+                type: string
+                description: "Voice name"
+              language:
+                type: string
+                description: "Voice language (ISO 639-1)"
+              visibility:
+                type: string
+                enum: ["PUBLIC", "PRIVATE"]
+              status:
+                type: string
+                enum: ["PENDING", "PROCESSING", "AVAILABLE", "FAILED"]
+    example:
+      request:
+        method: GET
+        url: "https://dev.voice.ai/api/v1/tts/voices?limit=10"
+        headers:
+          Authorization: "Bearer YOUR_API_KEY"
+      response:
+        voices:
+          - voice_id: "abc123"
+            name: "Sarah"
+            language: "en"
+            visibility: "PUBLIC"
+            status: "AVAILABLE"
+
+  # --------------------------------------------------------------------------
+  # Get Voice
+  # --------------------------------------------------------------------------
+  - name: get_voice
+    display_name: "Get Voice Details"
+    description: |
+      Retrieve detailed information about a specific voice by its ID.
+    method: GET
+    endpoint: "/api/v1/tts/voice/{voice_id}"
+    parameters:
+      - name: voice_id
+        type: string
+        required: true
+        in: path
+        description: "The unique voice identifier"
+    response:
+      type: object
+      properties:
+        voice_id:
+          type: string
+        name:
+          type: string
+        language:
+          type: string
+        visibility:
+          type: string
+        status:
+          type: string
+        created_at:
+          type: string
+          format: datetime
+    example:
+      request:
+        method: GET
+        url: "https://dev.voice.ai/api/v1/tts/voice/abc123"
+      response:
+        voice_id: "abc123"
+        name: "Sarah"
+        language: "en"
+        visibility: "PUBLIC"
+        status: "AVAILABLE"
+
+  # --------------------------------------------------------------------------
+  # Generate Speech
+  # --------------------------------------------------------------------------
+  - name: generate_speech
+    display_name: "Generate Speech"
+    description: |
+      Generate speech from text. Returns complete audio file after generation
+      is complete. For real-time streaming, use the speech_stream endpoint instead.
+    method: POST
+    endpoint: "/api/v1/tts/speech"
+    parameters:
+      - name: text
+        type: string
+        required: true
+        description: "The text to convert to speech"
+        max_length: 5000
+      - name: voice_id
+        type: string
+        required: false
+        description: "Voice ID to use. Omit to use the default built-in voice."
+      - name: audio_format
+        type: string
+        required: false
+        default: "mp3"
+        enum: ["mp3", "wav", "pcm", "alaw_8000", "ulaw_8000", "mp3_44100_128", "opus_48000_64"]
+        description: "Output audio format (32kHz sample rate for basic formats)"
+      - name: temperature
+        type: number
+        required: false
+        default: 1.0
+        minimum: 0.0
+        maximum: 2.0
+        description: "Sampling temperature for variation (0.0-2.0)"
+      - name: top_p
+        type: number
+        required: false
+        default: 0.8
+        minimum: 0.0
+        maximum: 1.0
+        description: "Nucleus sampling parameter (0.0-1.0)"
+      - name: model
+        type: string
+        required: false
+        enum: ["voiceai-tts-v1-latest", "voiceai-tts-multilingual-v1-latest"]
+        description: "TTS model. Auto-selected based on language if not specified."
+      - name: language
+        type: string
+        required: false
+        default: "en"
+        enum: ["en", "es", "fr", "de", "it", "pt", "pl", "ru", "nl", "sv", "ca"]
+        description: "Language code (ISO 639-1)"
+    response:
+      type: binary
+      content_type: "audio/mpeg"
+      description: "Audio file in the requested format"
+    example:
+      request:
+        method: POST
+        url: "https://dev.voice.ai/api/v1/tts/speech"
+        headers:
+          Authorization: "Bearer YOUR_API_KEY"
+          Content-Type: "application/json"
+        body:
+          text: "Hello, this is a test of Voice.ai text to speech."
+          voice_id: "abc123"
+          audio_format: "mp3"
+          language: "en"
+
+  # --------------------------------------------------------------------------
+  # Speech Stream
+  # --------------------------------------------------------------------------
+  - name: speech_stream
+    display_name: "Speech Stream"
+    description: |
+      Generate speech from text with HTTP chunked streaming. Returns audio
+      chunks as they are generated for low-latency playback. Ideal for
+      real-time applications.
+    method: POST
+    endpoint: "/api/v1/tts/speech/stream"
+    streaming: true
+    parameters:
+      - name: text
+        type: string
+        required: true
+        description: "The text to convert to speech"
+      - name: voice_id
+        type: string
+        required: false
+        description: "Voice ID to use. Omit for default voice."
+      - name: audio_format
+        type: string
+        required: false
+        default: "mp3"
+        description: "Output audio format"
+      - name: temperature
+        type: number
+        required: false
+        default: 1.0
+        minimum: 0.0
+        maximum: 2.0
+      - name: top_p
+        type: number
+        required: false
+        default: 0.8
+      - name: model
+        type: string
+        required: false
+      - name: language
+        type: string
+        required: false
+        default: "en"
+    response:
+      type: stream
+      content_type: ["audio/mpeg", "audio/wav", "audio/pcm"]
+      description: "Chunked audio stream via HTTP chunked transfer encoding"
+    example:
+      request:
+        method: POST
+        url: "https://dev.voice.ai/api/v1/tts/speech/stream"
+        headers:
+          Authorization: "Bearer YOUR_API_KEY"
+          Content-Type: "application/json"
+        body:
+          text: "Streaming audio is great for real-time applications."
+          audio_format: "mp3"
+
+  # --------------------------------------------------------------------------
+  # Clone Voice
+  # --------------------------------------------------------------------------
+  - name: clone_voice
+    display_name: "Clone Voice"
+    description: |
+      Clone a voice from reference audio. Upload an audio file (MP3, WAV, or OGG,
+      max 7.5MB) and get back a voice_id for future speech generation requests.
+    method: POST
+    endpoint: "/api/v1/tts/clone-voice"
+    content_type: "multipart/form-data"
+    parameters:
+      - name: file
+        type: file
+        required: true
+        description: "Audio file (MP3, WAV, or OGG format, max 7.5MB)"
+        accept: [".mp3", ".wav", ".ogg"]
+        max_size: "7.5MB"
+      - name: name
+        type: string
+        required: false
+        description: "Name for the cloned voice"
+      - name: voice_visibility
+        type: string
+        required: false
+        default: "PUBLIC"
+        enum: ["PUBLIC", "PRIVATE"]
+        description: "Voice visibility setting"
+      - name: language
+        type: string
+        required: false
+        default: "en"
+        enum: ["en", "es", "fr", "de", "it", "pt", "pl", "ru", "nl", "sv", "ca"]
+        description: "Primary language of the voice"
+    response:
+      type: object
+      properties:
+        voice_id:
+          type: string
+          description: "The created voice ID"
+        status:
+          type: string
+          enum: ["PENDING", "PROCESSING", "AVAILABLE", "FAILED"]
+          description: "Voice processing status"
+    example:
+      request:
+        method: POST
+        url: "https://dev.voice.ai/api/v1/tts/clone-voice"
+        headers:
+          Authorization: "Bearer YOUR_API_KEY"
+          Content-Type: "multipart/form-data"
+        body:
+          file: "@voice_sample.mp3"
+          name: "My Custom Voice"
+          voice_visibility: "PRIVATE"
+          language: "en"
+      response:
+        voice_id: "cloned_xyz789"
+        status: "PROCESSING"
+
+  # --------------------------------------------------------------------------
+  # Update Voice
+  # --------------------------------------------------------------------------
+  - name: update_voice
+    display_name: "Update Voice"
+    description: |
+      Update voice metadata such as name and visibility. Owner-only operation.
+    method: PATCH
+    endpoint: "/api/v1/tts/voice/{voice_id}"
+    parameters:
+      - name: voice_id
+        type: string
+        required: true
+        in: path
+        description: "The voice ID to update"
+      - name: name
+        type: string
+        required: false
+        description: "New name for the voice"
+      - name: voice_visibility
+        type: string
+        required: false
+        enum: ["PUBLIC", "PRIVATE"]
+        description: "New visibility setting"
+    response:
+      type: object
+      properties:
+        voice_id:
+          type: string
+        name:
+          type: string
+        visibility:
+          type: string
+        updated_at:
+          type: string
+    example:
+      request:
+        method: PATCH
+        url: "https://dev.voice.ai/api/v1/tts/voice/abc123"
+        body:
+          name: "Updated Voice Name"
+          voice_visibility: "PRIVATE"
+
+  # --------------------------------------------------------------------------
+  # Delete Voice
+  # --------------------------------------------------------------------------
+  - name: delete_voice
+    display_name: "Delete Voice"
+    description: |
+      Delete a cloned voice. This is a permanent action and cannot be undone.
+      Owner-only operation.
+    method: DELETE
+    endpoint: "/api/v1/tts/voice/{voice_id}"
+    parameters:
+      - name: voice_id
+        type: string
+        required: true
+        in: path
+        description: "The voice ID to delete"
+    response:
+      type: object
+      properties:
+        success:
+          type: boolean
+        message:
+          type: string
+    example:
+      request:
+        method: DELETE
+        url: "https://dev.voice.ai/api/v1/tts/voice/abc123"
+      response:
+        success: true
+        message: "Voice deleted successfully"
+
+  # --------------------------------------------------------------------------
+  # Single Context WebSocket
+  # --------------------------------------------------------------------------
+  - name: websocket_single_context
+    display_name: "WebSocket (Single Context)"
+    description: |
+      Real-time bidirectional streaming via WebSocket for single conversation
+      context. Ideal for interactive applications requiring ultra-low latency.
+      Send text chunks and receive audio chunks in real-time.
+    method: WEBSOCKET
+    endpoint: "/api/v1/tts/ws"
+    parameters:
+      - name: voice_id
+        type: string
+        required: false
+        description: "Voice ID to use"
+      - name: audio_format
+        type: string
+        required: false
+        default: "pcm_16000"
+        description: "Audio format for streaming"
+      - name: model
+        type: string
+        required: false
+    messages:
+      send:
+        type: object
+        properties:
+          text:
+            type: string
+            description: "Text chunk to synthesize"
+          flush:
+            type: boolean
+            description: "Force flush buffered audio"
+          end:
+            type: boolean
+            description: "Signal end of stream"
+      receive:
+        type: binary
+        description: "Audio data chunks"
+    example:
+      url: "wss://dev.voice.ai/api/v1/tts/ws?voice_id=abc123&audio_format=pcm_16000"
+      send: '{"text": "Hello, how are you today?"}'
+      receive: "<binary audio data>"
+
+  # --------------------------------------------------------------------------
+  # Multi Context WebSocket
+  # --------------------------------------------------------------------------
+  - name: websocket_multi_context
+    display_name: "WebSocket (Multi Context)"
+    description: |
+      Real-time bidirectional streaming via WebSocket with support for multiple
+      conversation contexts. Allows switching between different voice contexts
+      within a single connection for complex applications.
+    method: WEBSOCKET
+    endpoint: "/api/v1/tts/ws/multi"
+    parameters:
+      - name: audio_format
+        type: string
+        required: false
+        default: "pcm_16000"
+    messages:
+      send:
+        type: object
+        properties:
+          context_id:
+            type: string
+            description: "Context identifier for multiplexing"
+          voice_id:
+            type: string
+            description: "Voice ID for this context"
+          text:
+            type: string
+            description: "Text chunk to synthesize"
+          flush:
+            type: boolean
+          end:
+            type: boolean
+      receive:
+        type: object
+        properties:
+          context_id:
+            type: string
+          audio:
+            type: binary
+            description: "Audio data for the context"
+    example:
+      url: "wss://dev.voice.ai/api/v1/tts/ws/multi?audio_format=pcm_16000"
+      send: '{"context_id": "conv1", "voice_id": "abc123", "text": "Hello!"}'
+
+# ============================================================================
+# Error Codes
+# ============================================================================
+
+errors:
+  - code: 401
+    name: "Unauthorized"
+    description: "Invalid or missing API key"
+    
+  - code: 402
+    name: "Payment Required"
+    description: "Insufficient credits or voice slot limit reached"
+    
+  - code: 403
+    name: "Forbidden"
+    description: "Insufficient permissions for the requested operation"
+    
+  - code: 404
+    name: "Not Found"
+    description: "Voice ID does not exist or is not accessible"
+    
+  - code: 422
+    name: "Validation Error"
+    description: "Invalid request parameters"
+    
+  - code: 429
+    name: "Rate Limited"
+    description: "Too many requests. Please slow down."
+    
+  - code: 500
+    name: "Internal Server Error"
+    description: "Server error. Please try again later."
+
+# ============================================================================
+# Code Examples
+# ============================================================================
+
+examples:
+  python:
+    list_voices: |
+      import requests
+
+      API_KEY = "your_api_key_here"
+      
+      response = requests.get(
+          "https://dev.voice.ai/api/v1/tts/voices",
+          headers={"Authorization": f"Bearer {API_KEY}"},
+          params={"limit": 10}
+      )
+      
+      voices = response.json()["voices"]
+      for voice in voices:
+          print(f"{voice['name']} ({voice['voice_id']})")
+
+    generate_speech: |
+      import requests
+
+      API_KEY = "your_api_key_here"
+      
+      response = requests.post(
+          "https://dev.voice.ai/api/v1/tts/speech",
+          headers={
+              "Authorization": f"Bearer {API_KEY}",
+              "Content-Type": "application/json"
+          },
+          json={
+              "text": "Hello, this is Voice.ai text to speech!",
+              "voice_id": "your_voice_id",  # optional
+              "audio_format": "mp3"
+          }
+      )
+      
+      with open("output.mp3", "wb") as f:
+          f.write(response.content)
+
+    stream_speech: |
+      import requests
+
+      API_KEY = "your_api_key_here"
+      
+      response = requests.post(
+          "https://dev.voice.ai/api/v1/tts/speech/stream",
+          headers={
+              "Authorization": f"Bearer {API_KEY}",
+              "Content-Type": "application/json"
+          },
+          json={
+              "text": "Streaming audio for real-time playback.",
+              "audio_format": "mp3"
+          },
+          stream=True
+      )
+      
+      with open("stream_output.mp3", "wb") as f:
+          for chunk in response.iter_content(chunk_size=1024):
+              f.write(chunk)
+
+    clone_voice: |
+      import requests
+
+      API_KEY = "your_api_key_here"
+      
+      with open("voice_sample.mp3", "rb") as audio_file:
+          response = requests.post(
+              "https://dev.voice.ai/api/v1/tts/clone-voice",
+              headers={"Authorization": f"Bearer {API_KEY}"},
+              files={"file": audio_file},
+              data={
+                  "name": "My Cloned Voice",
+                  "voice_visibility": "PRIVATE",
+                  "language": "en"
+              }
+          )
+      
+      result = response.json()
+      print(f"Voice ID: {result['voice_id']}")
+      print(f"Status: {result['status']}")
+
+  curl:
+    list_voices: |
+      curl -X GET "https://dev.voice.ai/api/v1/tts/voices?limit=10" \
+        -H "Authorization: Bearer YOUR_API_KEY"
+
+    generate_speech: |
+      curl -X POST "https://dev.voice.ai/api/v1/tts/speech" \
+        -H "Authorization: Bearer YOUR_API_KEY" \
+        -H "Content-Type: application/json" \
+        -d '{"text": "Hello world!", "audio_format": "mp3"}' \
+        --output speech.mp3
+
+    clone_voice: |
+      curl -X POST "https://dev.voice.ai/api/v1/tts/clone-voice" \
+        -H "Authorization: Bearer YOUR_API_KEY" \
+        -F "file=@voice_sample.mp3" \
+        -F "name=My Voice" \
+        -F "voice_visibility=PRIVATE"
+
+  typescript:
+    generate_speech: |
+      const response = await fetch("https://dev.voice.ai/api/v1/tts/speech", {
+        method: "POST",
+        headers: {
+          "Authorization": `Bearer ${API_KEY}`,
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          text: "Hello from TypeScript!",
+          audio_format: "mp3"
+        })
+      });
+      
+      const audioBlob = await response.blob();
+      const audioUrl = URL.createObjectURL(audioBlob);
+      
+      // Play the audio
+      const audio = new Audio(audioUrl);
+      audio.play();
+
+# ============================================================================
+# Changelog
+# ============================================================================
+
+changelog:
+  - version: "1.0.0"
+    date: "2026-01-30"
+    changes:
+      - "Initial release"
+      - "Support for all TTS endpoints"
+      - "Voice cloning capabilities"
+      - "HTTP and WebSocket streaming"
+      - "Multilingual support (11 languages)"
+      - "Comprehensive audio format options"

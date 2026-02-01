@@ -1,0 +1,32 @@
+{
+  "name": "ad-creative-generator",
+  "version": "1.0.0",
+  "description": "Generate diverse, engaging ad prompts for any product or brand across 20+ creative styles and 10 categories",
+  "main": "generate.js",
+  "bin": {
+    "ad-creative-generator": "generate.js"
+  },
+  "scripts": {
+    "test": "node generate.js --help"
+  },
+  "keywords": [
+    "ad",
+    "advertising",
+    "marketing",
+    "creative",
+    "prompts",
+    "generation",
+    "marketing-tools"
+  ],
+  "author": "jack happy",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "files": [
+    "generate.js",
+    "templates.js",
+    "README.md",
+    "SKILL.md"
+  ]
+}

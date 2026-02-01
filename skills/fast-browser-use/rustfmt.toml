@@ -1,0 +1,10 @@
+# Rustfmt configuration for browser-use project
+
+# Import formatting
+imports_indent = "Visual"
+reorder_imports = true
+imports_granularity = "Crate"
+
+# Line formatting
+use_small_heuristics = "Max"
+max_width = 120

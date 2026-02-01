@@ -1,0 +1,26 @@
+{
+  "name": "creative-illustration",
+  "version": "1.0.0",
+  "description": "Generate diverse creative illustrations via OpenAI Images API. Create book illustrations, editorial art, children's book art, concept illustrations, and artistic scenes.",
+  "main": "SKILL.md",
+  "keywords": [
+    "illustration",
+    "art",
+    "book-illustration",
+    "editorial-art",
+    "children-book",
+    "concept-art",
+    "openai",
+    "image-generation",
+    "creative",
+    "visual-design"
+  ],
+  "author": "jack happy",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "files": [
+    "SKILL.md"
+  ]
+}

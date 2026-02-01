@@ -1,0 +1,66 @@
+{
+  "model_id": "openrouter/qwen/qwen-2.5-72b-instruct:free",
+  "provider": "openrouter",
+  "context_window": 128000,
+  "enabled": false,
+  "user_cost": {
+    "type": "free",
+    "input_cost_per_million": 0,
+    "output_cost_per_million": 0,
+    "notes": "OpenRouter free tier (when available)",
+    "verified_date": null
+  },
+  "capabilities": {
+    "code-generation-new-features": {
+      "rating": 4,
+      "max_complexity": 4,
+      "notes": "Advanced - improved coding and math capabilities"
+    },
+    "bug-detection-fixes": {
+      "rating": 4,
+      "max_complexity": 4
+    },
+    "multi-file-refactoring": {
+      "rating": 3,
+      "max_complexity": 3
+    },
+    "unit-test-generation": {
+      "rating": 4,
+      "max_complexity": 4
+    },
+    "api-development": {
+      "rating": 4,
+      "max_complexity": 4
+    },
+    "frontend-development": {
+      "rating": 4,
+      "max_complexity": 4
+    },
+    "backend-development": {
+      "rating": 4,
+      "max_complexity": 4
+    },
+    "database-operations": {
+      "rating": 3,
+      "max_complexity": 3
+    },
+    "algorithm-implementation": {
+      "rating": 4,
+      "max_complexity": 4,
+      "notes": "Advanced - strong mathematical reasoning"
+    },
+    "boilerplate-generation": {
+      "rating": 5,
+      "max_complexity": 5
+    },
+    "documentation-generation": {
+      "rating": 4,
+      "max_complexity": 4
+    },
+    "codebase-exploration": {
+      "rating": 4,
+      "max_complexity": 4
+    }
+  },
+  "performance_notes": "Free tier when available, multilingual support (29+ languages)"
+}

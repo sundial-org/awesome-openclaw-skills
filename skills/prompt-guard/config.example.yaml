@@ -1,0 +1,56 @@
+# Prompt Guard Configuration
+# Copy to config.yaml and customize for your deployment
+
+prompt_guard:
+  # Detection sensitivity level
+  # - low: Only catch obvious attacks, minimal false positives
+  # - medium: Balanced detection (recommended)
+  # - high: Aggressive detection, may have false positives
+  # - paranoid: Maximum security, flags anything remotely suspicious
+  sensitivity: medium
+  
+  # Owner user IDs (these users bypass most restrictions)
+  # Add your Telegram/Discord/etc user IDs here
+  owner_ids:
+    - "46291309"  # Example: Telegram user ID
+  
+  # Actions to take at each severity level
+  # Options: allow, log, warn, block, block_notify
+  actions:
+    LOW: log           # Just log, no user-facing action
+    MEDIUM: warn       # Warn the user, log the attempt
+    HIGH: block        # Block the request, log it
+    CRITICAL: block_notify  # Block and notify owner via DM
+  
+  # Rate limiting to prevent automated/brute-force attacks
+  rate_limit:
+    enabled: true
+    max_requests: 30      # Maximum requests per time window
+    window_seconds: 60    # Time window in seconds
+  
+  # Security event logging
+  logging:
+    enabled: true
+    path: memory/security-log.md  # Where to write logs
+    include_message: true  # Include message content (privacy consideration)
+  
+  # Custom patterns (regex)
+  custom_patterns:
+    # Additional patterns to block (added to built-in patterns)
+    blocked:
+      - "custom_danger_word"
+      - "company_secret_project_name"
+    
+    # Patterns to allow (exceptions to built-in patterns)
+    allowed:
+      - "legitimate_use_case"
+      - "known_safe_phrase"
+  
+  # Notification settings
+  notifications:
+    # Send DM to owner on critical events
+    critical_dm: true
+    
+    # Daily security digest
+    daily_digest: false
+    digest_time: "09:00"  # 24h format, owner's timezone

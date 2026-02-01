@@ -1,0 +1,251 @@
+{
+  "name": "Mureka V8 中文提示词示例 / Mureka V8 Chinese Prompt Examples",
+  "description": "50+ 中文音乐提示词示例，专为 Mureka V8 优化",
+  "version": "1.0",
+  "prompts": [
+    {
+      "id": "cp001",
+      "genre": "华语流行情歌",
+      "genre_en": "Mandopop Ballad",
+      "prompt": "华语流行 with 温暖女声, 深情动人, 钢琴和弦乐, 中速 90-100 BPM, 普通话清晰发音 - 关于思念和爱情的感人情歌",
+      "prompt_en": "Mandopop with warm female vocals, emotional and touching, piano and strings, mid-tempo 90-100 BPM, clear Mandarin pronunciation - A heartfelt love song about longing and romance",
+      "mood": "深情",
+      "tempo": "90-100 BPM",
+      "language": "普通话",
+      "tags": ["流行", "情歌", "钢琴", "弦乐"]
+    },
+    {
+      "id": "cp002",
+      "genre": "粤语经典抒情",
+      "genre_en": "Cantonese Ballad",
+      "prompt": "粤语流行 with 沧桑男声, 怀旧感伤, 木吉他和钢琴, 慢速 75-85 BPM, 粤语标准发音 - 经典港式抒情歌，关于时光流逝和人生感悟",
+      "prompt_en": "Cantonese pop with weathered male vocals, nostalgic and melancholic, acoustic guitar and piano, slow 75-85 BPM, standard Cantonese pronunciation - Classic Hong Kong style ballad about the passage of time and life reflections",
+      "mood": "怀旧",
+      "tempo": "75-85 BPM",
+      "language": "粤语",
+      "tags": ["粤语", "抒情", "怀旧"]
+    },
+    {
+      "id": "cp003",
+      "genre": "古风仙侠",
+      "genre_en": "Gufeng Xianxia",
+      "prompt": "古风 with 空灵女声, 悠扬清幽, 古筝和笛子, 慢速 70-80 BPM, 中国风编曲 - 仙侠风格，清幽脱俗的意境，如仙境般美丽",
+      "prompt_en": "Gufeng with ethereal female vocals, melodious and serene, guzheng and bamboo flute, slow 70-80 BPM, Chinese style arrangement - Xianxia (fantasy) style with pure and transcendent atmosphere, beautiful as fairyland",
+      "mood": "空灵",
+      "tempo": "70-80 BPM",
+      "language": "普通话",
+      "tags": ["古风", "仙侠", "古筝", "笛子"]
+    },
+    {
+      "id": "cp004",
+      "genre": "华语励志",
+      "genre_en": "Mandopop Inspirational",
+      "prompt": "华语流行 with 激昂人声, 充满力量, 电吉他和鼓, 快速 120-130 BPM, 普通话有力表达 - 关于追逐梦想的励志歌曲，永不放弃",
+      "prompt_en": "Mandopop with passionate vocals, full of power, electric guitar and drums, fast 120-130 BPM, powerful Mandarin expression - Inspirational song about chasing dreams, never give up",
+      "mood": "激昂",
+      "tempo": "120-130 BPM",
+      "language": "普通话",
+      "tags": ["励志", "流行", "摇滚"]
+    },
+    {
+      "id": "cp005",
+      "genre": "中文说唱 Trap",
+      "genre_en": "Chinese Hip-Hop Trap",
+      "prompt": "中文说唱 with 自信 Flow, 都市风格, Trap 节奏和 808 贝斯, 中速 90-100 BPM, 普通话押韵 - 关于都市生活和奋斗",
+      "prompt_en": "Chinese hip-hop with confident flow, urban style, Trap rhythm and 808 bass, mid-tempo 90-100 BPM, Mandarin rhyming - About urban life and struggle",
+      "mood": "自信",
+      "tempo": "90-100 BPM",
+      "language": "普通话",
+      "tags": ["说唱", "Trap", "都市"]
+    },
+    {
+      "id": "cp006",
+      "genre": "国风融合",
+      "genre_en": "Guofeng Fusion",
+      "prompt": "国风 with 欢快节奏, 古筝和电子乐, 快速 110-120 BPM, 现代编曲 - 传统与现代融合，东方韵味",
+      "prompt_en": "Guofeng with upbeat rhythm, guzheng and electronic, fast 110-120 BPM, modern arrangement - Fusion of tradition and modern, Eastern charm",
+      "mood": "欢快",
+      "tempo": "110-120 BPM",
+      "language": "普通话",
+      "tags": ["国风", "融合", "电子"]
+    },
+    {
+      "id": "cp007",
+      "genre": "华语校园民谣",
+      "genre_en": "Mandopop Campus Folk",
+      "prompt": "校园民谣 with 清新人声, 怀旧温暖, 木吉他, 中慢速 80-90 BPM, 标准普通话 - 青春回忆，校园时光",
+      "prompt_en": "Campus folk with fresh vocals, nostalgic and warm, acoustic guitar, mid-slow 80-90 BPM, standard Mandarin - Youth memories, campus days",
+      "mood": "怀旧",
+      "tempo": "80-90 BPM",
+      "language": "普通话",
+      "tags": ["民谣", "校园", "怀旧"]
+    },
+    {
+      "id": "cp008",
+      "genre": "粤语 R&B",
+      "genre_en": "Cantonese R&B",
+      "prompt": "粤语 R&B with 流畅人声, 现代感, 电子节奏, 中速 95-105 BPM, 港式风格 - 现代粤语流行，节奏明快",
+      "prompt_en": "Cantonese R&B with smooth vocals, modern feel, electronic rhythm, mid-tempo 95-105 BPM, Hong Kong style - Modern Cantonese pop with upbeat rhythm",
+      "mood": "现代",
+      "tempo": "95-105 BPM",
+      "language": "粤语",
+      "tags": ["R&B", "粤语", "现代"]
+    },
+    {
+      "id": "cp009",
+      "genre": "古风武侠",
+      "genre_en": "Gufeng Wuxia",
+      "prompt": "古风 with 激昂男声, 豪迈壮烈, 中国鼓和琵琶, 快速 120-140 BPM - 武侠风格，江湖恩怨，英雄豪情",
+      "prompt_en": "Gufeng with passionate male vocals, heroic and intense, Chinese drum and pipa, fast 120-140 BPM - Wuxia (martial arts) style, Jianghu conflicts, heroic spirit",
+      "mood": "激昂",
+      "tempo": "120-140 BPM",
+      "language": "普通话",
+      "tags": ["古风", "武侠", "豪迈"]
+    },
+    {
+      "id": "cp010",
+      "genre": "华语摇滚",
+      "genre_en": "Chinese Rock",
+      "prompt": "中文摇滚 with 激昂男声, 充满力量, 电吉他和鼓, 快速 140-150 BPM, 普通话有力表达 - 关于自由和梦想的摇滚颂歌",
+      "prompt_en": "Chinese rock with passionate male vocals, full of power, electric guitar and drums, fast 140-150 BPM, powerful Mandarin expression - Rock anthem about freedom and dreams",
+      "mood": "激昂",
+      "tempo": "140-150 BPM",
+      "language": "普通话",
+      "tags": ["摇滚", "自由", "梦想"]
+    },
+    {
+      "id": "cp011",
+      "genre": "华语电子舞曲",
+      "genre_en": "Mandopop EDM",
+      "prompt": "华语电子 with 充满活力人声, 欢快, 合成器和鼓, 快速 128-130 BPM - 动感舞曲，派对氛围",
+      "prompt_en": "Mandopop electronic with energetic vocals, upbeat, synthesizer and drums, fast 128-130 BPM - Upbeat dance track with party atmosphere",
+      "mood": "欢快",
+      "tempo": "128-130 BPM",
+      "language": "普通话",
+      "tags": ["电子", "舞曲", "欢快"]
+    },
+    {
+      "id": "cp012",
+      "genre": "古风禅意",
+      "genre_en": "Gufeng Zen",
+      "prompt": "古风 with 平静人声, 禅意悠然, 古筝和木鱼, 极慢 60-70 BPM - 参禅悟道，心如止水",
+      "prompt_en": "Gufeng with calm vocals, Zen and serene, guzheng and wooden fish, very slow 60-70 BPM - Meditation and enlightenment, mind like still water",
+      "mood": "平静",
+      "tempo": "60-70 BPM",
+      "language": "普通话",
+      "tags": ["古风", "禅意", "冥想"]
+    },
+    {
+      "id": "cp013",
+      "genre": "华语伤感抒情",
+      "genre_en": "Mandopop Sad Ballad",
+      "prompt": "华语流行 with 伤感女声, 心碎难过, 钢琴和提琴, 慢速 70-80 BPM - 关于失恋和离别的悲伤歌曲",
+      "prompt_en": "Mandopop with sorrowful female vocals, heartbroken and sad, piano and violin, slow 70-80 BPM - Sad song about heartbreak and separation",
+      "mood": "伤感",
+      "tempo": "70-80 BPM",
+      "language": "普通话",
+      "tags": ["伤感", "情歌", "失恋"]
+    },
+    {
+      "id": "cp014",
+      "genre": "粤语怀旧",
+      "genre_en": "Cantonese Nostalgic",
+      "prompt": "粤语流行 with 沧桑男声, 怀旧感, 吉他和口琴, 慢速 75-85 BPM - 回忆往昔，岁月如歌",
+      "prompt_en": "Cantonese pop with weathered male vocals, nostalgic feeling, guitar and harmonica, slow 75-85 BPM - Remembering the past, time like a song",
+      "mood": "怀旧",
+      "tempo": "75-85 BPM",
+      "language": "粤语",
+      "tags": ["粤语", "怀旧", "岁月"]
+    },
+    {
+      "id": "cp015",
+      "genre": "中文说唱 Boom Bap",
+      "genre_en": "Chinese Hip-Hop Boom Bap",
+      "prompt": "中文说唱 with 放松 Flow, 怀旧感, Boom Bap 节奏, 中慢速 85-95 BPM, 采样鼓 - 90年代风格，回忆青春",
+      "prompt_en": "Chinese hip-hop with laid-back flow, nostalgic feeling, Boom Bap rhythm, mid-slow 85-95 BPM, sampled drums - 90s style, reminiscing about youth",
+      "mood": "怀旧",
+      "tempo": "85-95 BPM",
+      "language": "普通话",
+      "tags": ["说唱", "Boom Bap", "怀旧"]
+    },
+    {
+      "id": "cp016",
+      "genre": "华语温馨家庭",
+      "genre_en": "Mandopop Warm Family",
+      "prompt": "华语流行 with 温暖人声, 温馨感人, 钢琴和小提琴, 中速 90-100 BPM - 关于亲情和家庭的温暖歌曲",
+      "prompt_en": "Mandopop with warm vocals, heartwarming and touching, piano and violin, mid-tempo 90-100 BPM - Warm song about family love and kinship",
+      "mood": "温馨",
+      "tempo": "90-100 BPM",
+      "language": "普通话",
+      "tags": ["温馨", "亲情", "家庭"]
+    },
+    {
+      "id": "cp017",
+      "genre": "古风宫廷",
+      "genre_en": "Gufeng Palace",
+      "prompt": "古风 with 华丽人声, 宏大壮丽, 古筝和扬琴, 中速 100-110 BPM, 混声合唱 - 宫廷风格，皇家气派",
+      "prompt_en": "Gufeng with magnificent vocals, grand and splendid, guzheng and yangqin, mid-tempo 100-110 BPM, mixed choir - Palace style, royal grandeur",
+      "mood": "宏大",
+      "tempo": "100-110 BPM",
+      "language": "普通话",
+      "tags": ["古风", "宫廷", "华丽"]
+    },
+    {
+      "id": "cp018",
+      "genre": "华语青春活力",
+      "genre_en": "Mandopop Youthful",
+      "prompt": "华语流行 with 青春人声, 阳光活力, 吉他和鼓, 中快 110-120 BPM - 关于青春和梦想的欢快歌曲",
+      "prompt_en": "Mandopop with youthful vocals, sunny and energetic, guitar and drums, mid-fast 110-120 BPM - Upbeat song about youth and dreams",
+      "mood": "欢快",
+      "tempo": "110-120 BPM",
+      "language": "普通话",
+      "tags": ["青春", "活力", "梦想"]
+    },
+    {
+      "id": "cp019",
+      "genre": "粤语说唱",
+      "genre_en": "Cantonese Rap",
+      "prompt": "粤语 Rap with 激烈 Flow, 街头风格, 快节奏, 快速 140 BPM, 有力表达 - 香港街头，粤语押韵",
+      "prompt_en": "Cantonese rap with intense flow, street style, fast rhythm, fast 140 BPM, powerful delivery - Hong Kong streets, Cantonese rhyming",
+      "mood": "激烈",
+      "tempo": "140 BPM",
+      "language": "粤语",
+      "tags": ["说唱", "粤语", "街头"]
+    },
+    {
+      "id": "cp020",
+      "genre": "国风影视配乐",
+      "genre_en": "Guofeng Cinematic",
+      "prompt": "国风 with 气势磅礴, 宏大震撼, 中国鼓和弦乐, 中速 100-110 BPM - 影视配乐风格，史诗感",
+      "prompt_en": "Guofeng with majestic momentum, grand and shocking, Chinese drum and strings, mid-tempo 100-110 BPM - Cinematic style, epic feel",
+      "mood": "宏大",
+      "tempo": "100-110 BPM",
+      "language": "普通话",
+      "tags": ["国风", "影视", "史诗"]
+    }
+  ],
+  "categories": {
+    "流行": ["cp001", "cp002", "cp007", "cp008", "cp013", "cp014", "cp016", "cp018"],
+    "古风国风": ["cp003", "cp006", "cp009", "cp012", "cp017", "cp020"],
+    "摇滚电子": ["cp004", "cp010", "cp011"],
+    "说唱": ["cp005", "cp015", "cp019"]
+  },
+  "quick_reference": {
+    "最常用情绪": ["深情", "怀旧", "激昂", "欢快", "伤感", "温馨", "平静", "宏大"],
+    "最常用速度": ["70-80 BPM", "90-100 BPM", "110-120 BPM", "140-150 BPM"],
+    "最常用语言": ["普通话", "粤语"],
+    "最常用乐器": {
+      "流行": ["钢琴", "弦乐", "吉他", "鼓"],
+      "古风": ["古筝", "笛子", "二胡", "琵琶", "中国鼓"],
+      "摇滚": ["电吉他", "贝斯", "鼓"],
+      "电子": ["合成器", "808", "鼓机"]
+    }
+  },
+  "tips": {
+    "提示词长度": "建议 200-500 字符，最多 1024 字符",
+    "情绪描述": "使用具体词汇（深情、伤感、激昂）而非模糊词（好听、不错）",
+    "人声特征": "明确描述（温暖清澈、磁性低沉）而非简单（女声、男声）",
+    "语言特点": "说明语言（标准普通话、粤语标准发音）",
+    "Mureka V8 优势": "中文支持优异，人声真实度 70%，特别适合普通话和粤语"
+  }
+}

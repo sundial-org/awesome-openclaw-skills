@@ -1,0 +1,12 @@
+{
+  "schema": {
+    "name": "ClawdbotWorkProofV1",
+    "string": "bytes32 taskHash, bytes32 outputHash, string agentId, string metadata",
+    "revocable": true,
+    "resolver": "0x0000000000000000000000000000000000000000"
+  },
+  "uids": {
+    "base": null,
+    "base_sepolia": null
+  }
+}

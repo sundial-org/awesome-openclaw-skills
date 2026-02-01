@@ -1,0 +1,12 @@
+{
+  "name": "clawdbot-skill-xai",
+  "version": "1.0.0",
+  "description": "xAI/Grok integration for Clawdbot",
+  "keywords": ["clawdbot-skill", "xai", "grok", "ai", "chat"],
+  "author": "Lobster",
+  "license": "MIT",
+  "scripts": {
+    "chat": "node scripts/chat.js",
+    "models": "node scripts/models.js"
+  }
+}

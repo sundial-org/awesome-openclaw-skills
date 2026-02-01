@@ -1,0 +1,11 @@
+{
+  "name": "@ai-labs-claude-skills/brand-analyzer",
+  "version": "1.0.0",
+  "description": "Claude AI skill: brand-analyzer",
+  "main": "index.js",
+  "files": [
+    "."
+  ],
+  "license": "MIT",
+  "author": "AI Labs"
+}

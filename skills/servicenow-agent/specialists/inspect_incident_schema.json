@@ -1,0 +1,9 @@
+[
+  {
+    "name": "schema-incident",
+    "table": "sys_dictionary",
+    "sysparm_query": "name=incident^elementISNOTEMPTY",
+    "sysparm_fields": "element,column_label,internal_type,reference",
+    "sysparm_limit": 500
+  }
+]

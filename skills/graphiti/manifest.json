@@ -1,0 +1,36 @@
+{
+  "name": "graphiti",
+  "version": "1.0.1",
+  "description": "Query and manage your knowledge graph using Graphiti's REST API with automatic service discovery",
+  "author": "Essam Masoudy",
+  "homepage": "https://github.com/emasoudy/clawdbot-skills",
+  "repository": "https://github.com/emasoudy/clawdbot-skills",
+  "license": "MIT",
+  "keywords": ["knowledge-graph", "graphiti", "neo4j", "qdrant", "memory"],
+  "clawdhub": {
+    "category": "knowledge",
+    "featured": true
+  },
+  "dependencies": {
+    "system": ["curl", "jq"],
+    "services": ["graphiti", "neo4j", "qdrant"],
+    "clawdbot": ">=2026.1.17"
+  },
+  "ports": {
+    "graphiti": 8001,
+    "neo4j": 7687,
+    "qdrant": 6333
+  },
+  "install": [
+    {
+      "check": "command -v curl",
+      "install": "apt-get install curl",
+      "platforms": ["linux"]
+    },
+    {
+      "check": "command -v jq",
+      "install": "apt-get install jq",
+      "platforms": ["linux"]
+    }
+  ]
+}

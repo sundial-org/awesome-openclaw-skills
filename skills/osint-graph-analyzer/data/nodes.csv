@@ -1,0 +1,11 @@
+id,name,type,properties
+1,@target_account,person,"{country:US,verified:true,followers:50000}"
+2,@associate_1,person,"{country:RU,followers:1200}"
+3,@associated_handle,person,"{country:RU,followers:800}"
+4,@bot_100,bot,"{language:EN,automated:true}"
+5,@crypto_shill,bot,"{language:EN,automated:true}"
+6,@news_outlet,organization,"{type:media,verified:true}"
+7,@crypto_exchange,organization,"{type:finance}"
+8,@security_researcher,person,"{specialization:OSINT,verified:true}"
+9,@analyst_42,person,"{organization:private}"
+10,@suspected_proxy,person,"{flags:suspicious,verified:false}"

@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "name": "security-audit",
+  "version": "0.1.3",
+  "intent": "Hostile, fail-closed auditing of codebases and skills for secrets, prompt-injection signals, persistence mechanisms, and supply-chain hygiene.",
+  "permissions": {
+    "network": {
+      "required": false,
+      "domains": []
+    },
+    "filesystem": {
+      "read": [
+        "<target>/**"
+      ],
+      "write": [
+        "<workdir>/**"
+      ],
+      "deny": [
+        "/etc/**",
+        "/proc/**",
+        "/sys/**",
+        "/root/**"
+      ]
+    },
+    "subprocess": {
+      "required": true,
+      "allow": [
+        "jq",
+        "trufflehog",
+        "semgrep",
+        "python3"
+      ],
+      "optional": [
+        "docker"
+      ]
+    }
+  },
+  "expectedWrites": [
+    "<workdir>/**"
+  ],
+  "dependencies": {
+    "ecosystems": [],
+    "lockfilesRequired": true,
+    "banInstallHooks": true
+  },
+  "notes": [
+    "This manifest is required by strict/zero-trust workflows.",
+    "The skill itself does not need network access; scanners may attempt update checks, which should be disabled."
+  ]
+}

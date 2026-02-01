@@ -1,0 +1,160 @@
+# ============================================================================
+# Voice.ai Agents Skill
+# ============================================================================
+# Create, manage, and deploy conversational AI voice agents using Voice.ai API.
+#
+# Version: 1.0.0
+# Author: Nick Gill (https://github.com/gizmoGremlin)
+# License: MIT
+# Documentation: https://voice.ai/docs/guides/voice-agents/quickstart
+# ============================================================================
+
+skill:
+  name: voice.ai-voice-agents
+  display_name: "Voice.ai Voice Agents"
+  description: |
+    Create, manage, and deploy Voice.ai conversational AI agents.
+    Features include agent management, one-click deployment, knowledge base (RAG),
+    MCP integration, phone number management, and analytics.
+  version: "1.0.0"
+  author: "Nick Gill (https://github.com/gizmoGremlin)"
+  icon: "🤖"
+  category: "voice-agents"
+  tags:
+    - voice-agents
+    - conversational-ai
+    - voice-ai
+    - phone-agents
+    - ai-agents
+    - mcp
+    - rag
+
+# ============================================================================
+# Authentication Configuration
+# ============================================================================
+
+authentication:
+  type: bearer
+  header: Authorization
+  prefix: "Bearer "
+  description: |
+    Voice.ai uses Bearer token authentication. Get your API key from
+    https://voice.ai/app/dashboard/developers
+  environment_variable: VOICE_AI_API_KEY
+  required: true
+
+# ============================================================================
+# API Configuration
+# ============================================================================
+
+api:
+  base_url: "https://dev.voice.ai"
+  version: "v1"
+
+# ============================================================================
+# LLM Models
+# ============================================================================
+
+llm_models:
+  - id: gemini-2.5-flash-lite
+    name: "Gemini 2.5 Flash Lite"
+    description: "Fast, lightweight model for quick responses"
+    default: true
+  - id: gemini-2.5-flash
+    name: "Gemini 2.5 Flash"
+    description: "Balanced speed and capability"
+  - id: gemini-2.5-pro
+    name: "Gemini 2.5 Pro"
+    description: "Most capable model for complex tasks"
+
+# ============================================================================
+# TTS Models
+# ============================================================================
+
+tts_models:
+  - id: voiceai-tts-v1-latest
+    name: "English Latest"
+    language: en
+    description: "Latest English TTS model"
+  - id: voiceai-tts-v1-2025-12-19
+    name: "English Stable"
+    language: en
+    description: "Stable English TTS model"
+  - id: voiceai-tts-multilingual-v1-latest
+    name: "Multilingual Latest"
+    language: multi
+    description: "Latest multilingual TTS model"
+  - id: voiceai-tts-multilingual-v1-2025-01-14
+    name: "Multilingual Stable"
+    language: multi
+    description: "Stable multilingual TTS model"
+
+# ============================================================================
+# Supported Languages
+# ============================================================================
+
+languages:
+  - code: auto
+    name: "Auto-detect"
+  - code: en
+    name: "English"
+  - code: es
+    name: "Spanish"
+  - code: fr
+    name: "French"
+  - code: de
+    name: "German"
+  - code: it
+    name: "Italian"
+  - code: pt
+    name: "Portuguese"
+  - code: pl
+    name: "Polish"
+  - code: ru
+    name: "Russian"
+  - code: nl
+    name: "Dutch"
+  - code: sv
+    name: "Swedish"
+  - code: ca
+    name: "Catalan"
+
+# ============================================================================
+# Agent Configuration Defaults
+# ============================================================================
+
+agent_defaults:
+  llm_model: "gemini-2.5-flash-lite"
+  llm_temperature: 0.7
+  max_call_duration_seconds: 900
+  allow_interruptions: true
+  allow_interruptions_on_greeting: false
+  min_interruption_words: 1
+  auto_noise_reduction: true
+  allow_agent_to_end_call: false
+  min_silence_duration: 0.55
+  min_speech_duration: 0.1
+  user_silence_timeout: 10
+  tts_min_sentence_len: 20
+  min_endpointing_delay: 0.5
+  max_endpointing_delay: 3
+  vad_activation_threshold: 0.6
+
+# ============================================================================
+# TTS Parameter Defaults
+# ============================================================================
+
+tts_defaults:
+  language: "en"
+  temperature: 1.0
+  top_p: 0.8
+
+# ============================================================================
+# MCP Authentication Types
+# ============================================================================
+
+mcp_auth_types:
+  - none
+  - bearer_token
+  - api_key
+  - custom_headers

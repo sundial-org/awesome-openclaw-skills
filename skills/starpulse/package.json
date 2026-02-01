@@ -1,0 +1,10 @@
+{
+  "name": "starpulse-skill",
+  "version": "0.2.0",
+  "description": "Clawdbot skill for Star Pulse decentralized social network",
+  "type": "module",
+  "main": "lib/cli.js",
+  "dependencies": {
+    "tweetnacl": "^1.0.3"
+  }
+}

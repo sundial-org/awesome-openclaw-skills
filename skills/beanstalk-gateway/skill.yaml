@@ -1,0 +1,20 @@
+name: beanstalk-gateway
+version: 1.0.0
+description: Connect your Clawdbot to beans.talk for remote monitoring and control
+author: tommygeoco
+repository: https://github.com/tommygeoco/beanstalk
+tags:
+  - gateway
+  - monitoring
+  - beanstalk
+  - remote
+
+# Lifecycle hooks
+hooks:
+  # Run after skill is installed
+  postInstall: scripts/setup.sh
+  
+# Required environment for the gateway client
+environment:
+  GATEWAY_URL: "Gateway WebSocket URL from beans.talk"
+  GATEWAY_TOKEN: "Gateway authentication token from beans.talk"

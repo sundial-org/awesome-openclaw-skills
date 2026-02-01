@@ -1,0 +1,31 @@
+{
+  "name": "clawd-skill-zhipu-mcp-tools",
+  "version": "1.0.0",
+  "description": "使用智谱AI MCP服务器提供的多种AI能力，包括网页分析、视觉理解等功能",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "clawd",
+    "skill",
+    "zhipu",
+    "ai",
+    "mcp",
+    "web-analysis",
+    "vision",
+    "search"
+  ],
+  "author": "Clawd User",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.0"
+  },
+  "clawd": {
+    "skill": {
+      "name": "zhipu-mcp-tools",
+      "category": "ai-tools",
+      "tags": ["zhipu", "ai", "analysis", "vision", "search", "web"]
+    }
+  }
+}

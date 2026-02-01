@@ -1,0 +1,45 @@
+# Price Alerts Workflow for Cron (No Approval Gate)
+# Usage: lobster run --file workflows/alerts-cron.yaml --args-json '{"lang":"en"}'
+#
+# Schedule: 2:00 PM PT / 5:00 PM ET (1 hour after market close)
+# Checks price alerts against current prices (including after-hours)
+
+name: finance.alerts.cron
+description: Check price alerts and send triggered alerts to WhatsApp/Telegram
+
+args:
+  lang:
+    default: en
+    description: "Language: en or de"
+  channel:
+    default: "${FINANCE_NEWS_CHANNEL:-whatsapp}"
+    description: "Delivery channel: whatsapp or telegram"
+  target:
+    default: "${FINANCE_NEWS_TARGET}"
+    description: "Target: group name, JID, or chat ID"
+
+steps:
+  # Check alerts against current prices
+  - id: check_alerts
+    command: |
+      SKILL_DIR="${SKILL_DIR:-$HOME/projects/skills/personal/finance-news}"
+      python3 "$SKILL_DIR/scripts/alerts.py" check --lang "${lang}"
+    description: Check price alerts against current prices
+
+  # Send alert message if there's content
+  - id: send_alerts
+    command: |
+      MSG=$(cat)
+      MSG=$(echo "$MSG" | tr -d '\r')
+      # Only send if message has actual content (not just "No price data" message)
+      if echo "$MSG" | grep -q "IN BUY ZONE\|IN KAUFZONE\|WATCHING\|BEOBACHTUNG"; then
+        openclaw message send \
+          --channel "${channel}" \
+          --target "${target}" \
+          --message "$MSG"
+        echo "Sent price alerts to ${channel}"
+      else
+        echo "No triggered alerts or watchlist items to send"
+      fi
+    stdin: $check_alerts.stdout
+    description: Send price alerts to channel

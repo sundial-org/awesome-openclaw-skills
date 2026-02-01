@@ -1,0 +1,17 @@
+{
+  "owner": "gumadeiras",
+  "slug": "tldr",
+  "displayName": "tldr",
+  "latest": {
+    "version": "1.0.1",
+    "publishedAt": 1769060848674,
+    "commit": "https://github.com/clawdbot/skills/commit/801f60b7b527ef3e3df8122d9ea8c650f20753f4"
+  },
+  "history": [
+    {
+      "version": "1.0.0",
+      "publishedAt": 1768935236822,
+      "commit": "https://github.com/clawdbot/skills/commit/e52eb5cddcaa92c619dac05d1625d8b9a66bea17"
+    }
+  ]
+}

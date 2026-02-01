@@ -1,0 +1,10 @@
+{
+  "name": "nodetool",
+  "version": "0.6.2",
+  "description": "Visual AI workflow builder - ComfyUI meets n8n for LLM agents, RAG pipelines, and multimodal data flows",
+  "author": "Matthias Georgi <matti.georgi@gmail.com>",
+  "homepage": "https://nodetool.ai",
+  "keywords": ["workflow", "automation", "AI", "RAG", "ComfyUI", "n8n", "agents", "LLM"],
+  "categories": ["development", "automation", "AI"],
+  "license": "AGPL-3.0"
+}

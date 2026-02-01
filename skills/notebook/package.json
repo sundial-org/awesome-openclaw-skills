@@ -1,0 +1,21 @@
+{
+  "name": "notebook",
+  "version": "1.0.0",
+  "description": "Local-first idea and project notebook",
+  "main": "cli.js",
+  "type": "module",
+  "scripts": {
+    "test": "node cli.js"
+  },
+  "keywords": [
+    "notebook",
+    "ideas",
+    "projects",
+    "knowledge"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "js-yaml": "^4.1.1",
+    "uuid": "^13.0.0"
+  }
+}

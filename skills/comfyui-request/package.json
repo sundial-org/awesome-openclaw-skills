@@ -1,0 +1,9 @@
+{
+  "name": "@workspace/comfyui-request",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "comfyui-request": "bin/cli.js"
+  }
+}

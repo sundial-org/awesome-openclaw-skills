@@ -1,0 +1,26 @@
+name: EchoAgent
+version: 0.1.0
+
+description: >
+  A simple demonstration agent for the OpenClaw community
+  that uses a tool and short-term memory.
+
+author: Krishna Lokhande
+license: MIT
+
+capabilities:
+  - text_processing
+  - tool_usage
+
+tools:
+  - echo_tool
+
+inputs:
+  - text
+
+outputs:
+  - echoed_text
+
+runtime:
+  language: python
+  python_version: ">=3.10"

@@ -1,0 +1,17 @@
+# Flow - Intelligent Skill Orchestrator Dependencies
+
+# Core dependencies
+streamlit>=1.28.0
+pandas>=2.0.0
+
+# Natural Language Processing
+nltk>=3.8.0
+spacy>=3.6.0
+
+# Security scanning
+bandit>=1.7.5
+safety>=2.3.0
+
+# Code analysis
+ast-grep>=0.12.0
+pylint>=2.17.0

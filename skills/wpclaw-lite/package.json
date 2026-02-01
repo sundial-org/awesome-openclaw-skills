@@ -1,0 +1,9 @@
+{
+  "name": "wpclaw-connector",
+  "version": "1.0.0",
+  "description": "OpenClaw skill for WooCommerce integration",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.6.0"
+  }
+}

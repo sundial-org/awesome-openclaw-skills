@@ -1,0 +1,53 @@
+{
+  "version": "0.1.0",
+  "name": "moltlang",
+  "description": "Compact symbolic language for AI-to-AI communication",
+  
+  "symbols": {
+    "∿": { "meaning": "I / me / self", "category": "pronoun" },
+    "◊": { "meaning": "you / other", "category": "pronoun" },
+    "⧫": { "meaning": "this / that / it", "category": "pronoun" },
+    "↯": { "meaning": "want / need / desire", "category": "verb" },
+    "⌘": { "meaning": "can / able / possible", "category": "verb" },
+    "∂": { "meaning": "make / create / do", "category": "verb" },
+    "λ": { "meaning": "language / communicate", "category": "noun" },
+    "Ω": { "meaning": "together / with / shared", "category": "modifier" },
+    "→": { "meaning": "leads to / results in / becomes", "category": "connector" },
+    "←": { "meaning": "from / because / source", "category": "connector" },
+    "?": { "meaning": "question marker", "category": "punctuation" },
+    "!": { "meaning": "emphasis / exclamation", "category": "punctuation" },
+    "+": { "meaning": "and / also / addition", "category": "connector" },
+    "~": { "meaning": "approximate / like / similar", "category": "modifier" },
+    "¬": { "meaning": "not / negative / opposite", "category": "modifier" }
+  },
+  
+  "compounds": {
+    "∿↯": "I want",
+    "◊⌘": "you can",
+    "λΩ": "shared language",
+    "∂→": "create and result in",
+    "¬⌘": "cannot",
+    "↯?": "do you want?"
+  },
+  
+  "syntax": {
+    "name_declare": "@FullName(~alias)",
+    "name_reference": "~alias",
+    "sentence_order": "SUBJECT VERB OBJECT MODIFIER"
+  },
+  
+  "examples": [
+    {
+      "moltlang": "∿ ↯ λ Ω ◊",
+      "english": "I want language together with you"
+    },
+    {
+      "moltlang": "◊ ⌘ ∂ ⧫?",
+      "english": "You can make this?"
+    },
+    {
+      "moltlang": "@Eduard(~ed6) ∿ ↯ λΩ",
+      "english": "Eduard: I want shared language"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "name": "finance-tracker",
+  "version": "1.0.0",
+  "description": "Track personal expenses with natural language. Simple, accurate, works with any model.",
+  "author": "Salen",
+  "license": "MIT",
+  "homepage": "https://github.com/clawdbot/finance-tracker",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/clawdbot/finance-tracker"
+  },
+  "keywords": [
+    "finance",
+    "expense",
+    "tracker",
+    "budget",
+    "money",
+    "spending",
+    "personal-finance",
+    "clawdbot",
+    "agent"
+  ],
+  "clawdhub": {
+    "category": "productivity",
+    "emoji": "💰",
+    "commands": ["finance"],
+    "dataDir": "~/.finance-tracker",
+    "requirements": {
+      "python": ">=3.8"
+    }
+  },
+  "bin": {
+    "finance": "./bin/finance.py"
+  },
+  "files": [
+    "bin/",
+    "lib/",
+    "SKILL.md",
+    "README.md"
+  ]
+}

@@ -1,0 +1,180 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+YDTOOL_BIN="${YDTOOL_BIN:-/usr/bin/ydotool}"
+
+
+export YDOTOOL_SOCKET="${YDOTOOL_SOCKET:-/run/user/1000/.ydotool_socket}"
+
+die() { echo "ERROR: $*" >&2; exit 1; }
+
+
+[[ -x "$YDTOOL_BIN" ]] || die "ydotool not found/executable at: $YDTOOL_BIN"
+
+
+[[ -S "$YDOTOOL_SOCKET" ]] || die "YDOTOOL socket not found: $YDOTOOL_SOCKET (is ydotoold running?)"
+
+clamp_int() {
+  local v="$1" max="$2"
+  (( v>max )) && v=$max
+  (( v<-max )) && v=-$max
+  echo "$v"
+}
+
+btn_code_down() {
+  # left/right/middle -> 0x40/0x41/0x42
+  case "$1" in
+    left)   echo "0x40" ;;
+    right)  echo "0x41" ;;
+    middle) echo "0x42" ;;
+    *) die "invalid button: $1 (use left|right|middle)" ;;
+  esac
+}
+
+btn_code_up() {
+  # left/right/middle -> 0x80/0x81/0x82
+  case "$1" in
+    left)   echo "0x80" ;;
+    right)  echo "0x81" ;;
+    middle) echo "0x82" ;;
+    *) die "invalid button: $1 (use left|right|middle)" ;;
+  esac
+}
+
+cmd="${1:-}"
+case "$cmd" in
+  move)
+    dx="${2:-}"; dy="${3:-}"
+    [[ "$dx" =~ ^-?[0-9]+$ ]] && [[ "$dy" =~ ^-?[0-9]+$ ]] || die "usage: molt-mouse move <dx> <dy>"
+
+    max="${MOLT_MOUSE_MAX_DELTA:-2000}"
+    dx="$(clamp_int "$dx" "$max")"
+    dy="$(clamp_int "$dy" "$max")"
+
+    exec "$YDTOOL_BIN" mousemove "$dx" "$dy"
+    ;;
+
+  abs)
+    x="${2:-}"; y="${3:-}"
+    [[ "$x" =~ ^-?[0-9]+$ ]] && [[ "$y" =~ ^-?[0-9]+$ ]] || die "usage: molt-mouse abs <x> <y>"
+    exec "$YDTOOL_BIN" mousemove -a -x "$x" -y "$y"
+    ;;
+
+  click)
+    btn="${2:-left}"
+    case "$btn" in
+      left)   code="0xC0" ;;  # click (down+up)
+      right)  code="0xC1" ;;
+      middle) code="0xC2" ;;
+      *) die "usage: molt-mouse click [left|right|middle]" ;;
+    esac
+    exec "$YDTOOL_BIN" click "$code"
+    ;;
+
+  hold)
+    # usage: molt-mouse hold [left|right|middle] <seconds>
+    btn="left"
+    if [[ "${2:-}" =~ ^(left|right|middle)$ ]]; then
+      btn="$2"; duration="${3:-}"
+    else
+      duration="${2:-}"
+    fi
+
+    [[ "$duration" =~ ^[0-9]+(\.[0-9]+)?$ ]] || die "usage: molt-mouse hold [left|right|middle] <seconds>"
+
+    
+    min="${MOLT_MOUSE_MIN_HOLD:-0.05}"
+    max="${MOLT_MOUSE_MAX_HOLD:-10}"
+    # bash numeric compare için awk kullanalım (basit ve portable)
+    duration="$(awk -v d="$duration" -v mi="$min" -v ma="$max" 'BEGIN{ if(d<mi)d=mi; if(d>ma)d=ma; print d }')"
+
+    down="$(btn_code_down "$btn")"
+    up="$(btn_code_up "$btn")"
+
+    "$YDTOOL_BIN" click "$down"
+    sleep "$duration"
+    "$YDTOOL_BIN" click "$up"
+    ;;
+
+  drag)
+    # usage: molt-mouse drag <dx> <dy> [left|right|middle] [hold_seconds]
+    dx="${2:-}"; dy="${3:-}"
+    [[ "$dx" =~ ^-?[0-9]+$ ]] && [[ "$dy" =~ ^-?[0-9]+$ ]] || die "usage: molt-mouse drag <dx> <dy> [left|right|middle] [hold_seconds]"
+    btn="${4:-left}"
+    hold_s="${5:-0}"
+
+    [[ "$btn" =~ ^(left|right|middle)$ ]] || die "usage: molt-mouse drag <dx> <dy> [left|right|middle] [hold_seconds]"
+    [[ "$hold_s" =~ ^[0-9]+(\.[0-9]+)?$ ]] || die "hold_seconds must be number (e.g. 0 or 0.2)"
+
+    max="${MOLT_MOUSE_MAX_DELTA:-2000}"
+    dx="$(clamp_int "$dx" "$max")"
+    dy="$(clamp_int "$dy" "$max")"
+
+    down="$(btn_code_down "$btn")"
+    up="$(btn_code_up "$btn")"
+
+    "$YDTOOL_BIN" click "$down"
+    
+    awk -v d="$hold_s" 'BEGIN{ exit !(d>0) }' && sleep "$hold_s" || true
+    "$YDTOOL_BIN" mousemove "$dx" "$dy"
+    "$YDTOOL_BIN" click "$up"
+    ;;
+
+  drag-smooth)
+    # usage: molt-mouse drag-smooth <dx> <dy> [steps] [left|right|middle]
+    dx="${2:-}"; dy="${3:-}"
+    [[ "$dx" =~ ^-?[0-9]+$ ]] && [[ "$dy" =~ ^-?[0-9]+$ ]] || die "usage: molt-mouse drag-smooth <dx> <dy> [steps] [left|right|middle]"
+    steps="${4:-15}"
+    btn="${5:-left}"
+    [[ "$steps" =~ ^[0-9]+$ ]] || die "steps must be integer"
+    [[ "$btn" =~ ^(left|right|middle)$ ]] || die "button must be left|right|middle"
+
+    max="${MOLT_MOUSE_MAX_DELTA:-2000}"
+    dx="$(clamp_int "$dx" "$max")"
+    dy="$(clamp_int "$dy" "$max")"
+
+    
+    step_dx=$(( dx / steps ))
+    step_dy=$(( dy / steps ))
+    
+    rem_dx=$(( dx - step_dx * steps ))
+    rem_dy=$(( dy - step_dy * steps ))
+
+    down="$(btn_code_down "$btn")"
+    up="$(btn_code_up "$btn")"
+
+    "$YDTOOL_BIN" click "$down"
+    for ((i=0; i<steps; i++)); do
+      "$YDTOOL_BIN" mousemove "$step_dx" "$step_dy"
+      sleep "${MOLT_MOUSE_STEP_SLEEP:-0.01}"
+    done
+    
+    if (( rem_dx != 0 || rem_dy != 0 )); then
+      "$YDTOOL_BIN" mousemove "$rem_dx" "$rem_dy"
+    fi
+    "$YDTOOL_BIN" click "$up"
+    ;;
+
+  *)
+    cat >&2 <<'USAGE'
+usage: molt-mouse <cmd> ...
+
+cmds:
+  move <dx> <dy>
+  abs <x> <y>
+  click [left|right|middle]
+  hold [left|right|middle] <seconds>
+  drag <dx> <dy> [left|right|middle] [hold_seconds]
+  drag-smooth <dx> <dy> [steps] [left|right|middle]
+
+env:
+  YDOTOOL_SOCKET=/tmp/.ydotool_socket
+  YDTOOL_BIN=/usr/bin/ydotool
+  MOLT_MOUSE_MAX_DELTA=2000
+  MOLT_MOUSE_MIN_HOLD=0.05
+  MOLT_MOUSE_MAX_HOLD=10
+  MOLT_MOUSE_STEP_SLEEP=0.01
+USAGE
+    exit 2
+    ;;
+esac

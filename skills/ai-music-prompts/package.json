@@ -1,0 +1,29 @@
+{
+  "name": "ai-music-prompts",
+  "version": "1.0.0",
+  "description": "AI music prompt templates and best practices for generating music with AI tools like Suno, Udio, Mureka, and others",
+  "main": "SKILL.md",
+  "scripts": {
+    "test": "cat SKILL.md | head -20"
+  },
+  "keywords": [
+    "music",
+    "ai",
+    "prompts",
+    "suno",
+    "udio",
+    "mureka",
+    "music-generation",
+    "prompt-engineering"
+  ],
+  "author": "jack happy",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "files": [
+    "SKILL.md",
+    "examples",
+    "references"
+  ]
+}

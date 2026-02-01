@@ -1,0 +1,63 @@
+# AgentGuard Configuration
+# Copy this to ~/.agentguard/config.yaml and customize
+
+monitoring:
+  enabled: true
+  file_watch_dirs:
+    - ~/clawd
+    - ~/.clawdbot
+  exclude_patterns:
+    - "*.log"
+    - "node_modules/**"
+    - ".git/**"
+    - "__pycache__/**"
+    - "*.pyc"
+
+alerts:
+  sensitivity: medium  # low, medium, high
+  channels:
+    - console
+    # - telegram  # Uncomment to enable
+  alert_on:
+    - credential_access
+    - bulk_file_read
+    - unknown_api_endpoint
+    - data_exfiltration
+    - off_hours_activity
+  cooldown_minutes: 15
+  min_severity: low  # Minimum severity to dispatch
+
+api_monitoring:
+  trusted_domains:
+    - api.anthropic.com
+    - api.openai.com
+    - api.telegram.org
+    - api.elevenlabs.io
+    - api.brave.com
+    - api.github.com
+    - gateway.clawdbot.com
+  block_on_suspicious: false  # true = prevent call, false = alert only
+
+logging:
+  retention_days: 30
+  log_dir: ~/.agentguard/logs
+  hash_sensitive_data: true
+  compress_after_days: 7
+
+reporting:
+  auto_daily_report: true
+  report_time: "09:00"
+  report_channel: console
+  
+# Channel-specific settings
+telegram:
+  enabled: false
+  # chat_id: your_chat_id
+
+discord:
+  enabled: false
+  # webhook_url: your_webhook_url
+
+email:
+  enabled: false
+  # to: your@email.com

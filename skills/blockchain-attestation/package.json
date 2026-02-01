@@ -1,0 +1,15 @@
+{
+  "name": "clawdbot-skill-blockchain-attestation",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@ethereum-attestation-service/eas-sdk": "^2.9.0",
+    "commander": "^12.1.0",
+    "ethers": "^6.13.4"
+  }
+}

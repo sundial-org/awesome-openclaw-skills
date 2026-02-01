@@ -1,0 +1,11 @@
+{
+  "name": "@ai-labs-claude-skills/docker-containerization",
+  "version": "1.0.0",
+  "description": "Claude AI skill: docker-containerization",
+  "main": "index.js",
+  "files": [
+    "."
+  ],
+  "license": "MIT",
+  "author": "AI Labs"
+}

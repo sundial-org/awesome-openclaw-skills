@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ATP — Agent Trust Protocol</title>
+<style>
+  :root {
+    --bg: #0a0a0f;
+    --surface: #12121a;
+    --border: #1e1e2e;
+    --text: #e0e0e8;
+    --dim: #666680;
+    --green: #4ade80;
+    --orange: #fb923c;
+    --red: #f87171;
+    --blue: #60a5fa;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'SF Mono', 'Fira Code', monospace;
+    font-size: 14px;
+    padding: 24px;
+    min-height: 100vh;
+  }
+  h1 { font-size: 18px; font-weight: 600; margin-bottom: 4px; }
+  .subtitle { color: var(--dim); font-size: 12px; margin-bottom: 24px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 16px; }
+  .card-title { font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--dim); margin-bottom: 12px; }
+  .stat { font-size: 28px; font-weight: 700; }
+  .stat-label { font-size: 11px; color: var(--dim); margin-top: 2px; }
+  .stat-row { display: flex; gap: 32px; }
+  table { width: 100%; border-collapse: collapse; }
+  th { text-align: left; font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--dim); padding: 8px 12px; border-bottom: 1px solid var(--border); }
+  td { padding: 10px 12px; border-bottom: 1px solid var(--border); }
+  tr:hover { background: rgba(255,255,255,0.02); }
+  .trust-bar { width: 120px; height: 6px; background: var(--border); border-radius: 3px; overflow: hidden; display: inline-block; vertical-align: middle; margin-right: 8px; }
+  .trust-bar-fill { height: 100%; border-radius: 3px; }
+  #graph-container { position: relative; height: 320px; overflow: hidden; }
+  .node { position: absolute; padding: 8px 14px; border: 2px solid; border-radius: 8px; font-size: 12px; font-weight: 600; z-index: 2; background: var(--surface); }
+  .node-score { font-size: 10px; font-weight: 400; color: var(--dim); margin-top: 2px; }
+  svg.edges { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; }
+  .edge-line { stroke-width: 2; fill: none; opacity: 0.5; }
+  .interaction { padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 12px; }
+  .full-width { grid-column: 1 / -1; }
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+  .badge-high { background: rgba(74,222,128,0.15); color: var(--green); }
+  .badge-med { background: rgba(251,146,60,0.15); color: var(--orange); }
+  .badge-low { background: rgba(248,113,113,0.15); color: var(--red); }
+  .refresh-btn { position: fixed; top: 24px; right: 24px; background: var(--surface); border: 1px solid var(--border); color: var(--text); padding: 6px 14px; border-radius: 6px; cursor: pointer; font-family: inherit; font-size: 12px; }
+  .refresh-btn:hover { border-color: var(--blue); }
+  .last-update { color: var(--dim); font-size: 11px; position: fixed; top: 56px; right: 24px; }
+</style>
+</head>
+<body>
+
+<h1>Agent Trust Protocol</h1>
+<div class="subtitle" id="identity">Loading...</div>
+<button class="refresh-btn" onclick="loadData()">Refresh</button>
+<div class="last-update" id="last-update"></div>
+
+<div class="grid">
+  <div class="card">
+    <div class="card-title">Overview</div>
+    <div class="stat-row">
+      <div><div class="stat" id="agent-count">-</div><div class="stat-label">Trusted Agents</div></div>
+      <div><div class="stat" id="edge-count">-</div><div class="stat-label">Trust Edges</div></div>
+      <div><div class="stat" id="avg-trust">-</div><div class="stat-label">Avg Trust</div></div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-title">Trust Graph</div>
+    <div id="graph-container"><svg class="edges" id="graph-svg"></svg></div>
+  </div>
+  <div class="card full-width">
+    <div class="card-title">Trusted Agents</div>
+    <table><thead><tr>
+      <th>Agent</th><th>Domain</th><th>Fingerprint</th><th>Base</th><th>Effective</th><th>Stability</th><th>Interactions</th><th>Level</th>
+    </tr></thead><tbody id="agents-table"></tbody></table>
+  </div>
+  <div class="card full-width">
+    <div class="card-title">Interaction Log</div>
+    <div id="interactions-log"></div>
+  </div>
+</div>
+
+<script>
+let atpData = null;
+let interactionsData = [];
+
+function trustColorHex(s) { return s > 0.7 ? '#4ade80' : s > 0.4 ? '#fb923c' : '#f87171'; }
+function trustLevel(s) { return s > 0.7 ? 'high' : s > 0.4 ? 'med' : 'low'; }
+function trustLabel(s) { return s > 0.8 ? 'HIGH' : s > 0.5 ? 'MODERATE' : s > 0.3 ? 'LOW' : 'MINIMAL'; }
+
+function effectiveTrust(a) {
+  const base = a.trust_score || 0.5, stability = a.stability || 168;
+  const hrs = (Date.now() / 1000 - (a.last_interaction_ts || Date.now() / 1000)) / 3600;
+  return Math.max(0.1, Math.min(0.99, base * Math.exp(-hrs / stability)));
+}
+
+function el(tag, attrs, text) {
+  const e = document.createElement(tag);
+  if (attrs) Object.entries(attrs).forEach(([k,v]) => { if (k === 'style' && typeof v === 'object') Object.assign(e.style, v); else e.setAttribute(k, v); });
+  if (text) e.textContent = text;
+  return e;
+}
+
+function render() {
+  if (!atpData) return;
+  const agents = atpData.agents || {}, edges = atpData.edges || [], self = atpData.self || {};
+
+  document.getElementById('identity').textContent = (self.agent_id || 'unknown') + ' \u00B7 ' + (self.fingerprint || 'no fingerprint');
+  const agentList = Object.values(agents);
+  const avg = agentList.length ? agentList.reduce((s,a) => s + effectiveTrust(a), 0) / agentList.length : 0;
+  document.getElementById('agent-count').textContent = agentList.length;
+  document.getElementById('edge-count').textContent = edges.length;
+  document.getElementById('avg-trust').textContent = avg.toFixed(2);
+
+  // Table
+  const tbody = document.getElementById('agents-table');
+  tbody.replaceChildren();
+  Object.entries(agents).sort((a,b) => effectiveTrust(b[1]) - effectiveTrust(a[1])).forEach(([id, a]) => {
+    const eff = effectiveTrust(a), lev = trustLevel(eff);
+    const tr = el('tr');
+    const tdName = el('td'); const strong = el('strong', null, id); tdName.appendChild(strong); tr.appendChild(tdName);
+    tr.appendChild(el('td', null, (a.trust_domains || ['general']).join(', ')));
+    tr.appendChild(el('td', {style: 'color:var(--dim);font-size:11px'}, (a.fingerprint || '?').slice(0, 12)));
+    tr.appendChild(el('td', null, (a.trust_score || 0).toFixed(2)));
+    const tdEff = el('td');
+    const bar = el('div', {class: 'trust-bar'});
+    const fill = el('div', {class: 'trust-bar-fill'});
+    fill.style.width = (eff * 100) + '%';
+    fill.style.background = trustColorHex(eff);
+    bar.appendChild(fill);
+    tdEff.appendChild(bar);
+    tdEff.appendChild(document.createTextNode(' ' + eff.toFixed(2)));
+    tr.appendChild(tdEff);
+    tr.appendChild(el('td', null, (a.stability || 0).toFixed(0) + 'h'));
+    tr.appendChild(el('td', null, String(a.interaction_count || 0)));
+    const badge = el('span', {class: 'badge badge-' + lev}, trustLabel(eff));
+    const tdBadge = el('td'); tdBadge.appendChild(badge); tr.appendChild(tdBadge);
+    tbody.appendChild(tr);
+  });
+
+  // Graph
+  renderGraph(agents, edges, self);
+
+  // Interactions
+  const logEl = document.getElementById('interactions-log');
+  logEl.replaceChildren();
+  if (interactionsData.length === 0) {
+    logEl.appendChild(el('span', {style: 'color:var(--dim)'}, 'No interactions recorded yet.'));
+  } else {
+    interactionsData.slice(-20).reverse().forEach(i => {
+      const div = el('div', {class: 'interaction'});
+      const outcome = el('span', null, i.outcome);
+      outcome.style.color = i.outcome === 'positive' ? '#4ade80' : i.outcome === 'negative' ? '#f87171' : '#666680';
+      div.appendChild(outcome);
+      div.appendChild(document.createTextNode(' interaction with '));
+      div.appendChild(el('strong', null, i.agent));
+      if (i.note) div.appendChild(document.createTextNode(' \u2014 ' + i.note));
+      const scores = el('span', {style: 'color:var(--dim);margin-left:8px'}, (i.old_score||0).toFixed(3) + ' \u2192 ' + (i.new_score||0).toFixed(3));
+      div.appendChild(scores);
+      const time = el('div', {style: 'color:var(--dim);font-size:11px'}, i.timestamp || '');
+      div.appendChild(time);
+      logEl.appendChild(div);
+    });
+  }
+
+  document.getElementById('last-update').textContent = 'Updated: ' + new Date().toLocaleTimeString();
+}
+
+function renderGraph(agents, edges, self) {
+  const container = document.getElementById('graph-container');
+  const svg = document.getElementById('graph-svg');
+  const w = container.clientWidth, h = container.clientHeight;
+  container.querySelectorAll('.node').forEach(n => n.remove());
+  while (svg.firstChild) svg.removeChild(svg.firstChild);
+
+  const ids = [...new Set([self.agent_id || 'self', ...Object.keys(agents)])];
+  const pos = {};
+  const cx = w / 2, cy = h / 2;
+  pos[ids[0]] = {x: cx, y: cy};
+  ids.slice(1).forEach((id, i) => {
+    const angle = (2 * Math.PI * i) / (ids.length - 1) - Math.PI / 2;
+    const r = Math.min(w, h) * 0.35;
+    pos[id] = {x: cx + Math.cos(angle) * r, y: cy + Math.sin(angle) * r};
+  });
+
+  edges.forEach(e => {
+    const f = pos[e.from], t = pos[e.to];
+    if (!f || !t) return;
+    const eff = agents[e.to] ? effectiveTrust(agents[e.to]) : e.weight;
+    const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+    line.setAttribute('x1', f.x); line.setAttribute('y1', f.y);
+    line.setAttribute('x2', t.x); line.setAttribute('y2', t.y);
+    line.setAttribute('class', 'edge-line');
+    line.setAttribute('stroke', trustColorHex(eff));
+    line.setAttribute('stroke-width', Math.max(1, eff * 3));
+    svg.appendChild(line);
+  });
+
+  ids.forEach(id => {
+    const p = pos[id], isSelf = id === (self.agent_id || 'self');
+    const eff = agents[id] ? effectiveTrust(agents[id]) : 1.0;
+    const node = el('div', {class: 'node'});
+    node.style.borderColor = isSelf ? '#60a5fa' : trustColorHex(eff);
+    node.style.left = (p.x - 50) + 'px';
+    node.style.top = (p.y - 20) + 'px';
+    node.appendChild(document.createTextNode(id));
+    const score = el('div', {class: 'node-score'}, isSelf ? 'self' : eff.toFixed(2));
+    node.appendChild(score);
+    container.appendChild(node);
+  });
+}
+
+async function loadData() {
+  try {
+    const [tr, ir] = await Promise.all([fetch('/api/trust'), fetch('/api/interactions')]);
+    atpData = await tr.json();
+    interactionsData = await ir.json();
+  } catch(e) { console.warn('API unavailable'); }
+  render();
+}
+setInterval(loadData, 30000);
+loadData();
+</script>
+</body>
+</html>

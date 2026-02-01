@@ -1,0 +1,45 @@
+# Weekly Earnings Alert Workflow for Cron (No Approval Gate)
+# Usage: lobster run --file workflows/earnings-weekly-cron.yaml --args-json '{"lang":"en"}'
+#
+# Schedule: Sunday 7:00 AM PT (before market week starts)
+# Sends upcoming week's earnings calendar to WhatsApp/Telegram
+
+name: finance.earnings.weekly.cron
+description: Send weekly earnings preview for portfolio stocks
+
+args:
+  lang:
+    default: en
+    description: "Language: en or de"
+  channel:
+    default: "${FINANCE_NEWS_CHANNEL:-whatsapp}"
+    description: "Delivery channel: whatsapp or telegram"
+  target:
+    default: "${FINANCE_NEWS_TARGET}"
+    description: "Target: group name, JID, or chat ID"
+
+steps:
+  # Check earnings calendar for upcoming week
+  - id: check_earnings
+    command: |
+      SKILL_DIR="${SKILL_DIR:-$HOME/projects/skills/personal/finance-news}"
+      python3 "$SKILL_DIR/scripts/earnings.py" check --week --lang "${lang}"
+    description: Get upcoming week's earnings calendar
+
+  # Send earnings alert if there's content
+  - id: send_earnings
+    command: |
+      MSG=$(cat)
+      MSG=$(echo "$MSG" | tr -d '\r')
+      # Only send if there are actual earnings next week
+      if echo "$MSG" | grep -qE "EARNINGS (NEXT WEEK|NÄCHSTE WOCHE)"; then
+        openclaw message send \
+          --channel "${channel}" \
+          --target "${target}" \
+          --message "$MSG"
+        echo "Sent weekly earnings preview to ${channel}"
+      else
+        echo "No earnings next week - skipping message"
+      fi
+    stdin: $check_earnings.stdout
+    description: Send weekly earnings alert to channel

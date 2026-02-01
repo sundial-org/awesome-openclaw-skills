@@ -1,0 +1,17 @@
+{
+  "name": "weather-pollen",
+  "version": "1.0.3",
+  "description": "Weather and pollen reports for any location using free APIs. Get current conditions, forecasts, and pollen data.",
+  "main": "SKILL.md",
+  "keywords": [
+    "weather",
+    "pollen",
+    "allergies",
+    "forecast"
+  ],
+  "author": "Seth Rose",
+  "license": "MIT",
+  "dependencies": {
+    "zod": "^4.3.5"
+  }
+}

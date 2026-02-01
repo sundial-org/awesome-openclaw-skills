@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Chia Wallet Verification</title>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <script src="https://unpkg.com/@walletconnect/sign-client@2.11.0/dist/index.umd.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🌱 Chia Wallet Verification</h1>
+      <p class="subtitle">Connect your Sage wallet to verify ownership</p>
+    </header>
+
+    <main>
+      <div id="status-badge" class="status-badge disconnected">
+        <span class="status-dot"></span>
+        <span id="status-text">Disconnected</span>
+      </div>
+
+      <div id="connect-section" class="section">
+        <button id="connect-btn" class="primary-btn">
+          <span class="btn-icon">🔗</span>
+          Connect Sage Wallet
+        </button>
+        <p class="hint">Click to open WalletConnect modal</p>
+      </div>
+
+      <div id="wallet-info" class="section hidden">
+        <h3>Connected Wallet</h3>
+        <div class="info-card">
+          <div class="info-row">
+            <span class="label">Address:</span>
+            <span id="wallet-address" class="value monospace"></span>
+          </div>
+          <div class="info-row">
+            <span class="label">Public Key:</span>
+            <span id="wallet-pubkey" class="value monospace small"></span>
+          </div>
+        </div>
+      </div>
+
+      <div id="challenge-section" class="section hidden">
+        <h3>Verification Challenge</h3>
+        <div class="challenge-card">
+          <p class="challenge-message" id="challenge-message"></p>
+          <button id="sign-btn" class="primary-btn">
+            <span class="btn-icon">✍️</span>
+            Sign Message
+          </button>
+        </div>
+      </div>
+
+      <div id="result-section" class="section hidden">
+        <h3>Verification Result</h3>
+        <div id="result-card" class="result-card">
+          <div class="result-icon" id="result-icon">⏳</div>
+          <div class="result-message" id="result-message">Processing...</div>
+          <div class="result-details" id="result-details"></div>
+        </div>
+      </div>
+
+      <div id="error-section" class="section hidden">
+        <div class="error-card">
+          <div class="error-icon">⚠️</div>
+          <div class="error-message" id="error-message"></div>
+          <button id="retry-btn" class="secondary-btn">Try Again</button>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p class="footer-text">Powered by WalletConnect & MintGarden API</p>
+    </footer>
+  </div>
+
+  <div id="loading-overlay" class="hidden">
+    <div class="spinner"></div>
+    <p id="loading-text">Connecting...</p>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

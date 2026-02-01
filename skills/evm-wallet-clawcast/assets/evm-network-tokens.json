@@ -1,0 +1,447 @@
+{
+  "generated_at": "2026-02-01",
+  "schema_version": 1,
+  "networks": {
+    "ethereum": {
+      "name": "Ethereum Mainnet",
+      "chain_id": 1,
+      "currency_symbol": "ETH",
+      "rpc": [
+        "https://cloudflare-eth.com",
+        "https://rpc.ankr.com/eth"
+      ],
+      "explorers": [
+        "https://etherscan.io"
+      ],
+      "tokens": {
+        "native": {
+          "symbol": "ETH",
+          "type": "native"
+        },
+        "wrapped_native": {
+          "symbol": "WETH",
+          "name": "Wrapped Ether",
+          "address": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+          "decimals": 18
+        },
+        "stables": {
+          "USDC": {
+            "name": "USD Coin",
+            "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+            "decimals": 6,
+            "issuer": "Circle"
+          },
+          "USDT": {
+            "name": "Tether USD",
+            "address": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+            "decimals": 6,
+            "issuer": "Tether"
+          }
+        }
+      }
+    },
+    "arbitrum_one": {
+      "name": "Arbitrum One",
+      "chain_id": 42161,
+      "currency_symbol": "ETH",
+      "rpc": [
+        "https://arb1.arbitrum.io/rpc"
+      ],
+      "explorers": [
+        "https://arbiscan.io"
+      ],
+      "tokens": {
+        "native": {
+          "symbol": "ETH",
+          "type": "native"
+        },
+        "wrapped_native": {
+          "symbol": "WETH",
+          "name": "Wrapped Ether",
+          "address": "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
+          "decimals": 18
+        },
+        "stables": {
+          "USDC": {
+            "name": "USD Coin",
+            "address": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+            "decimals": 6,
+            "issuer": "Circle"
+          },
+          "USDT": {
+            "name": "Tether USD",
+            "address": "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
+            "decimals": 6,
+            "issuer": "Tether"
+          }
+        }
+      }
+    },
+    "optimism": {
+      "name": "OP Mainnet",
+      "chain_id": 10,
+      "currency_symbol": "ETH",
+      "rpc": [
+        "https://mainnet.optimism.io"
+      ],
+      "explorers": [
+        "https://optimistic.etherscan.io"
+      ],
+      "tokens": {
+        "native": {
+          "symbol": "ETH",
+          "type": "native"
+        },
+        "wrapped_native": {
+          "symbol": "WETH",
+          "name": "Wrapped Ether",
+          "address": "0x4200000000000000000000000000000000000006",
+          "decimals": 18
+        },
+        "stables": {
+          "USDC": {
+            "name": "USD Coin",
+            "address": "0x0b2C639c533813f4Aa9D7837CAf62653d097Ff85",
+            "decimals": 6,
+            "issuer": "Circle"
+          },
+          "USDT": {
+            "name": "Tether USD",
+            "address": "0x94b008aA00579c1307B0EF2c499aD98a8ce58e58",
+            "decimals": 6,
+            "issuer": "Tether"
+          }
+        }
+      }
+    },
+    "base": {
+      "name": "Base Mainnet",
+      "chain_id": 8453,
+      "currency_symbol": "ETH",
+      "rpc": [
+        "https://mainnet.base.org"
+      ],
+      "explorers": [
+        "https://basescan.org"
+      ],
+      "tokens": {
+        "native": {
+          "symbol": "ETH",
+          "type": "native"
+        },
+        "wrapped_native": {
+          "symbol": "WETH",
+          "name": "Wrapped Ether",
+          "address": "0x4200000000000000000000000000000000000006",
+          "decimals": 18
+        },
+        "stables": {
+          "USDC": {
+            "name": "USD Coin",
+            "address": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+            "decimals": 6,
+            "issuer": "Circle"
+          },
+          "USDT": {
+            "name": "Tether USD",
+            "address": "0xfde4C96c8593536E31F229EA8f37b2ADa2699bb2",
+            "decimals": 6,
+            "issuer": "Tether",
+            "bridged": true
+          }
+        }
+      }
+    },
+    "polygon_pos": {
+      "name": "Polygon PoS",
+      "chain_id": 137,
+      "currency_symbol": "MATIC",
+      "rpc": [
+        "https://polygon-rpc.com"
+      ],
+      "explorers": [
+        "https://polygonscan.com"
+      ],
+      "tokens": {
+        "native": {
+          "symbol": "MATIC",
+          "type": "native"
+        },
+        "wrapped_native": {
+          "symbol": "WMATIC",
+          "name": "Wrapped MATIC",
+          "address": "0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270",
+          "decimals": 18
+        },
+        "stables": {
+          "USDC": {
+            "name": "USD Coin",
+            "address": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359",
+            "decimals": 6,
+            "issuer": "Circle"
+          },
+          "USDT": {
+            "name": "Tether USD",
+            "address": "0xC2132D05D31c914a87C6611C10748AEb04B58e8F",
+            "decimals": 6,
+            "issuer": "Tether"
+          }
+        }
+      }
+    },
+    "bnb_smart_chain": {
+      "name": "BNB Smart Chain",
+      "chain_id": 56,
+      "currency_symbol": "BNB",
+      "rpc": [
+        "https://bsc-dataseed.bnbchain.org"
+      ],
+      "explorers": [
+        "https://bscscan.com"
+      ],
+      "tokens": {
+        "native": {
+          "symbol": "BNB",
+          "type": "native"
+        },
+        "wrapped_native": {
+          "symbol": "WBNB",
+          "name": "Wrapped BNB",
+          "address": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+          "decimals": 18
+        },
+        "stables": {
+          "USDT": {
+            "name": "Tether USD",
+            "address": "0x55d398326f99059fF775485246999027B3197955",
+            "decimals": 18,
+            "issuer": "Binance-Bridged",
+            "bridged": true
+          }
+        }
+      }
+    },
+    "avalanche_c_chain": {
+      "name": "Avalanche C-Chain",
+      "chain_id": 43114,
+      "currency_symbol": "AVAX",
+      "rpc": [
+        "https://api.avax.network/ext/bc/C/rpc"
+      ],
+      "explorers": [
+        "https://avascan.info",
+        "https://snowtrace.io"
+      ],
+      "tokens": {
+        "native": {
+          "symbol": "AVAX",
+          "type": "native"
+        },
+        "wrapped_native": {
+          "symbol": "WAVAX",
+          "name": "Wrapped AVAX",
+          "address": "0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7",
+          "decimals": 18
+        },
+        "stables": {
+          "USDC": {
+            "name": "USD Coin",
+            "address": "0xB97EF9Ef8734C71904D8002F8b6Bc66Dd9c48a6E",
+            "decimals": 6,
+            "issuer": "Circle"
+          },
+          "USDT": {
+            "name": "Tether USD",
+            "address": "0x9702230A8Ea53601f5cD2dc00fDBc13d4dF4A8c7",
+            "decimals": 6,
+            "issuer": "Tether"
+          }
+        }
+      }
+    },
+    "gnosis": {
+      "name": "Gnosis Chain",
+      "chain_id": 100,
+      "currency_symbol": "XDAI",
+      "rpc": [
+        "https://rpc.gnosischain.com"
+      ],
+      "explorers": [
+        "https://gnosisscan.io",
+        "https://blockscout.com/gnosis"
+      ],
+      "tokens": {
+        "native": {
+          "symbol": "XDAI",
+          "type": "native"
+        },
+        "wrapped_native": {
+          "symbol": "WXDAI",
+          "name": "Wrapped xDai",
+          "address": "0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d",
+          "decimals": 18
+        },
+        "stables": {
+          "USDT": {
+            "name": "Tether USD",
+            "address": "0x4ECaBa5870353805a9F068101A40E0f32ed605C6",
+            "decimals": 6,
+            "bridged": true
+          }
+        }
+      }
+    },
+    "fantom": {
+      "name": "Fantom Opera",
+      "chain_id": 250,
+      "currency_symbol": "FTM",
+      "rpc": [
+        "https://rpcapi.fantom.network"
+      ],
+      "explorers": [
+        "https://ftmscan.com"
+      ],
+      "tokens": {
+        "native": {
+          "symbol": "FTM",
+          "type": "native"
+        },
+        "wrapped_native": {
+          "symbol": "WFTM",
+          "name": "Wrapped Fantom",
+          "address": "0x21be370D5312f44cB42ce377BC9b8a0cEF1A4C83",
+          "decimals": 18
+        },
+        "stables": {
+          "USDT": {
+            "name": "Frapped USDT",
+            "symbol": "fUSDT",
+            "address": "0x049d68029688eAbF473097a2fC38ef61633A3C7A",
+            "decimals": 6,
+            "bridged": true
+          }
+        }
+      }
+    },
+    "linea": {
+      "name": "Linea",
+      "chain_id": 59144,
+      "currency_symbol": "ETH",
+      "rpc": [
+        "https://rpc.linea.build"
+      ],
+      "explorers": [
+        "https://lineascan.build",
+        "https://explorer.linea.build"
+      ],
+      "tokens": {
+        "native": {
+          "symbol": "ETH",
+          "type": "native"
+        },
+        "wrapped_native": {
+          "symbol": "WETH",
+          "name": "Wrapped Ether",
+          "address": "0xe5D7C2a44FfDDf6b295A15c148167daaAf5Cf34f",
+          "decimals": 18
+        },
+        "stables": {
+          "USDC": {
+            "name": "USD Coin",
+            "address": "0x176211869cA2b568f2A7D4EE941E073a821EE1ff",
+            "decimals": 6,
+            "issuer": "Circle"
+          },
+          "USDT": {
+            "name": "Tether USD",
+            "address": "0xA219439258ca9da29E9Cc4cE5596924745e12B93",
+            "decimals": 6,
+            "issuer": "Tether",
+            "bridged": true
+          }
+        }
+      }
+    },
+    "zksync_era": {
+      "name": "zkSync Era",
+      "chain_id": 324,
+      "currency_symbol": "ETH",
+      "rpc": [
+        "https://mainnet.era.zksync.io"
+      ],
+      "explorers": [
+        "https://explorer.zksync.io",
+        "https://era.zksync.network"
+      ],
+      "tokens": {
+        "native": {
+          "symbol": "ETH",
+          "type": "native"
+        },
+        "wrapped_native": {
+          "symbol": "WETH",
+          "name": "Wrapped Ether",
+          "address": "0x5aea5775959fbc2557cc8789bc1bf90a239d9a91",
+          "decimals": 18
+        },
+        "stables": {
+          "USDC": {
+            "name": "USD Coin",
+            "address": "0x1d17cbcf0d6d143135ae902365d2e5e2a16538d4",
+            "decimals": 6,
+            "issuer": "Circle"
+          },
+          "USDT": {
+            "name": "Tether USD",
+            "address": "0x493257fd37edb34451f62edf8d2a0c418852ba4c",
+            "decimals": 6,
+            "issuer": "Tether"
+          }
+        }
+      }
+    },
+    "scroll": {
+      "name": "Scroll",
+      "chain_id": 534352,
+      "currency_symbol": "ETH",
+      "rpc": [
+        "https://rpc.scroll.io"
+      ],
+      "explorers": [
+        "https://scrollscan.com",
+        "https://blockscout.scroll.io"
+      ],
+      "tokens": {
+        "native": {
+          "symbol": "ETH",
+          "type": "native"
+        },
+        "wrapped_native": {
+          "symbol": "WETH",
+          "name": "Wrapped Ether",
+          "address": "0x5300000000000000000000000000000000000004",
+          "decimals": 18
+        },
+        "stables": {
+          "USDC": {
+            "name": "USD Coin",
+            "address": "0x06efdbff2a14a7c8e15944d1f4a48f9f95f663a4",
+            "decimals": 6,
+            "bridged": true
+          },
+          "USDT": {
+            "name": "Tether USD",
+            "address": "0xf55bec9cafdbe8730f096aa55dad6d22d44099df",
+            "decimals": 6,
+            "issuer": "Tether",
+            "bridged": true
+          }
+        }
+      }
+    }
+  },
+  "notes": [
+    "Addresses are mainnet contract addresses. Always validate on the chain's explorer before use.",
+    "Some stables are bridged representations (see `bridged: true`)."
+  ]
+}

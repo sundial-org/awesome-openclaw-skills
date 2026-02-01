@@ -1,0 +1,70 @@
+{
+  "templates": {
+    "minimal": {
+      "name": "Minimal",
+      "description": "Minimal theme with Helvetica Neue font",
+      "colors": {
+        "background": "FFFFFF",
+        "title": "1a1a1a",
+        "body": "4a4a4a",
+        "accent": "0066cc",
+        "accent2": "00a86b"
+      }
+    },
+    "corporate": {
+      "name": "Corporate",
+      "description": "Corporate theme with Arial font",
+      "colors": {
+        "background": "FFFFFF",
+        "title": "003366",
+        "body": "333333",
+        "accent": "0066cc",
+        "accent2": "ff6600"
+      }
+    },
+    "creative": {
+      "name": "Creative",
+      "description": "Creative theme with Avenir Next font",
+      "colors": {
+        "background": "FAFAFA",
+        "title": "2d2d2d",
+        "body": "4a4a4a",
+        "accent": "ff5722",
+        "accent2": "9c27b0"
+      }
+    },
+    "dark": {
+      "name": "Dark Mode",
+      "description": "Dark Mode theme with SF Pro Display font",
+      "colors": {
+        "background": "1a1a2e",
+        "title": "ffffff",
+        "body": "e0e0e0",
+        "accent": "00d4ff",
+        "accent2": "ff6b6b"
+      }
+    },
+    "executive": {
+      "name": "Executive",
+      "description": "Executive theme with Georgia font",
+      "colors": {
+        "background": "FFFFFF",
+        "title": "1e3a5f",
+        "body": "2c3e50",
+        "accent": "c9a227",
+        "accent2": "1e3a5f"
+      }
+    },
+    "startup": {
+      "name": "Startup Pitch",
+      "description": "Startup Pitch theme with Poppins font",
+      "colors": {
+        "background": "FFFFFF",
+        "title": "2d3436",
+        "body": "636e72",
+        "accent": "6c5ce7",
+        "accent2": "00b894"
+      }
+    }
+  }
+}

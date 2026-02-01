@@ -1,0 +1,68 @@
+{
+  "model_id": "google/gemini-2.0-flash",
+  "provider": "google",
+  "context_window": 1000000,
+  "enabled": false,
+  "user_cost": {
+    "type": "free-tier",
+    "input_cost_per_million": 0,
+    "output_cost_per_million": 0,
+    "notes": "Google AI Studio free tier (update during setup if using paid)",
+    "verified_date": null
+  },
+  "capabilities": {
+    "code-generation-new-features": {
+      "rating": 4,
+      "max_complexity": 4,
+      "notes": "Advanced - very fast generation"
+    },
+    "bug-detection-fixes": {
+      "rating": 3,
+      "max_complexity": 3
+    },
+    "multi-file-refactoring": {
+      "rating": 3,
+      "max_complexity": 3
+    },
+    "unit-test-generation": {
+      "rating": 4,
+      "max_complexity": 4
+    },
+    "api-development": {
+      "rating": 4,
+      "max_complexity": 4
+    },
+    "frontend-development": {
+      "rating": 4,
+      "max_complexity": 4,
+      "notes": "Advanced - good UI generation"
+    },
+    "backend-development": {
+      "rating": 4,
+      "max_complexity": 4
+    },
+    "database-operations": {
+      "rating": 3,
+      "max_complexity": 3
+    },
+    "codebase-exploration": {
+      "rating": 5,
+      "max_complexity": 5,
+      "notes": "Expert - 1M token context window"
+    },
+    "documentation-generation": {
+      "rating": 4,
+      "max_complexity": 4
+    },
+    "algorithm-implementation": {
+      "rating": 4,
+      "max_complexity": 4
+    },
+    "boilerplate-generation": {
+      "rating": 5,
+      "max_complexity": 5,
+      "notes": "Expert - very fast at scaffolding"
+    }
+  },
+  "performance_notes": "Extremely fast generation speed, massive context window"
+}

@@ -1,0 +1,17 @@
+{
+  "_comment": "Store your Cloudflare API token",
+  
+  "_option_1": "Save to file (recommended):",
+  "_command": "echo 'YOUR_TOKEN' > ~/.cloudflare_token && chmod 600 ~/.cloudflare_token",
+  
+  "_option_2": "Or set environment variable:",
+  "_env": "export CLOUDFLARE_API_TOKEN='YOUR_TOKEN'",
+  
+  "_get_token": "https://dash.cloudflare.com/profile/api-tokens",
+  
+  "_permissions_needed": {
+    "zones": "Zone:Read",
+    "dns": "DNS:Edit", 
+    "tunnels": "Account:Cloudflare Tunnel:Edit"
+  }
+}

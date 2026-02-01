@@ -1,0 +1,112 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "x402 Payments Configuration",
+  "description": "Configuration template for x402 payments skill",
+  
+  "config": {
+    "thirdweb": {
+      "secretKey": "${THIRDWEB_SECRET_KEY}",
+      "description": "Your thirdweb project secret key. Get one at https://thirdweb.com/dashboard"
+    },
+    
+    "wallet": {
+      "identifier": "x402-agent-wallet",
+      "description": "Unique identifier for your server wallet. The same identifier always returns the same wallet."
+    },
+    
+    "chain": {
+      "default": "base",
+      "chainId": "8453",
+      "description": "Default chain for payments. Base is recommended for low fees."
+    },
+    
+    "tokens": {
+      "usdc": {
+        "base": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "baseSepolia": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+        "arbitrum": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831"
+      }
+    },
+    
+    "defaults": {
+      "maxPaymentUSD": "10.00",
+      "minBalanceUSD": "1.00",
+      "minGasETH": "0.001"
+    }
+  },
+  
+  "environment": {
+    "required": [
+      {
+        "name": "THIRDWEB_SECRET_KEY",
+        "description": "thirdweb project secret key for API authentication",
+        "example": "your-secret-key-here"
+      }
+    ],
+    "optional": [
+      {
+        "name": "X402_WALLET_ADDRESS",
+        "description": "Override default wallet address for payments",
+        "example": "0x1234567890123456789012345678901234567890"
+      },
+      {
+        "name": "X402_CHAIN_ID",
+        "description": "Override default chain ID",
+        "example": "8453"
+      },
+      {
+        "name": "X402_MAX_PAYMENT",
+        "description": "Maximum payment per request in USD",
+        "example": "10.00"
+      }
+    ]
+  },
+  
+  "setup": {
+    "steps": [
+      {
+        "step": 1,
+        "action": "Get thirdweb API key",
+        "url": "https://thirdweb.com/dashboard",
+        "description": "Create a project and copy your secret key"
+      },
+      {
+        "step": 2,
+        "action": "Set environment variable",
+        "command": "export THIRDWEB_SECRET_KEY='your-key-here'",
+        "description": "Add to .env.local or shell profile"
+      },
+      {
+        "step": 3,
+        "action": "Create wallet",
+        "command": "npx ts-node scripts/create-wallet.ts",
+        "description": "Creates a new server wallet for payments"
+      },
+      {
+        "step": 4,
+        "action": "Fund wallet",
+        "command": "npx ts-node scripts/fund-wallet.ts <address>",
+        "description": "Get instructions for funding your wallet"
+      },
+      {
+        "step": 5,
+        "action": "Verify balance",
+        "command": "npx ts-node scripts/check-balance.ts <address>",
+        "description": "Confirm wallet has sufficient funds"
+      }
+    ]
+  },
+  
+  "services": {
+    "browserbase": {
+      "name": "Browserbase",
+      "endpoint": "https://api.browserbase.com/v1/sessions",
+      "documentation": "https://docs.browserbase.com/integrations/x402/introduction"
+    },
+    "firecrawl": {
+      "name": "Firecrawl",
+      "endpoint": "https://api.firecrawl.dev/v1/search",
+      "documentation": "https://docs.firecrawl.dev/x402/"
+    }
+  }
+}

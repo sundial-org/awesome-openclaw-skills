@@ -1,0 +1,9 @@
+[
+  {
+    "name": "recent-incident-attachments",
+    "table": "attachment",
+    "sysparm_query": "table_name=incident",
+    "sysparm_fields": "sys_id,file_name,content_type,table_sys_id,sys_created_on",
+    "sysparm_limit": 20
+  }
+]

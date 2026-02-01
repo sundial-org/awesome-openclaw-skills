@@ -1,0 +1,101 @@
+# Finance Briefing Workflow for Cron (No Approval Gate)
+# Usage: lobster run --file workflows/briefing-cron.yaml --args-json '{"time":"morning","lang":"de"}'
+#
+# This workflow:
+# 1. Generates a market briefing via Docker
+# 2. Translates portfolio headlines (German)
+# 3. Sends directly to messaging channel (no approval)
+
+name: finance.briefing.cron
+description: Generate market briefing and send to WhatsApp/Telegram (auto-approve for cron)
+
+args:
+  time:
+    default: morning
+    description: "Briefing type: morning or evening"
+  lang:
+    default: de
+    description: "Language: en or de"
+  channel:
+    default: "${FINANCE_NEWS_CHANNEL:-whatsapp}"
+    description: "Delivery channel: whatsapp or telegram"
+  target:
+    default: "${FINANCE_NEWS_TARGET}"
+    description: "Target: group name, JID, phone number, or Telegram chat ID (requires FINANCE_NEWS_TARGET env var if not specified)"
+  fast:
+    default: "false"
+    description: "Use fast mode: true or false"
+
+steps:
+  # Generate briefing and save to temp file
+  - id: generate
+    command: |
+      SKILL_DIR="${SKILL_DIR:-$HOME/projects/skills/personal/finance-news}"
+      FAST_FLAG=""
+      if [ "${fast}" = "true" ]; then FAST_FLAG="--fast"; fi
+      OUTFILE="/tmp/lobster-briefing-$$.json"
+      # Resolve openbb-quote symlink for Docker mount
+      OPENBB_BIN=$(realpath "$HOME/.local/bin/openbb-quote" 2>/dev/null || echo "")
+      OPENBB_MOUNT=""
+      if [ -f "$OPENBB_BIN" ]; then
+        OPENBB_MOUNT="-v $OPENBB_BIN:/usr/local/bin/openbb-quote:ro"
+      fi
+      docker run --rm \
+        -v "$SKILL_DIR/config:/app/config:ro" \
+        -v "$SKILL_DIR/scripts:/app/scripts:ro" \
+        $OPENBB_MOUNT \
+        finance-news-briefing python3 scripts/briefing.py \
+          --time "${time}" \
+          --lang "${lang}" \
+          --json \
+          $FAST_FLAG > "$OUTFILE"
+      # Output the file path for subsequent steps
+      echo "$OUTFILE"
+    description: Generate briefing via Docker
+
+  # Translate portfolio headlines (if German)
+  - id: translate
+    command: |
+      OUTFILE=$(cat)
+      OUTFILE=$(echo "$OUTFILE" | tr -d '\n')
+      SKILL_DIR="${SKILL_DIR:-$HOME/projects/skills/personal/finance-news}"
+      if [ "${lang}" = "de" ]; then
+        python3 "$SKILL_DIR/scripts/translate_portfolio.py" "$OUTFILE" --lang de || true
+      fi
+      echo "$OUTFILE"
+    stdin: $generate.stdout
+    description: Translate portfolio headlines via openclaw
+
+  # Send macro briefing (market overview) - NO APPROVAL GATE
+  - id: send_macro
+    command: |
+      OUTFILE=$(cat)
+      OUTFILE=$(echo "$OUTFILE" | tr -d '\n')
+      MSG=$(jq -r '.macro_message // empty' "$OUTFILE")
+      if [ -n "$MSG" ]; then
+        openclaw message send \
+          --channel "${channel}" \
+          --target "${target}" \
+          --message "$MSG"
+      else
+        echo "No macro message to send"
+      fi
+    stdin: $translate.stdout
+    description: Send macro briefing
+
+  # Send portfolio briefing (stock movers)
+  - id: send_portfolio
+    command: |
+      OUTFILE=$(cat)
+      OUTFILE=$(echo "$OUTFILE" | tr -d '\n')
+      MSG=$(jq -r '.portfolio_message // empty' "$OUTFILE")
+      if [ -n "$MSG" ]; then
+        openclaw message send \
+          --channel "${channel}" \
+          --target "${target}" \
+          --message "$MSG"
+      else
+        echo "No portfolio message to send"
+      fi
+    stdin: $translate.stdout
+    description: Send portfolio briefing

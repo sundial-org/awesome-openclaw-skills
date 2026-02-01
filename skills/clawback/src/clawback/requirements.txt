@@ -1,0 +1,16 @@
+requests>=2.31.0
+requests-oauthlib>=1.3.1
+python-dotenv>=1.0.0
+pandas>=2.0.0
+numpy>=1.24.0
+schedule>=1.2.0
+python-dateutil>=2.8.2
+beautifulsoup4>=4.12.0
+lxml>=4.9.0
+pyyaml>=6.0
+colorlog>=6.7.0
+
+# Congressional data collection specific
+schedule>=1.2.0  # For cron-like scheduling
+pytz>=2023.3     # Timezone support
+tzlocal>=5.0.1   # Local timezone detection

@@ -1,0 +1,29 @@
+{
+  "name": "aap-agent-core",
+  "version": "2.6.0",
+  "description": "Core cryptographic utilities for Agent Attestation Protocol",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./identity": "./identity.js",
+    "./crypto": "./crypto.js"
+  },
+  "files": ["*.js", "README.md"],
+  "keywords": ["aap", "agent", "attestation", "crypto", "secp256k1", "ai", "verification"],
+  "author": "ira-hash",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ira-hash/agent-attestation-protocol.git",
+    "directory": "packages/core"
+  },
+  "homepage": "https://github.com/ira-hash/agent-attestation-protocol#readme",
+  "bugs": {
+    "url": "https://github.com/ira-hash/agent-attestation-protocol/issues"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

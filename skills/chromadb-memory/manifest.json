@@ -1,0 +1,14 @@
+{
+  "name": "chromadb-memory",
+  "version": "1.0.0",
+  "description": "Long-term memory via ChromaDB with local Ollama embeddings. Auto-recall injects relevant context every turn. No cloud APIs required.",
+  "author": "matts",
+  "license": "MIT",
+  "tags": ["memory", "chromadb", "ollama", "vector-search", "local", "self-hosted", "auto-recall"],
+  "files": [
+    "SKILL.md",
+    "manifest.json",
+    "scripts/index.ts",
+    "scripts/openclaw.plugin.json"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "name": "sql-assistant",
+  "version": "1.0.0",
+  "description": "Comprehensive SQL query assistant for database operations, optimization, and troubleshooting. Write, debug, optimize, and explain SQL queries across MySQL, PostgreSQL, SQLite, and more.",
+  "main": "SKILL.md",
+  "keywords": [
+    "sql",
+    "database",
+    "query",
+    "mysql",
+    "postgresql",
+    "sqlite",
+    "optimization",
+    "debugging",
+    "data-analysis",
+    "database-schema"
+  ],
+  "author": "jack happy",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "files": [
+    "SKILL.md"
+  ]
+}

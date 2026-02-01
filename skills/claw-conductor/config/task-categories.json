@@ -1,0 +1,259 @@
+{
+  "version": "1.0.0",
+  "description": "Standard task categories for intelligent routing",
+  "categories": {
+    "code-generation-new-features": {
+      "name": "Code Generation (New Features)",
+      "description": "Creating new functionality from requirements",
+      "keywords": ["new feature", "implement", "create", "add functionality", "build"],
+      "complexity_indicators": {
+        "trivial": ["hello world", "simple variable", "basic output"],
+        "simple": ["basic form", "simple endpoint", "single function"],
+        "moderate": ["feature with validation", "multi-step process", "integration"],
+        "complex": ["real-time feature", "complex state", "multiple integrations"],
+        "very-complex": ["distributed feature", "novel architecture", "advanced algorithms"]
+      }
+    },
+    "bug-detection-fixes": {
+      "name": "Bug Detection & Fixes",
+      "description": "Finding and resolving errors in code",
+      "keywords": ["bug", "fix", "error", "issue", "broken", "not working", "crash"],
+      "complexity_indicators": {
+        "simple": ["typo", "missing semicolon", "obvious logic error"],
+        "moderate": ["edge case bug", "state management issue", "race condition"],
+        "complex": ["cross-file dependency bug", "memory leak", "performance issue"],
+        "very-complex": ["distributed system bug", "concurrency issue", "data corruption"]
+      }
+    },
+    "multi-file-refactoring": {
+      "name": "Multi-File Refactoring",
+      "description": "Architectural changes across multiple files",
+      "keywords": ["refactor", "restructure", "reorganize", "modernize", "consolidate"],
+      "complexity_indicators": {
+        "simple": ["rename variable across files", "extract function"],
+        "moderate": ["move functionality", "consolidate modules", "update patterns"],
+        "complex": ["architectural change", "framework migration", "design pattern"],
+        "very-complex": ["complete rewrite", "microservices split", "monolith decomposition"]
+      }
+    },
+    "unit-test-generation": {
+      "name": "Unit Test Generation",
+      "description": "Creating comprehensive test suites",
+      "keywords": ["test", "testing", "unit test", "coverage", "test cases"],
+      "complexity_indicators": {
+        "simple": ["test single function", "basic assertions"],
+        "moderate": ["test class", "mock dependencies", "edge cases"],
+        "complex": ["integration tests", "complex mocking", "async testing"],
+        "very-complex": ["end-to-end tests", "performance tests", "chaos testing"]
+      }
+    },
+    "debugging-complex-issues": {
+      "name": "Debugging Complex Issues",
+      "description": "Tracing cross-file dependencies and business logic",
+      "keywords": ["debug", "investigate", "trace", "diagnose", "troubleshoot"],
+      "complexity_indicators": {
+        "simple": ["single file issue", "clear error message"],
+        "moderate": ["multi-file trace", "unclear symptoms"],
+        "complex": ["cross-module dependencies", "business logic bug"],
+        "very-complex": ["distributed tracing", "production mystery", "race condition"]
+      }
+    },
+    "api-development": {
+      "name": "API Development (REST/GraphQL)",
+      "description": "Building backend APIs with proper patterns",
+      "keywords": ["api", "endpoint", "REST", "GraphQL", "route", "handler"],
+      "complexity_indicators": {
+        "simple": ["GET endpoint", "basic CRUD"],
+        "moderate": ["authentication", "validation", "error handling"],
+        "complex": ["complex queries", "rate limiting", "caching"],
+        "very-complex": ["GraphQL federation", "API gateway", "versioning strategy"]
+      }
+    },
+    "security-vulnerability-detection": {
+      "name": "Security Vulnerability Detection",
+      "description": "Identifying security issues in code",
+      "keywords": ["security", "vulnerability", "exploit", "CVE", "security audit"],
+      "complexity_indicators": {
+        "simple": ["hardcoded credentials", "missing sanitization"],
+        "moderate": ["XSS", "SQL injection", "CSRF"],
+        "complex": ["authentication bypass", "privilege escalation"],
+        "very-complex": ["zero-day", "advanced exploitation", "cryptographic flaw"]
+      }
+    },
+    "security-fixes": {
+      "name": "Security Fixes Implementation",
+      "description": "Implementing security patches and hardening",
+      "keywords": ["security fix", "patch", "harden", "secure"],
+      "complexity_indicators": {
+        "simple": ["input validation", "escape output"],
+        "moderate": ["implement CSP", "add rate limiting", "secure headers"],
+        "complex": ["cryptographic implementation", "authentication overhaul"],
+        "very-complex": ["zero-trust architecture", "end-to-end encryption"]
+      }
+    },
+    "documentation-generation": {
+      "name": "Documentation Generation",
+      "description": "Creating technical documentation and comments",
+      "keywords": ["documentation", "docs", "comment", "README", "guide"],
+      "complexity_indicators": {
+        "simple": ["function comments", "basic README"],
+        "moderate": ["API documentation", "usage guide"],
+        "complex": ["architecture docs", "integration guide"],
+        "very-complex": ["complete technical spec", "developer handbook"]
+      }
+    },
+    "code-review": {
+      "name": "Code Review",
+      "description": "Quality assessment and improvement suggestions",
+      "keywords": ["review", "assess", "analyze", "evaluate", "feedback"],
+      "complexity_indicators": {
+        "simple": ["single file review", "style check"],
+        "moderate": ["feature review", "pattern compliance"],
+        "complex": ["architecture review", "security audit"],
+        "very-complex": ["complete system review", "performance analysis"]
+      }
+    },
+    "frontend-development": {
+      "name": "Frontend (React/Vue/Angular)",
+      "description": "UI component development and state management",
+      "keywords": ["UI", "frontend", "component", "React", "Vue", "Angular", "interface"],
+      "complexity_indicators": {
+        "simple": ["static page", "basic form", "simple component"],
+        "moderate": ["interactive UI", "form validation", "state management"],
+        "complex": ["real-time dashboard", "complex state", "routing"],
+        "very-complex": ["micro-frontends", "advanced animations", "performance optimization"]
+      }
+    },
+    "backend-development": {
+      "name": "Backend (Node/Python/Java)",
+      "description": "Server-side logic and business rules",
+      "keywords": ["backend", "server", "business logic", "service"],
+      "complexity_indicators": {
+        "simple": ["simple function", "basic handler"],
+        "moderate": ["business logic", "data processing", "validation"],
+        "complex": ["workflow engine", "complex rules", "event processing"],
+        "very-complex": ["distributed processing", "saga pattern", "CQRS"]
+      }
+    },
+    "database-operations": {
+      "name": "Database Operations",
+      "description": "Schema design, queries, ORMs, migrations",
+      "keywords": ["database", "query", "schema", "migration", "SQL", "ORM"],
+      "complexity_indicators": {
+        "simple": ["basic CRUD", "simple table"],
+        "moderate": ["joins", "indexes", "relationships"],
+        "complex": ["query optimization", "complex schema", "triggers"],
+        "very-complex": ["sharding", "replication", "distributed transactions"]
+      }
+    },
+    "codebase-exploration": {
+      "name": "Codebase Exploration",
+      "description": "Understanding existing code architecture",
+      "keywords": ["explore", "understand", "analyze", "map", "investigate codebase"],
+      "complexity_indicators": {
+        "simple": ["single file", "small module"],
+        "moderate": ["feature area", "subsystem"],
+        "complex": ["large module", "framework integration"],
+        "very-complex": ["entire codebase", "legacy system", "undocumented"]
+      }
+    },
+    "dependency-management": {
+      "name": "Dependency Management",
+      "description": "Package management and framework upgrades",
+      "keywords": ["dependency", "package", "upgrade", "npm", "pip", "maven"],
+      "complexity_indicators": {
+        "simple": ["add package", "minor version bump"],
+        "moderate": ["major version upgrade", "resolve conflicts"],
+        "complex": ["framework upgrade", "breaking changes"],
+        "very-complex": ["complete migration", "dependency hell resolution"]
+      }
+    },
+    "legacy-modernization": {
+      "name": "Legacy Code Modernization",
+      "description": "Updating old codebases to modern patterns",
+      "keywords": ["legacy", "modernize", "migrate", "upgrade"],
+      "complexity_indicators": {
+        "moderate": ["update syntax", "add types", "modern patterns"],
+        "complex": ["framework migration", "architecture update"],
+        "very-complex": ["complete rewrite", "language migration", "platform change"]
+      }
+    },
+    "error-correction": {
+      "name": "Error Correction (Self-Fixing)",
+      "description": "Automatically fixing errors and retrying",
+      "keywords": ["fix error", "retry", "auto-correct", "self-heal"],
+      "complexity_indicators": {
+        "simple": ["syntax error", "import error"],
+        "moderate": ["runtime error", "type error"],
+        "complex": ["logic error", "state error"],
+        "very-complex": ["system error", "cascading failures"]
+      }
+    },
+    "performance-optimization": {
+      "name": "Performance Optimization",
+      "description": "Identifying and fixing bottlenecks",
+      "keywords": ["optimize", "performance", "speed up", "bottleneck"],
+      "complexity_indicators": {
+        "simple": ["inefficient loop", "unnecessary computation"],
+        "moderate": ["algorithm improvement", "caching"],
+        "complex": ["database optimization", "memory optimization"],
+        "very-complex": ["distributed optimization", "architectural redesign"]
+      }
+    },
+    "test-coverage-analysis": {
+      "name": "Test Coverage Analysis",
+      "description": "Analyzing and improving test coverage",
+      "keywords": ["coverage", "test analysis", "missing tests"],
+      "complexity_indicators": {
+        "simple": ["add missing tests", "basic coverage"],
+        "moderate": ["edge case coverage", "integration coverage"],
+        "complex": ["complete coverage", "mutation testing"],
+        "very-complex": ["property testing", "chaos testing"]
+      }
+    },
+    "algorithm-implementation": {
+      "name": "Algorithm Implementation",
+      "description": "Complex algorithmic and mathematical solutions",
+      "keywords": ["algorithm", "math", "calculation", "solve", "compute"],
+      "complexity_indicators": {
+        "simple": ["basic math", "simple sorting"],
+        "moderate": ["data structures", "search algorithms"],
+        "complex": ["graph algorithms", "optimization"],
+        "very-complex": ["machine learning", "advanced math", "novel algorithm"]
+      }
+    },
+    "boilerplate-generation": {
+      "name": "Boilerplate Generation",
+      "description": "Scaffolding, CRUD, standard patterns",
+      "keywords": ["boilerplate", "scaffold", "generate", "template", "starter"],
+      "complexity_indicators": {
+        "simple": ["single file template", "basic structure"],
+        "moderate": ["project scaffold", "CRUD generator"],
+        "complex": ["full stack template", "microservice template"],
+        "very-complex": ["custom framework", "enterprise template"]
+      }
+    },
+    "ci-cd-integration": {
+      "name": "CI/CD Integration",
+      "description": "Setting up continuous integration and deployment",
+      "keywords": ["CI/CD", "pipeline", "GitHub Actions", "deployment"],
+      "complexity_indicators": {
+        "simple": ["basic test run", "simple workflow"],
+        "moderate": ["multi-stage pipeline", "automated deployment"],
+        "complex": ["matrix testing", "multiple environments"],
+        "very-complex": ["blue-green deployment", "canary releases"]
+      }
+    },
+    "configuration-management": {
+      "name": "Configuration Management",
+      "description": "Managing build configs and environment settings",
+      "keywords": ["config", "configuration", "environment", "settings"],
+      "complexity_indicators": {
+        "simple": ["environment variables", "basic config"],
+        "moderate": ["multi-environment", "feature flags"],
+        "complex": ["dynamic config", "secrets management"],
+        "very-complex": ["config service", "distributed config"]
+      }
+    }
+  }
+}

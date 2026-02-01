@@ -1,0 +1,10 @@
+{
+  "name": "Stable Diffusion Prompt Guide: Basic to Advanced & Examples",
+  "version": "1.0.0",
+  "description": "t forget to detail the preferred ... image, with common prompts like front view, side view, back view, looking back, eye contact, from above, portrait, headshot, close-up, and bird",
+  "author": "Clawdbot",
+  "type": "Image Generation",
+  "source": "image-generation",
+  "url": "https://www.aiarty.com/stable-diffusion-prompts/stable-diffusion-prompt-guide.htm",
+  "created_at": "2026-01-31T10:07:38.225595"
+}

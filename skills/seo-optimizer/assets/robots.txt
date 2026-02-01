@@ -1,0 +1,28 @@
+# robots.txt template
+# This file tells search engine crawlers which pages they can and cannot access
+
+# Allow all crawlers to access all content by default
+User-agent: *
+Allow: /
+
+# Disallow crawling of common administrative and system directories
+Disallow: /admin/
+Disallow: /private/
+Disallow: /cgi-bin/
+Disallow: /tmp/
+
+# Disallow crawling of search results and dynamic pages (if applicable)
+# Disallow: /search?
+# Disallow: /?*
+
+# Sitemap location (update with your actual sitemap URL)
+Sitemap: https://example.com/sitemap.xml
+
+# Common bot-specific rules (uncomment if needed)
+# Block bad bots
+# User-agent: BadBot
+# Disallow: /
+
+# Slow down aggressive crawlers
+# User-agent: Googlebot
+# Crawl-delay: 1

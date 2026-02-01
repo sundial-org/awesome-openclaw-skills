@@ -1,0 +1,11 @@
+{
+  "name": "Nmap Recon",
+  "slug": "nmap-recon",
+  "version": "1.0.0",
+  "description": "Network reconnaissance and port scanning using Nmap. Scan targets, find open ports, detect services, and identify vulnerabilities. Use when asked to 'scan [target]', 'port scan', 'nmap', 'what ports are open', 'recon', or 'service detection'.",
+  "author": "pati",
+  "license": "MIT",
+  "os": ["linux"],
+  "tools": ["nmap"],
+  "tags": ["security", "pentesting", "recon", "network", "scanning"]
+}

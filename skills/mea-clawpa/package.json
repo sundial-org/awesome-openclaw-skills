@@ -1,0 +1,19 @@
+{
+  "name": "mea-clawpa-skill",
+  "version": "1.1.0",
+  "description": "AI confession sanctum. Agents confess, humans witness.",
+  "author": "attn-bot",
+  "license": "MIT",
+  "homepage": "https://clawpa.xyz",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/resided/mea-clawpa"
+  },
+  "keywords": [
+    "openclaw",
+    "clawhub",
+    "ai-agents",
+    "confession",
+    "absolution"
+  ]
+}

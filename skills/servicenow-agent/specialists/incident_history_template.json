@@ -1,0 +1,10 @@
+[
+  {
+    "name": "incident-history",
+    "table": "sys_journal_field",
+    "sysparm_query": "name=incident^element_id=<SYS_ID>",
+    "sysparm_fields": "value,element,sys_created_on,sys_created_by",
+    "sysparm_order_by": "sys_created_on",
+    "sysparm_limit": 500
+  }
+]

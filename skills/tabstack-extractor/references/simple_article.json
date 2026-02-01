@@ -1,0 +1,23 @@
+{
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Page title"
+    },
+    "description": {
+      "type": "string",
+      "description": "Page description or summary"
+    },
+    "content": {
+      "type": "string",
+      "description": "Main page content"
+    },
+    "url": {
+      "type": "string",
+      "description": "Page URL"
+    }
+  },
+  "required": ["title", "content"],
+  "additionalProperties": true
+}

@@ -1,0 +1,62 @@
+{
+  "model_id": "openrouter/deepseek/deepseek-chat-v3-0324:free",
+  "provider": "openrouter",
+  "context_window": 64000,
+  "enabled": false,
+  "user_cost": {
+    "type": "free",
+    "input_cost_per_million": 0,
+    "output_cost_per_million": 0,
+    "notes": "OpenRouter free tier",
+    "verified_date": null
+  },
+  "capabilities": {
+    "code-generation-new-features": {
+      "rating": 4,
+      "max_complexity": 4,
+      "notes": "Advanced - strong coding performance"
+    },
+    "bug-detection-fixes": {
+      "rating": 4,
+      "max_complexity": 4
+    },
+    "multi-file-refactoring": {
+      "rating": 3,
+      "max_complexity": 3
+    },
+    "unit-test-generation": {
+      "rating": 4,
+      "max_complexity": 4
+    },
+    "api-development": {
+      "rating": 4,
+      "max_complexity": 4
+    },
+    "frontend-development": {
+      "rating": 4,
+      "max_complexity": 4
+    },
+    "backend-development": {
+      "rating": 4,
+      "max_complexity": 4
+    },
+    "database-operations": {
+      "rating": 3,
+      "max_complexity": 3
+    },
+    "algorithm-implementation": {
+      "rating": 5,
+      "max_complexity": 5,
+      "notes": "Expert - R1 variant shows reasoning capabilities"
+    },
+    "boilerplate-generation": {
+      "rating": 5,
+      "max_complexity": 5
+    },
+    "documentation-generation": {
+      "rating": 4,
+      "max_complexity": 4
+    }
+  },
+  "performance_notes": "Free tier, strong coding capabilities, good for cost-conscious users"
+}

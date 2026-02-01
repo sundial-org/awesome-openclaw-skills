@@ -1,0 +1,29 @@
+{
+  "name": "brand-creative-suite",
+  "version": "1.0.0",
+  "description": "Professional brand visual content generation using AI image generation with 908+ curated prompt templates. Generate brand-themed bouquets, planets, style transfer, and creative brand scenes (treehouse, parachute packaging).",
+  "main": "SKILL.md",
+  "scripts": {
+    "test": "cat SKILL.md | head -20"
+  },
+  "keywords": [
+    "brand",
+    "creative",
+    "marketing",
+    "visual-content",
+    "branding",
+    "prompts",
+    "templates",
+    "commercial",
+    "advertising"
+  ],
+  "author": "jack happy",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "files": [
+    "SKILL.md",
+    "templates.js"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "skillguard",
+  "version": "1.0.1",
+  "description": "Security scanner and auditor for AgentSkill packages",
+  "type": "module",
+  "main": "src/index.js",
+  "bin": {
+    "skillguard": "./src/cli.js"
+  },
+  "scripts": {
+    "start": "node src/cli.js",
+    "test": "node --test src/**/*.test.js"
+  },
+  "keywords": ["agent", "security", "skills", "audit", "openclaw", "clawhub"],
+  "license": "MIT"
+}

@@ -1,0 +1,1 @@
+"""Trading strategy logic."""

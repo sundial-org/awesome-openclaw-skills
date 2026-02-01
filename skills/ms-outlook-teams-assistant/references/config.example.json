@@ -1,0 +1,20 @@
+{
+  "outlook": {
+    "mailbox": "", 
+    "days": 7,
+    "maxItems": 200,
+    "broadcastSenderDomains": ["no-reply", "noreply"],
+    "broadcastSubjectKeywords": ["newsletter", "notification", "automated"],
+    "actionKeywords": ["please", "can you", "could you", "need", "action", "review", "approve", "urgent"],
+    "ignoreIfOnlyCc": true
+  },
+  "reminders": {
+    "channel": "telegram",
+    "target": "Abhinav",
+    "repeatHours": 6,
+    "maxAgeDays": 7
+  },
+  "state": {
+    "path": "state/state.json"
+  }
+}

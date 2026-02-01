@@ -1,0 +1,32 @@
+{
+  "databases": [
+    {
+      "name": "db",
+      "host": "localhost",
+      "port": 3306,
+      "database": "user_db",
+      "user": "db_user",
+      "password": "your_password_here",
+      "ssh_tunnel": {
+        "enabled": false
+      }
+    },
+    {
+      "name": "test-db",
+      "host": "localhost",
+      "port": 3306,
+      "database": "test_db",
+      "user": "test_user",
+      "password": "your_password_here",
+      "ssh_tunnel": {
+        "enabled": true,
+        "ssh_host": "test.example.com",
+        "ssh_user": "deploy",
+        "ssh_port": 22,
+        "local_port": 3307,
+        "remote_host": "localhost",
+        "remote_port": 3306
+      }
+    }
+  ]
+}

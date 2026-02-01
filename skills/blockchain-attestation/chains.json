@@ -1,0 +1,18 @@
+{
+  "base": {
+    "chainId": 8453,
+    "name": "Base",
+    "eas": "0x4200000000000000000000000000000000000021",
+    "schemaRegistry": "0x4200000000000000000000000000000000000020",
+    "explorer": "https://base.easscan.org",
+    "easVersion": "1.0.1"
+  },
+  "base_sepolia": {
+    "chainId": 84532,
+    "name": "Base Sepolia",
+    "eas": "0x4200000000000000000000000000000000000021",
+    "schemaRegistry": "0x4200000000000000000000000000000000000020",
+    "explorer": "https://base-sepolia.easscan.org",
+    "easVersion": "1.2.0"
+  }
+}

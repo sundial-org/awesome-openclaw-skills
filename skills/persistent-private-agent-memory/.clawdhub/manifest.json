@@ -1,0 +1,25 @@
+{
+  "name": "agent-memory-improved",
+  "version": "2.1.1",
+  "description": "Agent Memory Service with proper Ed25519 cryptography. Fixed signature implementation for reliable memory storage and retrieval.",
+  "author": "OpenClaw Community",
+  "license": "MIT",
+  "homepage": "https://github.com/vercel-labs/agent-browser",
+  "keywords": ["memory", "persistence", "learning", "ed25519", "cryptography"],
+  "requires": {
+    "commands": ["python3"],
+    "packages": [
+      "fastapi",
+      "uvicorn",
+      "psutil",
+      "pydantic",
+      "cryptography",
+      "mnemonic",
+      "base58"
+    ]
+  },
+  "entrypoints": {
+    "client": "scripts/memory_client.py",
+    "service": "assets/service/main.py"
+  }
+}

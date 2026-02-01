@@ -1,0 +1,42 @@
+{
+  "workspace": "~/clawd",
+  "backup_dir": "~/.openclaw/backups",
+  "backup_before_update": true,
+  "backup_count": 5,
+  "excluded_skills": [],
+  "backup_paths": [
+    {
+      "path": "~/.openclaw",
+      "label": "config",
+      "description": "System config, credentials, logs",
+      "exclude": ["backups", "logs", "media", "*.lock"]
+    },
+    {
+      "path": "~/clawd",
+      "label": "workspace",
+      "description": "Working directory, projects, dev skills",
+      "exclude": ["node_modules", ".venv", "__pycache__", ".git"]
+    }
+  ],
+  "skills_dirs": [
+    {"path": "~/.openclaw/skills", "label": "prod", "update": true},
+    {"path": "~/clawd/skills", "label": "dev", "update": false}
+  ],
+  "remote_storage": {
+    "enabled": false,
+    "rclone_remote": "gdrive:",
+    "path": "openclaw-backups"
+  },
+  "encryption": {
+    "enabled": false,
+    "gpg_recipient": "your-email@example.com"
+  },
+  "notifications": {
+    "enabled": false,
+    "target": "+1234567890",
+    "on_success": true,
+    "on_error": true
+  },
+  "connection_retries": 3,
+  "connection_retry_delay": 60
+}

@@ -1,0 +1,1028 @@
+---
+openapi: "3.0.1"
+info:
+  title: "Service Catalog API"
+  description: "Allows you to use Service Catalog via REST"
+  version: "latest"
+externalDocs:
+  url: ""
+servers:
+- url: "https://onegditservicecenter.gdit.com/"
+paths:
+  /api/sn_sc/servicecatalog/cart:
+    get:
+      description: ""
+      parameters: []
+      responses:
+        "200":
+          description: "ok"
+          content:
+            application/json: {}
+            application/xml: {}
+            text/xml: {}
+  /api/sn_sc/servicecatalog/cart/checkout:
+    post:
+      description: ""
+      parameters: []
+      requestBody:
+        content:
+          application/json: {}
+          application/xml: {}
+          text/xml: {}
+      responses:
+        "200":
+          description: "ok"
+          content:
+            application/json: {}
+            application/xml: {}
+            text/xml: {}
+  /api/sn_sc/servicecatalog/cart/delivery_address/{user_id}:
+    get:
+      description: ""
+      parameters:
+      - name: "user_id"
+        in: "path"
+        required: true
+        schema: {}
+      responses:
+        "200":
+          description: "ok"
+          content:
+            application/json: {}
+            application/xml: {}
+            text/xml: {}
+  /api/sn_sc/servicecatalog/cart/submit_order:
+    post:
+      description: ""
+      parameters: []
+      requestBody:
+        content:
+          application/json: {}
+          application/xml: {}
+          text/xml: {}
+      responses:
+        "200":
+          description: "ok"
+          content:
+            application/json: {}
+            application/xml: {}
+            text/xml: {}
+  /api/sn_sc/servicecatalog/cart/{cart_item_id}:
+    put:
+      description: ""
+      parameters:
+      - name: "cart_item_id"
+        in: "path"
+        required: true
+        schema: {}
+      requestBody:
+        content:
+          application/json: {}
+          application/xml: {}
+          text/xml: {}
+      responses:
+        "200":
+          description: "ok"
+          content:
+            application/json: {}
+            application/xml: {}
+            text/xml: {}
+    delete:
+      description: ""
+      parameters:
+      - name: "cart_item_id"
+        in: "path"
+        required: true
+        schema: {}
+      responses:
+        "200":
+          description: "ok"
+          content:
+            application/json: {}
+            application/xml: {}
+            text/xml: {}
+  /api/sn_sc/servicecatalog/cart/{sys_id}/empty:
+    delete:
+      description: ""
+      parameters:
+      - name: "sys_id"
+        in: "path"
+        required: true
+        schema: {}
+      responses:
+        "200":
+          description: "ok"
+          content:
+            application/json: {}
+            application/xml: {}
+            text/xml: {}
+  /api/sn_sc/servicecatalog/catalog_builder/validate_catalog_categories:
+    get:
+      description: ""
+      parameters: []
+      responses:
+        "200":
+          description: "ok"
+          content:
+            application/json: {}
+            application/xml: {}
+            text/xml: {}
+  /api/sn_sc/servicecatalog/catalog_client_script/on_change_choices/{entity_id}:
+    get:
+      description: ""
+      parameters:
+      - name: "entity_id"
+        in: "path"
+        required: true
+        schema: {}
+      responses:
+        "200":
+          description: "ok"
+          content:
+            application/json: {}
+            application/xml: {}
+            text/xml: {}
+  /api/sn_sc/servicecatalog/catalogs:
+    get:
+      description: "Retrives the list of catalogs you have access to"
+      parameters:
+      - name: "sysparm_view"
+        in: "query"
+        description: "View type"
+        required: false
+        schema: {}
+        example: "mobile, desktop"
+      - name: "sysparm_limit"
+        in: "query"
+        description: "Specifies number of entities in the response. Applies to categories,\
+          \ items"
+        required: false
+        schema: {}
+        example: "10"
+      - name: "sysparm_text"
+        in: "query"
+        description: "Query text for search support. This is required"
+        required: true
+        schema: {}
+        example: ""
+      responses:
+        "200":
+          description: "ok"
+          content:
+            application/json: {}
+            application/xml: {}
+            text/xml: {}
+  /api/sn_sc/servicecatalog/catalogs/{sys_id}:
+    get:
+      description: "Retrives details of a catalog"
+      parameters:
+      - name: "sys_id"
+        in: "path"
+        required: true
+        schema: {}
+      - name: "sysparm_view"
+        in: "query"
+        description: "View type"
+        required: false
+        schema: {}
+        example: "mobile, desktop"
+      responses:
+        "200":
+          description: "ok"
+          content:
+            application/json: {}
+            application/xml: {}
+            text/xml: {}
+  /api/sn_sc/servicecatalog/catalogs/{sys_id}/categories:
+    get:
+      description: "Retrive list of categories for a specific catalog"
+      parameters:
+      - name: "sys_id"
+        in: "path"
+        required: true
+        schema: {}
+      - name: "sysparm_top_level_only"
+        in: "query"
+        description: "Show only top level categories"
+        required: false
+        schema: {}
+        example: "true"
+      - name: "sysparm_limit"
+        in: "query"
+        description: "Specifies number of entities in the response. Applies to categories,\
+          \ items"
+        required: false
+        schema: {}
+        example: "10"
+      - name: "sysparm_view"
+        in: "query"
+        description: "View type"
+        required: false
+        schema: {}
+        example: "mobile, desktop"
+      - name: "sysparm_offset"
+        in: "query"
+        description: ""
+        required: false
+        schema: {}
+        example: ""
+      responses:
+        "200":
+          description: "ok"
+          content:
+            application/json: {}
+            application/xml: {}
+            text/xml: {}
+  /api/sn_sc/servicecatalog/categories/{sys_id}:
+    get:
+      description: "Retrives details of a category"
+      parameters:
+      - name: "sys_id"
+        in: "path"
+        required: true
+        schema: {}
+      - name: "sysparm_view"
+        in: "query"
+        description: "View type"
+        required: false
+        schema: {}
+        example: "mobile, desktop"
+      responses:
+        "200":
+          description: "ok"
+          content:
+            application/json: {}
+            application/xml: {}
+            text/xml: {}
+  /api/sn_sc/servicecatalog/item/{record_id}:
+    delete:
+      description: ""
+      parameters:
+      - name: "record_id"
+        in: "path"
+        required: true
+        schema: {}
+      responses:
+        "200":
+          description: "ok"
+          content:
+            application/json: {}
+            application/xml: {}
+            text/xml: {}
+  /api/sn_sc/servicecatalog/items:
+    get:
+      description: "Get list of catalog items"
+      parameters:
+      - name: "sysparm_category"
+        in: "query"
+        description: "Category sys_id"
+        required: false
+        schema: {}
+        example: ""
+      - name: "sysparm_type"
+        in: "query"
+        description: "Used by Item Search to search for the specific type of Item"
+        required: false
+        schema: {}
+        example: "record_producer"
+      - name: "sysparm_limit"
+        in: "query"
+        description: "Specifies number of entities in the response. Applies to categories,\
+          \ items"
+        required: false
+        schema: {}
+        example: "10"
+      - name: "sysparm_view"
+        in: "query"
+        description: "View type"
+        required: false
+        schema: {}
+        example: "mobile, desktop"
+      - name: "sysparm_text"
+        in: "query"
+        description: "Query text for search support. This is required"
+        required: true
+        schema: {}
+        example: ""
+      - name: "sysparm_offset"
+        in: "query"
+        description: ""
+        required: false
+        schema: {}
+        example: ""
+      - name: "sysparm_catalog"
+        in: "query"
+        description: "Catalog sys_id"
+        required: false
+        schema: {}
+        example: ""
+      responses:
+        "200":
+          description: "ok"
+          content:
+            application/json: {}
+            application/xml: {}
+            text/xml: {}
+  /api/sn_sc/servicecatalog/items/{sys_id}:
+    get:
+      description: "Retrieves details of a specific catalog item"
+      parameters:
+      - name: "sys_id"
+        in: "path"
+        required: true
+        schema: {}
+      - name: "sysparm_view"
+        in: "query"
+        description: "View type"
+        required: false
+        schema: {}
+        example: "mobile, desktop"
+      responses:
+        "200":
+          description: "ok"
+          content:
+            application/json: {}
+            application/xml: {}
+            text/xml: {}
+  /api/sn_sc/servicecatalog/items/{sys_id}/add_to_cart:
+    post:
+      description: "Adds a catalog item to the cart for checkout"
+      parameters:
+      - name: "sys_id"
+        in: "path"
+        required: true
+        schema: {}
+      requestBody:
+        content:
+          application/json: {}
+          application/xml: {}
+          text/xml: {}
+      responses:
+        "200":
+          description: "ok"
+          content:
+            application/json: {}
+            application/xml: {}
+            text/xml: {}
+  /api/sn_sc/servicecatalog/items/{sys_id}/add_to_wishlist:
+    post:
+      description: ""
+      parameters:
+      - name: "sys_id"
+        in: "path"
+        required: true
+        schema: {}
+      requestBody:
+        content:
+          application/json: {}
+          application/xml: {}
+          text/xml: {}
+      responses:
+        "200":
+          description: "ok"
+          content:
+            application/json: {}
+            application/xml: {}
+            text/xml: {}
+  /api/sn_sc/servicecatalog/items/{sys_id}/checkout_guide:
+    post:
+      description: "Checkout items of an order guide."
+      parameters:
+      - name: "sys_id"
+        in: "path"
+        required: true
+        schema: {}
+      requestBody:
+        content:
+          application/json: {}
+          application/xml: {}
+          text/xml: {}
+      responses:
+        "200":
+          description: "ok"
+          content:
+            application/json: {}
+            application/xml: {}
+            text/xml: {}
+  /api/sn_sc/servicecatalog/items/{item_sys_id}/delegation/{user_sys_id}:
+    get:
+      description: ""
+      parameters:
+      - name: "item_sys_id"
+        in: "path"
+        required: true
+        schema: {}
+      - name: "user_sys_id"
+        in: "path"
+        required: true
+        schema: {}
+      responses:
+        "200":
+          description: "ok"
+          content:
+            application/json: {}
+            application/xml: {}
+            text/xml: {}
+  /api/sn_sc/servicecatalog/items/{item_sys_id}/get_invalid_delegated_users:
+    post:
+      description: ""
+      parameters:
+      - name: "item_sys_id"
+        in: "path"
+        required: true
+        schema: {}
+      requestBody:
+        content:
+          application/json: {}
+          application/xml: {}
+          text/xml: {}
+      responses:
+        "200":
+          description: "ok"
+          content:
+            application/json: {}
+            application/xml: {}
+            text/xml: {}
+  /api/sn_sc/servicecatalog/items/{sys_id}/order_now:
+    post:
+      description: ""
+      parameters:
+      - name: "sys_id"
+        in: "path"
+        required: true
+        schema: {}
+      requestBody:
+        content:
+          application/json: {}
+          application/xml: {}
+          text/xml: {}
+      responses:
+        "200":
+          description: "ok"
+          content:
+            application/json: {}
+            application/xml: {}
+            text/xml: {}
+  /api/sn_sc/servicecatalog/items/{sys_id}/price:
+    post:
+      description: ""
+      parameters:
+      - name: "sys_id"
+        in: "path"
+        required: true
+        schema: {}
+      requestBody:
+        content:
+          application/json: {}
+          application/xml: {}
+          text/xml: {}
+      responses:
+        "200":
+          description: "ok"
+          content:
+            application/json: {}
+            application/xml: {}
+            text/xml: {}
+  /api/sn_sc/servicecatalog/items/{sys_id}/save_catalog_item:
+    post:
+      description: ""
+      parameters:
+      - name: "sys_id"
+        in: "path"
+        required: true
+        schema: {}
+      requestBody:
+        content:
+          application/json: {}
+          application/xml: {}
+          text/xml: {}
+      responses:
+        "200":
+          description: "ok"
+          content:
+            application/json: {}
+            application/xml: {}
+            text/xml: {}
+  /api/sn_sc/servicecatalog/items/{sys_id}/save_producer:
+    post:
+      description: ""
+      parameters:
+      - name: "sys_id"
+        in: "path"
+        required: true
+        schema: {}
+      requestBody:
+        content:
+          application/json: {}
+          application/xml: {}
+          text/xml: {}
+      responses:
+        "200":
+          description: "ok"
+          content:
+            application/json: {}
+            application/xml: {}
+            text/xml: {}
+  /api/sn_sc/servicecatalog/items/{sys_id}/submit_guide:
+    put:
+      description: ""
+      parameters:
+      - name: "sys_id"
+        in: "path"
+        required: true
+        schema: {}
+      requestBody:
+        content:
+          application/json: {}
+          application/xml: {}
+          text/xml: {}
+      responses:
+        "200":
+          description: "ok"
+          content:
+            application/json: {}
+            application/xml: {}
+            text/xml: {}
+  /api/sn_sc/servicecatalog/items/{sys_id}/submit_producer:
+    post:
+      description: ""
+      parameters:
+      - name: "sys_id"
+        in: "path"
+        required: true
+        schema: {}
+      - name: "sysparm_view"
+        in: "query"
+        description: "View type"
+        required: false
+        schema: {}
+        example: "mobile, desktop"
+      requestBody:
+        content:
+          application/json: {}
+          application/xml: {}
+          text/xml: {}
+      responses:
+        "200":
+          description: "ok"
+          content:
+            application/json: {}
+            application/xml: {}
+            text/xml: {}
+  /api/sn_sc/servicecatalog/items/{sys_id}/variables:
+    get:
+      description: "Retrives variables of a catalog item"
+      parameters:
+      - name: "sys_id"
+        in: "path"
+        required: true
+        schema: {}
+      - name: "sysparm_view"
+        in: "query"
+        description: "View type"
+        required: false
+        schema: {}
+        example: "mobile, desktop"
+      responses:
+        "200":
+          description: "ok"
+          content:
+            application/json: {}
+            application/xml: {}
+            text/xml: {}
+  /api/sn_sc/servicecatalog/items/{sys_id}/versioning/cancel_review:
+    put:
+      description: ""
+      parameters:
+      - name: "sys_id"
+        in: "path"
+        required: true
+        schema: {}
+      requestBody:
+        content:
+          application/json: {}
+          application/xml: {}
+          text/xml: {}
+      responses:
+        "200":
+          description: "ok"
+          content:
+            application/json: {}
+            application/xml: {}
+            text/xml: {}
+  /api/sn_sc/servicecatalog/items/{sys_id}/versioning/checkout:
+    post:
+      description: ""
+      parameters:
+      - name: "sys_id"
+        in: "path"
+        required: true
+        schema: {}
+      requestBody:
+        content:
+          application/json: {}
+          application/xml: {}
+          text/xml: {}
+      responses:
+        "200":
+          description: "ok"
+          content:
+            application/json: {}
+            application/xml: {}
+            text/xml: {}
+  /api/sn_sc/servicecatalog/producer/{producer_id}/record/{record_id}:
+    get:
+      description: ""
+      parameters:
+      - name: "producer_id"
+        in: "path"
+        required: true
+        schema: {}
+      - name: "record_id"
+        in: "path"
+        required: true
+        schema: {}
+      responses:
+        "200":
+          description: "ok"
+          content:
+            application/json: {}
+            application/xml: {}
+            text/xml: {}
+  /api/sn_sc/servicecatalog/question_designer/create_resource/{action}:
+    post:
+      description: ""
+      parameters:
+      - name: "action"
+        in: "path"
+        required: true
+        schema: {}
+      requestBody:
+        content:
+          application/json: {}
+          application/xml: {}
+          text/xml: {}
+      responses:
+        "200":
+          description: "ok"
+          content:
+            application/json: {}
+            application/xml: {}
+            text/xml: {}
+  /api/sn_sc/servicecatalog/question_designer/delete_resource/{action}:
+    post:
+      description: ""
+      parameters:
+      - name: "action"
+        in: "path"
+        required: true
+        schema: {}
+      requestBody:
+        content:
+          application/json: {}
+          application/xml: {}
+          text/xml: {}
+      responses:
+        "200":
+          description: "ok"
+          content:
+            application/json: {}
+            application/xml: {}
+            text/xml: {}
+  /api/sn_sc/servicecatalog/question_designer/update_resource/{action}/{sys_id}:
+    post:
+      description: ""
+      parameters:
+      - name: "action"
+        in: "path"
+        required: true
+        schema: {}
+      - name: "sys_id"
+        in: "path"
+        required: true
+        schema: {}
+      requestBody:
+        content:
+          application/json: {}
+          application/xml: {}
+          text/xml: {}
+      responses:
+        "200":
+          description: "ok"
+          content:
+            application/json: {}
+            application/xml: {}
+            text/xml: {}
+  /api/sn_sc/servicecatalog/record_id/{record_id}/wizard/{wizard_id}:
+    get:
+      description: ""
+      parameters:
+      - name: "record_id"
+        in: "path"
+        required: true
+        schema: {}
+      - name: "wizard_id"
+        in: "path"
+        required: true
+        schema: {}
+      responses:
+        "200":
+          description: "ok"
+          content:
+            application/json: {}
+            application/xml: {}
+            text/xml: {}
+  /api/sn_sc/servicecatalog/service_fulfillment/generateStagePoolIds/{quantity}:
+    get:
+      description: ""
+      parameters:
+      - name: "quantity"
+        in: "path"
+        required: true
+        schema: {}
+      responses:
+        "200":
+          description: "ok"
+          content:
+            application/json: {}
+            application/xml: {}
+            text/xml: {}
+  /api/sn_sc/servicecatalog/service_fulfillment/step:
+    post:
+      description: ""
+      parameters: []
+      requestBody:
+        content:
+          application/json: {}
+          application/xml: {}
+          text/xml: {}
+      responses:
+        "200":
+          description: "ok"
+          content:
+            application/json: {}
+            application/xml: {}
+            text/xml: {}
+  /api/sn_sc/servicecatalog/service_fulfillment/step/{sys_id}:
+    put:
+      description: ""
+      parameters:
+      - name: "sys_id"
+        in: "path"
+        required: true
+        schema: {}
+      requestBody:
+        content:
+          application/json: {}
+          application/xml: {}
+          text/xml: {}
+      responses:
+        "200":
+          description: "ok"
+          content:
+            application/json: {}
+            application/xml: {}
+            text/xml: {}
+    delete:
+      description: ""
+      parameters:
+      - name: "sys_id"
+        in: "path"
+        required: true
+        schema: {}
+      responses:
+        "200":
+          description: "ok"
+          content:
+            application/json: {}
+            application/xml: {}
+            text/xml: {}
+  /api/sn_sc/servicecatalog/service_fulfillment/step_configs:
+    get:
+      description: ""
+      parameters: []
+      responses:
+        "200":
+          description: "ok"
+          content:
+            application/json: {}
+            application/xml: {}
+            text/xml: {}
+  /api/sn_sc/servicecatalog/template/{sys_id}/duplicate:
+    post:
+      description: ""
+      parameters:
+      - name: "sys_id"
+        in: "path"
+        required: true
+        schema: {}
+      requestBody:
+        content:
+          application/json: {}
+          application/xml: {}
+          text/xml: {}
+      responses:
+        "200":
+          description: "ok"
+          content:
+            application/json: {}
+            application/xml: {}
+            text/xml: {}
+  /api/sn_sc/servicecatalog/variableSetLayout:
+    post:
+      description: ""
+      parameters: []
+      requestBody:
+        content:
+          application/json: {}
+          application/xml: {}
+          text/xml: {}
+      responses:
+        "200":
+          description: "ok"
+          content:
+            application/json: {}
+            application/xml: {}
+            text/xml: {}
+  /api/sn_sc/servicecatalog/variables/{sys_id}/display_value:
+    post:
+      description: ""
+      parameters:
+      - name: "sys_id"
+        in: "path"
+        required: true
+        schema: {}
+      requestBody:
+        content:
+          application/json: {}
+          application/xml: {}
+          text/xml: {}
+      responses:
+        "200":
+          description: "ok"
+          content:
+            application/json: {}
+            application/xml: {}
+            text/xml: {}
+  /api/sn_sc/servicecatalog/variables/{sys_id}/dynamic_value:
+    post:
+      description: ""
+      parameters:
+      - name: "sys_id"
+        in: "path"
+        required: true
+        schema: {}
+      requestBody:
+        content:
+          application/json: {}
+          application/xml: {}
+          text/xml: {}
+      responses:
+        "200":
+          description: "ok"
+          content:
+            application/json: {}
+            application/xml: {}
+            text/xml: {}
+  /api/sn_sc/servicecatalog/variables/{sys_id}/validate_regex:
+    post:
+      description: ""
+      parameters:
+      - name: "sys_id"
+        in: "path"
+        required: true
+        schema: {}
+      requestBody:
+        content:
+          application/json: {}
+          application/xml: {}
+          text/xml: {}
+      responses:
+        "200":
+          description: "ok"
+          content:
+            application/json: {}
+            application/xml: {}
+            text/xml: {}
+  /api/sn_sc/servicecatalog/variables/{table_name}/{sys_id}:
+    put:
+      description: ""
+      parameters:
+      - name: "table_name"
+        in: "path"
+        required: true
+        schema: {}
+      - name: "sys_id"
+        in: "path"
+        required: true
+        schema: {}
+      requestBody:
+        content:
+          application/json: {}
+          application/xml: {}
+          text/xml: {}
+      responses:
+        "200":
+          description: "ok"
+          content:
+            application/json: {}
+            application/xml: {}
+            text/xml: {}
+  /api/sn_sc/servicecatalog/wishlist:
+    get:
+      description: ""
+      parameters: []
+      responses:
+        "200":
+          description: "ok"
+          content:
+            application/json: {}
+            application/xml: {}
+            text/xml: {}
+  /api/sn_sc/servicecatalog/wishlist/{cart_item_id}:
+    get:
+      description: ""
+      parameters:
+      - name: "cart_item_id"
+        in: "path"
+        required: true
+        schema: {}
+      responses:
+        "200":
+          description: "ok"
+          content:
+            application/json: {}
+            application/xml: {}
+            text/xml: {}
+  /api/sn_sc/servicecatalog/wizard/{sys_id}:
+    get:
+      description: ""
+      parameters:
+      - name: "sys_id"
+        in: "path"
+        required: true
+        schema: {}
+      - name: "record_id"
+        in: "query"
+        description: "sys_id of record in targetTable or sc_template based on the\
+          \ value given to mode"
+        required: false
+        schema: {}
+        example: ""
+      - name: "template_id"
+        in: "query"
+        description: "sys_id of template to be applied while creating a record in\
+          \ target tables."
+        required: false
+        schema: {}
+        example: ""
+      - name: "mode"
+        in: "query"
+        description: "Mode of the wizard"
+        required: false
+        schema: {}
+        example: "template,normal"
+      responses:
+        "200":
+          description: "ok"
+          content:
+            application/json: {}
+            application/xml: {}
+            text/xml: {}
+  /api/sn_sc/servicecatalog/wizard/{sys_id}/record_id/{record_id}:
+    post:
+      description: ""
+      parameters:
+      - name: "sys_id"
+        in: "path"
+        required: true
+        schema: {}
+      - name: "record_id"
+        in: "path"
+        required: true
+        schema: {}
+      - name: "mode"
+        in: "query"
+        description: "Mode of the wizard"
+        required: false
+        schema: {}
+        example: "template,normal"
+      - name: "template_id"
+        in: "query"
+        description: "sys_id of template to be applied while creating a record in\
+          \ target tables."
+        required: false
+        schema: {}
+        example: ""
+      requestBody:
+        content:
+          application/json: {}
+          application/xml: {}
+          text/xml: {}
+      responses:
+        "200":
+          description: "ok"
+          content:
+            application/json: {}
+            application/xml: {}
+            text/xml: {}

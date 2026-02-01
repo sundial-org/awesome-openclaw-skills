@@ -1,0 +1,13 @@
+{
+  "name": "elevenlabs-voices",
+  "version": "2.1.0",
+  "description": "High-quality voice synthesis with 18 personas, 32 languages, sound effects, batch processing, and voice design using ElevenLabs API.",
+  "main": "SKILL.md",
+  "keywords": ["tts", "elevenlabs", "voice", "speech", "audio"],
+  "author": "robbyczgw-cla",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/robbyczgw-cla/elevenlabs-voices.git"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "Personas",
+  "emoji": "🎭",
+  "description": "31 specialized AI personalities on demand. Switch from Dev (coding) to Chef Marco (cooking) to Dr. Med (medical) mid-conversation. Includes custom persona creator. Token-efficient, loads only active persona. Based on Chameleon AI Chat.",
+  "category": "ai-experience",
+  "author": "Chameleon AI / Moltbot",
+  "version": "1.0.8",
+  "readme": "README.md",
+  "tags": ["personalities", "modes", "expertise", "creative", "professional", "learning"],
+  "features": [
+    "31 pre-built expert personas",
+    "Create custom personas on demand",
+    "Switch personalities mid-conversation",
+    "Load only what you need (token-efficient)",
+    "Organized by category: core, creative, learning, lifestyle, professional, philosophy"
+  ],
+  "personas": {
+    "core": ["cami", "chameleon-agent", "professor-stein", "dev", "flash"],
+    "creative": ["luna", "mythos"],
+    "curator": ["vibe"],
+    "learning": ["herr-mueller", "scholar", "lingua"],
+    "lifestyle": ["chef-marco", "fit", "zen", "globetrotter", "wellbeing", "diy-maker", "family", "lisa-knight", "the-panel"],
+    "professional": ["social-pro", "cyberguard", "dataviz", "career-coach", "legal-guide", "startup-sam", "dr-med", "wordsmith", "canvas", "finny"],
+    "philosophy": ["coach-thompson"]
+  }
+}
