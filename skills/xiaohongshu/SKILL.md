@@ -1,3 +1,7 @@
+---
+name: xiaohongshu
+---
+
 # 小红书技能 (Xiaohongshu Skill)
 
 小红书内容创作、发布与运营一体化技能。

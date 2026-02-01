@@ -1,3 +1,7 @@
+---
+name: dropbox
+---
+
 # Dropbox Manager Skill
 
 Manage Dropbox files via MCP server and CLI. Swift-native implementation using SwiftyDropbox SDK with OAuth 2.0 PKCE and secure Keychain token storage.

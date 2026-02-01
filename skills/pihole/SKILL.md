@@ -1,3 +1,7 @@
+---
+name: pihole
+---
+
 # Pi-hole Skill
 
 Control your Pi-hole DNS ad blocker via the Pi-hole v6 API.

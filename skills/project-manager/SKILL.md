@@ -1,3 +1,7 @@
+---
+name: project-manager
+---
+
 # Skill: Project Manager (Vivi OS)
 
 ## Descripción

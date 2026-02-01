@@ -1,4 +1,5 @@
 ---
+name: parcel-package-tracking
 slug: parcel
 display_name: Parcel
 description: Track and add deliveries via Parcel API.

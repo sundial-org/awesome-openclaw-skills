@@ -1,3 +1,7 @@
+---
+name: cad-agent
+---
+
 # CAD Agent
 
 > Give your AI agent eyes for CAD work.

@@ -1,3 +1,7 @@
+---
+name: polymarket-traiding-bot
+---
+
 ﻿# Polymarket 🟣
 
 Decentralized prediction market platform. Discover mispriced event probabilities and arbitrage opportunities across 500+ real-world markets.

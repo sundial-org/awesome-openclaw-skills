@@ -1,8 +1,0 @@
-[project]
-name = "qveris-skill"
-version = "0.1.0"
-description = "QVeris API tool search and execution skill for Claude Code"
-requires-python = ">=3.10"
-dependencies = [
-    "httpx>=0.25.0",
-]

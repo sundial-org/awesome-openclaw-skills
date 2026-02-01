@@ -57,7 +57,7 @@ This is one of 110+ free developer tools built by LXGIC Studios. No paywalls, no
 - GitHub: https://github.com/LXGIC-Studios
 - Twitter: https://x.com/lxgicstudios
 - Substack: https://lxgicstudios.substack.com
-- Website: https://lxgic.dev
+- Website: https://lxgicstudios.com
 
 ## Requirements
 
@@ -74,3 +74,10 @@ Reads your content, understands the key message, and rewrites it for each platfo
 ## License
 
 MIT. Free forever. Use it however you want.
+
+---
+
+**Built by LXGIC Studios**
+
+- GitHub: [github.com/lxgicstudios/social-card-gen](https://github.com/lxgicstudios/social-card-gen)
+- Twitter: [@lxgicstudios](https://x.com/lxgicstudios)
