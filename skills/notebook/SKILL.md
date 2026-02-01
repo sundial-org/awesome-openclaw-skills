@@ -1,5 +1,5 @@
 ---
-name: Notebook
+name: notebook
 description: Local-first personal knowledge base for tracking ideas, projects, tasks, habits, and any object type you define. YAML-based with no cloud lock-in.
 ---
 

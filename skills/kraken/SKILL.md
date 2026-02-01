@@ -1,3 +1,7 @@
+---
+name: kraken
+---
+
 # Kraken Crypto Skill
 
 Use the kraken_cli.py wrapper to query your Kraken account.

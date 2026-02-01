@@ -1,3 +1,7 @@
+---
+name: n8n-monitor
+---
+
 # Skill: n8n-monitor
 
 Monitoramento operacional do N8N via Docker.

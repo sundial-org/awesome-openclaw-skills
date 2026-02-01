@@ -1,3 +1,0 @@
-[workspace]
-members = ["crates/schema", "crates/detector", "crates/collector", "crates/writer", "crates/alerter", "crates/clauditor-cli"]
-resolver = "2"

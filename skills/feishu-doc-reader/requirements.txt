@@ -1,2 +1,0 @@
-# Feishu Doc Reader Dependencies
-requests>=2.25.0

@@ -1,3 +1,7 @@
+---
+name: context-compressor
+---
+
 # Context Compressor Skill
 
 Automated context management for long-running Clawdbot sessions. Detects when context limits approach, compresses old conversation history, and seamlessly transfers to a fresh session.

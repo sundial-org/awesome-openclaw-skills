@@ -1,5 +1,5 @@
 ---
-name: Azure CLI
+name: azure-cli
 description: Comprehensive Azure Cloud Platform management via command-line interface
 license: MIT
 metadata:
