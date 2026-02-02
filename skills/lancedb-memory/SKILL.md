@@ -1,5 +1,6 @@
 ---
 name: lancedb-memory
+description: "\"\"\""
 ---
 
 #!/usr/bin/env python3

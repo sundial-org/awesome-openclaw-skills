@@ -1,5 +1,6 @@
 ---
 name: nano-banana
+description: "Description: Image generation via Gemini/OpenRouter."
 ---
 
 # nano-banana

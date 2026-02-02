@@ -1,5 +1,6 @@
 ---
 name: ms365
+description: "Access Microsoft 365 services - Email (Outlook), Calendar, OneDrive, To Do tasks, and Contacts via MS Graph API."
 ---
 
 # Microsoft 365 Integration

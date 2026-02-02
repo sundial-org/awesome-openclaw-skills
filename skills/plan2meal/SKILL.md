@@ -1,5 +1,6 @@
 ---
 name: plan2meal
+description: "A ClawdHub skill for managing recipes and grocery lists via Plan2Meal, a React Native recipe app."
 ---
 
 # Plan2Meal Skill

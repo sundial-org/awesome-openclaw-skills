@@ -1,5 +1,6 @@
 ---
 name: imagemagick
+description: "Comprehensive ImageMagick operations for image manipulation in Moltbot."
 ---
 
 # ImageMagick Moltbot Skill

@@ -1,5 +1,6 @@
 ---
 name: mcp-skill
+description: "This skill wraps the MCP at https://mcp.exa.ai/mcp for various tools such as web search, deep research, and more."
 ---
 
 # MCP Skill

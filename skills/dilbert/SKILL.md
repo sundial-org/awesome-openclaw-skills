@@ -1,5 +1,6 @@
 ---
 name: dilbert
+description: "**Name:** dilbert"
 ---
 
 # Dilbert Skill

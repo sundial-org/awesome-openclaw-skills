@@ -1,5 +1,6 @@
 ---
 name: oura
+description: "This tool allows retrieving health and biometric data from the Oura Ring API (V2) via a command-line interface. Use this to answer questions about the user's sleep, activity, readiness, and physiologi"
 ---
 
 # Oura Ring CLI Skill

@@ -1,5 +1,6 @@
 ---
 name: apple-docs-mcp
+description: "This skill wraps the Apple Developer Documentation MCP server."
 ---
 
 # Apple Docs MCP Skill

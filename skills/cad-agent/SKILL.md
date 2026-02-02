@@ -1,5 +1,6 @@
 ---
 name: cad-agent
+description: "> Give your AI agent eyes for CAD work."
 ---
 
 # CAD Agent

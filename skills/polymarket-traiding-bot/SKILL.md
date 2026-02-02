@@ -1,5 +1,6 @@
 ---
 name: polymarket-traiding-bot
+description: "﻿# Polymarket 🟣"
 ---
 
 ﻿# Polymarket 🟣

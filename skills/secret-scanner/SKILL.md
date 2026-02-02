@@ -1,5 +1,6 @@
 ---
 name: secret-scanner
+description: "Scan your codebase for leaked secrets, API keys, and credentials before they hit production."
 ---
 
 # Secret Scanner

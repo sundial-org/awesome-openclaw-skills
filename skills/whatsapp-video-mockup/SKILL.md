@@ -1,5 +1,6 @@
 ---
 name: whatsapp-video-mockup
+description: "Create animated WhatsApp-style chat videos using Remotion. Perfect for X, TikTok, Instagram Reels."
 ---
 
 # WhatsApp Video Skill

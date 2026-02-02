@@ -1,5 +1,6 @@
 ---
 name: kraken
+description: "Use the kraken_cli.py wrapper to query your Kraken account."
 ---
 
 # Kraken Crypto Skill

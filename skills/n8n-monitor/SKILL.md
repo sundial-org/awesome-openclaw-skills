@@ -1,5 +1,6 @@
 ---
 name: n8n-monitor
+description: "Monitoramento operacional do N8N via Docker."
 ---
 
 # Skill: n8n-monitor
