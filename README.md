@@ -584,6 +584,7 @@ See below for skills to try! 🦞
 | [**x-twitter2**](./skills/twitter-openclaw-2) | `twitter-openclaw-2` | Interact with Twitter/X — read tweets, search, post, like, retweet, and manage your timeline. | [53](https://www.clawhub.com/annettemekuro30/twitter-openclaw-2) |
 | [**Finance Tracker**](./skills/finance-tracker) | `finance-tracker` | Track personal expenses with natural language. Log spending, view reports, search transactions. Works with any AI model. | [52](https://www.clawhub.com/Salen-Project/finance-tracker) |
 | [**A nach B - AT Public Transport Service (VOR)**](./skills/anachb) | `anachb` | Austrian public transport (VOR AnachB) for all of Austria. Query real-time departures, search stations/stops, plan routes between locations, and check service disruptions. Use when asking about Aus... | [52](https://www.clawhub.com/manmal/anachb) |
+| [**HoverBot Chatbot**](./skills/hoverbot-chatbot) | `hoverbot-chatbot` | Embed AI chatbot widgets on websites using HoverBot. Pick from 4 templates (Customer Support, FAQ, Sales Assistant, Product Guide), customize branding, get embed code. Instruction-only skill, no AP... | [0](https://www.clawhub.com/goncharenko/hoverbot-chatbot) |
 
 ## Communication & Email
 
