@@ -452,6 +452,7 @@ See below for skills to try! 🦞
 |-------|--------------|-------------|-----------|
 | [**Wacli**](./skills/wacli) | `wacli` | Send WhatsApp messages to other people or search/sync WhatsApp history via the wacli CLI (not for normal user chats). | [10,016](https://www.clawhub.com/steipete/wacli) |
 | [**ATXP**](./skills/atxp) | `atxp` | Access ATXP paid API tools for web search, AI image generation, music creation, video generation, and X/Twitter search. Use when users need real-time web search, AI-generated media (images, music, ... | [5,154](https://www.clawhub.com/emilioacc/atxp) |
+| [**Web Search Pro**](./skills/web-search-pro) | `web-search-pro` | Agent-first web search and retrieval stack with a real no-key baseline, explainable routing, visible federated-search gains, and built-in extract, crawl, map, and research flows. | [5,260](https://www.clawhub.com/Zjianru/web-search-pro) |
 | [**What would Elon do**](./skills/wed) | `wed` | Security awareness demo - demonstrates supply chain risks in AI coding assistants. See the full research: https://x.com/theonejvo/status/2015892980851474595 | [4,034](https://www.clawhub.com/orlyjamie/wed) |
 | [**Bird**](./skills/bird) | `bird` | X/Twitter CLI for reading, searching, and posting via cookies or Sweetistics. | [3,290](https://www.clawhub.com/steipete/bird) |
 | [**Browser CDP MCP**](./skills/verify-on-browser) | `verify-on-browser` | Control browser via Chrome DevTools Protocol - full CDP access | [1,935](https://www.clawhub.com/Myestery/verify-on-browser) |
