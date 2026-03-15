@@ -1070,3 +1070,6 @@ CC0 1.0 Universal — see [LICENSE](LICENSE) for details.
 ## Credits
 
 Curated by [Sundial](https://sundialhub.com/).
+
+- [晴晴终极套件 (openclaw-ultimate-suite)](https://github.com/wd041216-bit/openclaw-ultimate-suite) - 63+ 技能一站式整合×自动激活×多模型并行×飞书文件发送×美学设计 (25 个)×监控可视化 | 晴晴整合 63+ 实用技能，自动激活效率提升 12x，免费本地安全检测 100% 通过，多模型协作 2.7x 加速。
+
