@@ -1,73 +1,57 @@
 ---
 name: a11y-checker
-description: Scan HTML and JSX for accessibility issues with AI-powered fix suggestions
+description: "Scan HTML and JSX files for WCAG accessibility violations and generate concrete code fixes. Detects missing alt text, low color contrast, missing form labels, keyboard navigation issues, and ARIA misuse. Use when auditing web components for accessibility, preparing for compliance reviews, or adding accessibility gates to CI/CD pipelines."
 ---
 
 # A11y Checker
 
-Scan your HTML and JSX files for WCAG accessibility issues. Get actual code fixes, not just warnings.
+Scan HTML and JSX files for WCAG accessibility violations and generate concrete code fixes.
 
-**One command. Real fixes. Not just complaints.**
+## Workflow
 
-## Quick Start
+1. Run scan on target files or directory.
+2. Review detected violations and generated fixes.
+3. Apply fixes and re-scan to verify resolution.
+4. Optionally integrate into CI/CD as a gate.
 
-```bash
-npx ai-a11y ./src/components/Header.tsx
-```
-
-## What It Does
-
-- Scans HTML/JSX for accessibility violations
-- Identifies WCAG guideline failures
-- Generates actual fix code, not just warnings
-- Works on single files or entire directories
-
-## Usage Examples
+## Usage
 
 ```bash
 # Scan a single component
 npx ai-a11y ./src/components/Button.tsx
 
-# Scan all components
+# Scan all components in a directory
 npx ai-a11y ./src/components/
 
-# Scan with verbose output
+# Scan with verbose output for detailed violation info
 npx ai-a11y ./src --verbose
 ```
 
-## Common Issues It Catches
+## Example Output
 
-- Missing alt text on images
-- Low color contrast
-- Missing form labels
-- Keyboard navigation problems
-- ARIA attribute misuse
-- Focus management issues
+```
+src/components/Header.tsx
+  Line 12: <img> missing alt attribute
+    Fix: <img src="logo.png" alt="Company logo" />
+  Line 28: <button> has no accessible name
+    Fix: <button aria-label="Close dialog">×</button>
 
-## When to Use This
+2 issues found, 2 fixes generated
+```
 
-- Before launching a new feature
-- Audit an inherited codebase
-- Prep for accessibility compliance
-- CI/CD accessibility gates
+## CI/CD Integration
 
-## Part of the LXGIC Dev Toolkit
-
-This is one of 110+ free developer tools built by LXGIC Studios. No paywalls, no sign-ups.
-
-**Find more:** https://github.com/LXGIC-Studios
+```bash
+# Add as a pre-commit or CI gate (exits non-zero on violations)
+npx ai-a11y ./src --verbose
+# Exit code 0 = no issues, non-zero = violations found
+```
 
 ## Requirements
 
-Node.js 18+. Needs OPENAI_API_KEY environment variable.
+- Node.js 18+
+- `OPENAI_API_KEY` environment variable set
 
-## License
+## References
 
-MIT. Free forever.
-
----
-
-**Built by LXGIC Studios**
-
-- GitHub: [github.com/lxgicstudios/ai-a11y](https://github.com/lxgicstudios/ai-a11y)
-- Twitter: [@lxgicstudios](https://x.com/lxgicstudios)
+- [GitHub repository](https://github.com/lxgicstudios/ai-a11y)

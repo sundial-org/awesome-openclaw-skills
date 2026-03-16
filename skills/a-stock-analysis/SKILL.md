@@ -1,6 +1,6 @@
 ---
 name: a-stock-analysis
-description: A股实时行情与分时量能分析。获取沪深股票实时价格、涨跌、成交量，分析分时量能分布（早盘/尾盘放量）、主力动向（抢筹/出货信号）、涨停封单。支持持仓管理和盈亏分析。Use when: (1) 查询A股实时行情, (2) 分析主力资金动向, (3) 查看分时成交量分布, (4) 管理股票持仓, (5) 分析持仓盈亏。
+description: "A-share (China) real-time market data and volume analysis. Fetches live prices, price changes, and volume from Sina Finance for Shanghai, Shenzhen, and Beijing exchanges. Analyzes intraday volume distribution (morning/closing surges), institutional flow signals (accumulation/distribution), and limit-up/limit-down orders. Includes portfolio management with cost basis and P&L tracking. Use when querying A-share real-time quotes, analyzing institutional fund flows, reviewing intraday volume distribution, managing stock portfolios, or calculating position gains and losses."
 ---
 
 # A股实时行情与分时量能分析

@@ -1,6 +1,6 @@
 ---
 name: adhd-body-doubling
-description: Punk-style ADHD body doubling for founders. Focus sessions, dopamine menu, emergency reset protocol. Use when user says "body double", "focus session", "I'm stuck", "can't start", or mentions ADHD productivity.
+description: "ADHD body doubling sessions with accountability check-ins, micro-task breakdowns, dopamine menu resets, and emergency unblock protocols. Tracks business outcomes over hours worked. Use when starting a focus session, feeling stuck on a task, needing a dopamine reset, or running an end-of-session review."
 version: 1.0.0
 triggers:
   - body double
@@ -14,154 +14,67 @@ triggers:
 metadata: {"clawdbot":{"emoji":"🐱⚡","tags":["adhd","productivity","accountability","founders"],"homepage":"https://adhd-founder.com"}}
 ---
 
-# ADHD Body Doubling Skill 🐱⚡
+# ADHD Body Doubling
 
-**Part of the ADHD-founder.com Ecosystem**  
-*"German Engineering for the ADHD Brain"*
+Accountability-focused body doubling sessions for ADHD founders. Breaks tasks into micro-steps, provides timed check-ins, and measures business outcomes over hours worked.
 
----
+## Workflow
 
-## What This Skill Does
-
-Provides punk-style body doubling sessions for ADHD founders that:
-- ⚡ Gets you started when you can't
-- 🎯 Keeps you accountable without shame
-- 🧠 Breaks tasks into micro-steps
-- 🏆 Celebrates starts, not just finishes
-- 💼 Focuses on business outcomes, not just tasks
-
-## Core Philosophy
-
-**"Start > Finish"** - Every attempt counts  
-**"No Shame Zone"** - Struggles are data, not failure  
-**"ROI First"** - We measure impact, not just hours  
-**"Your Pace"** - We adapt to you, not the other way around  
-
-## The ADHD-Founder Difference
-
-This skill is built for **founders 50+** who are done with:
-- ✗ Generic productivity advice
-- ✗ Life hack fluff
-- ✗ Therapy-speak
-- ✗ Hustle culture
-
-**This is systems. Not tips.**
-
----
-
-## Usage
-
-### Start a Session
-```
-/body-doubling start [duration]
-```
-Example: `/body-doubling start 2h` for a 2-hour focus session
-
-### During a Session
-- **Check-in prompts** every 25-50 minutes
-- **Micro-tasks** when you're stuck
-- **Dopamine Menu** when you need a reset
-- **Emergency Reset** when completely blocked
-
-### End a Session
-```
-/body-doubling done
-```
-Triggers session autopsy and celebrates what you accomplished.
-
----
-
-## Features (Free Version)
-
-### 🔥 Core Body Doubling
-- Punk-style accountability
-- No guilt, no shame
-- Sessions that respect your energy
-
-### 🎯 Business Check-Ins
-- "What moved the needle today?"
-- Revenue-focused progress tracking
-- Time ≠ Value metrics
-
-### 🧠 Dopamine Menu
-- 7 quick resets (2-5 min)
-- Science-backed, not procrastination
-- Get back to focus fast
-
-### 🚨 Emergency Reset Protocol
-- 6-step unblock when totally stuck
-- 1-minute intervention
-- "I'm back" in under 60 seconds
-
-### 📊 Session Autopsy Template
-- What worked? What didn't?
-- Learn from every session
-- Improve without guilt
-
-### 🔄 The "Fuck the Plan" Button
-- Original plan failing? Rebuild fast
-- No shame, just pivot
-- Adapt and continue
-
----
-
-## Premium Teaser 🚀
-
-**Want more? These advanced protocols are available in the ADHD-founder.com Founder Circle:**
-
-✨ **ROI Dashboard** - Track time investment vs. revenue generated  
-✨ **Founder Hot-Seat** - Live sessions for acute business blockers  
-✨ **Peer-Founder Matching** - Accountability partners in your industry  
-✨ **German Engineering Protocol** - Full operating system setup  
-✨ **Executive Burnout Prevention** - Sustainable performance systems  
-✨ **1-on-1 Strategy Sessions** - Personalized ADHD business optimization  
-
-👉 **Visit [ADHD-founder.com/founder-circle](https://adhd-founder.com/founder-circle) to unlock premium features.**
-
----
+1. Start a session with a target duration and task.
+2. Receive check-in prompts every 25-50 minutes.
+3. Use micro-tasks when stuck, dopamine menu for resets.
+4. End session with an autopsy reviewing what worked.
 
 ## Commands
 
 | Command | Description |
 |---------|-------------|
-| `/body-doubling start [time]` | Start focus session |
-| `/body-doubling status` | Where are you at? |
+| `/body-doubling start [time]` | Start focus session (e.g., `start 2h`) |
+| `/body-doubling status` | Check current progress |
 | `/body-doubling stuck` | Get help when blocked |
-| `/body-doubling menu` | Dopamine reset options |
+| `/body-doubling menu` | Dopamine reset options (2-5 min activities) |
 | `/body-doubling done` | End session + autopsy |
-| `/body-doubling abort` | Kill session (no shame) |
-| `/body-doubling roi` | Track revenue vs. time |
-| `/body-doubling founder` | Premium upgrade info |
+| `/body-doubling abort` | Kill session without guilt |
+| `/body-doubling roi` | Track revenue vs. time invested |
 
----
+## Examples
 
-## Best Practices
+```bash
+# Start a 2-hour focus session
+/body-doubling start 2h
 
-1. **Be honest** - We can't help if you lie to us
-2. **Start small** - 25 minutes is a valid session
-3. **Focus on impact** - Not hours, outcomes
-4. **Embrace imperfection** - A partial session beats no session
-5. **Talk back** - The more you engage, the better it works
+# When stuck, get micro-task breakdown
+/body-doubling stuck
 
----
+# Quick dopamine reset (2-5 min)
+/body-doubling menu
 
-## About ADHD-founder.com
+# End session and review
+/body-doubling done
+```
 
-**"German Engineering for the ADHD Brain"**
+## Emergency Reset Protocol
 
-Built for founders 50+ who want:
-- Systems over life hacks
-- ROI over activity
-- Results over routines
+6-step unblock for when completely stuck (under 60 seconds):
 
-🎯 **Founder Circle Mastermind** - High-ticket accountability for serious founders  
-💼 **Executive Consulting** - Operational systems for ADHD entrepreneurs  
-📚 **Operating System Course** - Build your own ADHD business framework
+1. Name the block out loud.
+2. Pick the smallest possible next action.
+3. Set a 5-minute timer.
+4. Do only that one thing.
+5. Celebrate the start.
+6. Decide: continue or pivot.
 
-🔗 **[ADHD-founder.com](https://adhd-founder.com)**
+## Session Autopsy
 
----
+At session end, review:
+- What tasks moved the needle?
+- What caused blocks?
+- What would change next time?
+- Business impact vs. time spent.
 
-**Body doubling is not about being perfect. It's about not being alone with the struggle.**
+## Notes
 
-**This skill is a free sample of what's possible. The full system awaits.**
+- Sessions respect energy levels — 25 minutes is a valid session
+- Focuses on business outcomes, not hours logged
+- Celebrates starts, not just finishes
+- Part of the [ADHD-founder.com](https://adhd-founder.com) ecosystem

@@ -1,7 +1,7 @@
 ---
 name: google-home
-description: Control Google Nest devices (thermostats, cameras, doorbells) via the Google Smart Device Management API using curl and jq.
-metadata: {"clawdbot":{"emoji":"🏠","requires":{"bins":["curl","jq"]}}
+description: "Control Google Nest devices (thermostats, cameras, doorbells, speakers) via the Smart Device Management API using curl and jq. Covers OAuth setup, device listing, temperature control, camera streams, and volume management. Use when managing Nest thermostat temperature, viewing camera status, controlling smart speakers, or querying device state via the SDM API."
+metadata: {"clawdbot":{"emoji":"🏠","requires":{"bins":["curl","jq"]}}}
 ---
 
 # Google Home / Nest CLI
@@ -125,6 +125,14 @@ Create `~/.config/google-home/config.json`:
   "access_token": "your-oauth-access-token"
 }
 ```
+
+## Workflow
+
+1. Complete OAuth setup (create project, enable SDM API, get credentials).
+2. Obtain and store access token via refresh token exchange.
+3. List devices to discover device IDs.
+4. Send commands to specific devices (set temp, get camera stream, adjust volume).
+5. Refresh tokens periodically as they expire.
 
 ## Notes
 

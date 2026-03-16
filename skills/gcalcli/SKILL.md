@@ -1,6 +1,6 @@
 ---
 name: gcalcli
-description: Interact with Google Calendar via gcalcli
+description: "Interact with Google Calendar via gcalcli using a custom fork with attachment support. View agendas, search events, access Gemini meeting notes, and bulk-export attachments. Use when checking calendar schedules, searching for meetings, extracting meeting notes, or preparing for upcoming syncs."
 ---
 
 # Calendar Reference
