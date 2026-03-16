@@ -445,6 +445,7 @@ See below for skills to try! 🦞
 | [**ggshield Secret Scanner**](./skills/ggshield-scanner) | `ggshield-scanner` | Detect 500+ types of hardcoded secrets (API keys, credentials, tokens) before they leak into git. Wraps GitGuardian's ggshield CLI. | [51](https://www.clawhub.com/amascia-gg/ggshield-scanner) |
 | [**weather-infographic**](./skills/infographic-weather) | `infographic-weather` | Generate a TV-style weather infographic with a location-specific seasonal background. Use when the user asks for a visual weather forecast or a weather infographic for a specific address. | [50](https://www.clawhub.com/silverkiwi/infographic-weather) |
 | [**Resume Optimizer**](./skills/resume-optimizer) | `resume-optimizer` | Professional resume builder with PDF export, ATS optimization, and analysis capabilities. Use when users need to (1) Create new resumes from scratch, (2) Customize/tailor existing resumes for speci... | [50](https://www.clawhub.com/TomsTools11/resume-optimizer) |
+| [**ETHSkills**](./skills/ethskills) | `ethskills` | Ethereum development knowledge for AI agents — from idea to deployed dApp. Fetch real-time docs on gas costs, Solidity patterns, Scaffold-ETH 2, Layer 2s, DeFi composability, security, testing, an... | [0](https://www.clawhub.com/austintgriffith/ethskills) |
 
 ## Web & Search
 
