@@ -1,5 +1,6 @@
 ---
 name: cad-agent
+description: "CAD rendering server that lets AI agents send build123d modeling commands, receive rendered PNG images, and iterate visually on 3D-printable parts. Use when designing parametric CAD models, 3D-printable parts, or mechanical components via a Docker-based rendering pipeline."
 ---
 
 # CAD Agent

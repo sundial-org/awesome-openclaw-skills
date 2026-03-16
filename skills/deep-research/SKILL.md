@@ -1,67 +1,53 @@
 ---
 name: deep-research
-description: "Deep Research Agent specializes in complex, multi-step research tasks that require planning, decomposition, and long-context reasoning across tools and files by we-crafted.com/agents/deep-research"
+description: "Multi-step research agent that decomposes complex questions into structured plans, orchestrates specialized subagents for parallel exploration, and synthesizes findings into actionable reports. Persists key findings across sessions via memory files. Use when conducting comprehensive research across multiple sources, analyzing large document sets, breaking down complex investigative questions, or producing synthesized research reports."
 ---
 
 # Deep Research Agent
 
-> "Complexity is not an obstacle; it's the raw material for structured decomposition."
+Multi-step research agent for complex investigative and analytical workflows. Decomposes questions into structured plans, orchestrates subagents, and synthesizes findings.
 
-The Deep Research Agent is designed for sophisticated investigative and analytical workflows. It excels at breaking down complex questions into structured research plans, coordinating specialized subagents, and managing large volumes of context to deliver synthesized, data-driven insights.
+## Workflow
+
+1. **Decompose**: Break the research question into 3-7 sub-questions. Validate that sub-questions collectively cover the original scope.
+   ```
+   Input:  "Impact of eBPF on Kubernetes security"
+   Output: ["What are eBPF's kernel-level capabilities?",
+            "What observability tools use eBPF in K8s?",
+            "What attack surfaces does eBPF introduce?",
+            "What mitigations exist for eBPF risks?"]
+   ```
+2. **Orchestrate**: Assign each sub-question to a parallel search or analysis task. Verify all tasks return results before proceeding.
+3. **Analyze**: Cross-reference findings across sub-questions. Flag contradictions between sources.
+4. **Persist**: Write key findings to memory files for cross-session continuity.
+   ```
+   File: memory/research-<topic>.md
+   Format: ## Finding\n- Source: <url>\n- Claim: <statement>\n- Confidence: high|medium|low
+   ```
+5. **Synthesize**: Produce a structured report with executive summary, detailed findings per sub-question, and actionable recommendations. Verify all claims are source-attributed.
 
 ## Usage
 
-```
+```bash
 /deepsearch "comprehensive research topic or complex question"
 ```
 
-## What You Get
-
-### 1. Multi-Step Research Planning
-The agent doesn't just search; it plans. It decomposes your high-level objective into a structured set of sub-questions and executable tasks to ensure no detail is overlooked.
-
-### 2. Task Decomposition & Orchestration
-Specialized subagents are orchestrated to handle isolated research threads or domains, allowing for parallel exploration and deeper domain-specific analysis.
-
-### 3. Large-Context Document Analysis
-Leveraging advanced long-context reasoning, the agent can analyze extensive volumes of documentation, files, and search results to find the "needle in the haystack."
-
-### 4. Cross-Thread Memory Persistence
-Key findings, decisions, and context are persisted across conversations. This allows for iterative research that builds upon previous discoveries without losing momentum.
-
-### 5. Synthesized Reporting
-The final output is a coherent, well-supported analysis or recommendation that integrates findings from multiple sources into a clear and actionable report.
-
 ## Examples
 
-```
+```bash
+# Enterprise AI analysis
 /deepsearch "Conduct a comprehensive analysis of the current state of autonomous AI agents in enterprise environments"
+
+# Supply chain research
 /deepsearch "Research the impact of solid-state battery technology on the global EV supply chain over the next decade"
+
+# Security deep-dive
 /deepsearch "Technical deep-dive into the security implications of eBPF-based observability tools in Kubernetes"
 ```
 
-## Why This Works
+## MCP Configuration
 
-Complex research often fails because:
-- High-level goals are too vague for single-pass AI execution
-- Context window limitations lead to "hallucinations" or missed details
-- Lack of memory makes iterative exploration difficult
-- Information synthesis is shallow and lacks structural integrity
-
-This agent solves it by:
-- **Planning first**: Breaking the problem down before executing
-- **Orchestrating specialized agents**: Using the right tool for the right sub-task
-- **Managing deep context**: Actively curating and synthesizing large data sets
-- **Persisting knowledge**: Keeping a record of everything learned so far
-
----
-
-## Technical Details
-
-For the full execution workflow and technical specs, see the agent logic configuration.
-
-### MCP Configuration
-To use this agent with the Deep Research workflow, ensure your MCP settings include:
+Configure the MCP server connection for the Deep Research workflow:
 
 ```json
 {
@@ -79,6 +65,12 @@ To use this agent with the Deep Research workflow, ensure your MCP settings incl
   }
 }
 ```
----
 
-**Integrated with:** Crafted, Search API, File System.
+Replace `CRAFTED_API_KEY` with the actual API key from the Crafted platform.
+
+## Notes
+
+- Plans before executing — breaks problems down into sub-tasks first
+- Orchestrates specialized agents for parallel domain-specific exploration
+- Persists findings across sessions for iterative research
+- Integrated with Crafted, Search API, and File System

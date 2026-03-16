@@ -1,19 +1,13 @@
 ---
 name: azure-cli
-description: Comprehensive Azure Cloud Platform management via command-line interface
+description: "Manage Azure Cloud resources via the Azure CLI (az). Covers authentication, resource groups, VMs, storage, AKS, networking, and automation scripting with JMESPath queries. Use when provisioning Azure infrastructure, managing VMs or AKS clusters, automating deployments with shell scripts, or querying Azure resource state."
 license: MIT
 metadata:
   author: Dennis de Vaal <d.devaal@gmail.com>
   version: "1.0.0"
   keywords: "azure,cloud,infrastructure,devops,iac,management,scripting"
 repository: https://github.com/Azure/azure-cli
-compatibility:
-  - platform: macOS
-    min_version: "10.12"
-  - platform: Linux
-    min_version: "Ubuntu 18.04"
-  - platform: Windows
-    min_version: "Windows 10"
+compatibility: "macOS 10.12+, Linux (Ubuntu 18.04+), Windows 10+"
 ---
 
 # Azure CLI Skill
