@@ -1070,3 +1070,5 @@ CC0 1.0 Universal — see [LICENSE](LICENSE) for details.
 ## Credits
 
 Curated by [Sundial](https://sundialhub.com/).
+
+- [tubeify](https://clawhub.ai/esokullu/tubeify) - AI video editor that removes pauses and filler words for YouTube creators
