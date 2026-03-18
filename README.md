@@ -1070,3 +1070,6 @@ CC0 1.0 Universal — see [LICENSE](LICENSE) for details.
 ## Credits
 
 Curated by [Sundial](https://sundialhub.com/).
+
+
+- [lobsterdomains](https://clawhub.ai/esokullu/lobsterdomains) - Register ICANN domains with crypto payments via API, built for AI agents
