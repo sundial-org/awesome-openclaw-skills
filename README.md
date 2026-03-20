@@ -689,6 +689,7 @@ See below for skills to try! 🦞
 | [**ffmpeg-video-editor**](./skills/ffmpeg-video-editor) | `ffmpeg-video-editor` | Generate FFmpeg commands from natural language video editing requests - cut, trim, convert, compress, change aspect ratio, extract audio, and more. | [60](https://www.clawhub.com/MahmoudAdelbghany/ffmpeg-video-editor) |
 | [**Venice AI Media**](./skills/venice-ai-media) | `venice-ai-media` | Generate, edit, and upscale images; create videos from images or other videos via Venice AI. Supports text-to-image, image-to-video (Sora, WAN), video-to-video (Runway Gen4), upscaling, and AI edit... | [56](https://www.clawhub.com/nhannah/venice-ai-media) |
 | [**AI media generation- Flux2pro,Google Veo3.1, Suno Ai..**](./skills/vap-media-2) | `vap-media-2` | AI image, video, and music generation. Flux, Veo 3.1, Suno V5. | [53](https://www.clawhub.com/elestirelbilinc-sketch/vap-media-2) |
+| [**Tubeify**](https://clawhub.ai/esokullu/tubeify) | `tubeify` | AI video editor for YouTube — removes pauses, filler words, and dead air from raw recordings via API. $2/video, no subscription. | [↗](https://clawhub.ai/esokullu/tubeify) |
 
 ## Audio & Speech
 
