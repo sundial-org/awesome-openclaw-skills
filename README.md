@@ -886,6 +886,7 @@ See below for skills to try! 🦞
 | [**Send Me My Files - R2 upload with short lived signed urls**](./skills/send-me-my-files-r2-upload-with-short-lived-signed-urls) | `send-me-my-files-r2-upload-with-short-lived-signed-urls` | Upload files to Cloudflare R2, AWS S3, or any S3-compatible storage and generate secure presigned download links with configurable expiration. | [120](https://www.clawhub.com/julianengel/send-me-my-files-r2-upload-with-short-lived-signed-urls) |
 | [**azure-cli**](./skills/azure-cli) | `azure-cli` | Comprehensive Azure Cloud Platform management via command-line interface | [80](https://www.clawhub.com/ddevaal/azure-cli) |
 | [**Cloudflare API**](./skills/cloudflare-2) | `cloudflare-2` | Connect to Cloudflare API for DNS management, tunnels, and zone administration. Use when user needs to manage domains, DNS records, or create tunnels. | [74](https://www.clawhub.com/stopmoclay/cloudflare-2) |
+| [**LobsterDomains**](https://clawhub.ai/esokullu/lobsterdomains) | `lobsterdomains` | Register ICANN domains with crypto payments (USDC/USDT/ETH/BTC) via REST API — built for AI agents to autonomously acquire .com/.xyz/.org and 1000+ TLDs. | [↗](https://clawhub.ai/esokullu/lobsterdomains) |
 
 ## Lifestyle & Fun
 
