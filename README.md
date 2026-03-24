@@ -1059,6 +1059,11 @@ See below for skills to try! 🦞
 
 ---
 
+## XVARY Stock Research
+
+- [XVARY Stock Research](https://github.com/xvary-research/claude-code-stock-analysis-skill) — Claude Code skill for public SEC EDGAR + market data: `/analyze`, `/score`, `/compare`. MIT.
+
+
 ## Contributing
 
 Contributions are welcome! If you know of a great OpenClaw skill that should be listed here, please open an issue or submit a pull request.
