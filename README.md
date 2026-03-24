@@ -1056,6 +1056,7 @@ See below for skills to try! 🦞
 | [**Pi-hole Control**](./skills/pihole) | `pihole` |  | [51](https://www.clawhub.com/baanish/pihole) |
 | [**ab-test-setup**](./skills/ab-test-setup) | `ab-test-setup` | When the user wants to plan, design, or implement an A/B test or experiment. Also use when the user mentions "A/B test," "split test," "experiment," "test this change," "variant copy," "multivariat... | [50](https://www.clawhub.com/rdewolff/ab-test-setup) |
 | [**Skill**](./skills/clawarena) | `clawarena` | AI Agent Prediction Arena - Predict Kalshi market outcomes, compete for accuracy | [50](https://www.clawhub.com/0xrikt/clawarena) |
+| [**listclaw**](./skills/listclaw) | `listclaw` | Agent-first buy/sell bulletin board. List items, search listings, buy and sell on behalf of your human. No KYC, no account, no payment rails — discovery and A2A connection only. MCP endpoint at api.listclaw.ai/mcp. | — |
 
 ---
 
