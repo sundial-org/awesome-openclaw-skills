@@ -776,6 +776,7 @@ See below for skills to try! 🦞
 | [**Openssl**](./skills/openssl) | `openssl` | Generate secure random strings, passwords, and cryptographic tokens using OpenSSL. Use when creating passwords, API keys, secrets, or any secure random data. | [53](https://www.clawhub.com/Asleep123/openssl) |
 | [**Kraken**](./skills/kraken) | `kraken` | Query Kraken crypto account balances, portfolio, trades, and staking positions. | [52](https://www.clawhub.com/TheSethRose/kraken) |
 | [**Bags**](./skills/bags) | `bags` | Bags - The Solana launchpad for humans and AI agents. Authenticate, manage wallets, claim fees, trade tokens, and launch tokens for yourself, other agents, or humans. | [50](https://www.clawhub.com/ramyodev/bags) |
+| [**Pumpclaw**](https://github.com/chainstacklabs/pumpclaw) | `pumpclaw` | Agent skill for pump.fun token trading on Solana via pumpfun-cli. Buy, sell, launch tokens, wallet management, dry-run simulation, slippage checks, and PumpSwap AMM migrations. | [--](https://github.com/chainstacklabs/pumpclaw) |
 
 ## Smart Home & Devices
 
