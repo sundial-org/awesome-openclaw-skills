@@ -645,6 +645,7 @@ See below for skills to try! 🦞
 | [**Social Media Management**](./skills/content-writing-thought-leadership) | `content-writing-thought-leadership` | B2B content writing with daily workflows and batching systems across Sales/HR/Fintech/Ops Tech | [175](https://www.clawhub.com/shashwatgtm/content-writing-thought-leadership) |
 | [**Content Writing & Thought Leadership**](./skills/content-writing-thought-leadership-2) | `content-writing-thought-leadership-2` | B2B content writing with daily workflows and batching systems across Sales/HR/Fintech/Ops Tech | [139](https://www.clawhub.com/shashwatgtm/content-writing-thought-leadership-2) |
 | [**Newsletter Digest**](./skills/newsletter-digest) | `newsletter-digest` | Summarize newsletters and articles, extract key insights, create reading lists | [118](https://www.clawhub.com/clawd-team/newsletter-digest) |
+| [**Novel Writer Suite**](https://github.com/Shine8592/novel-writer-skills) | `novel-outliner`, `novel-quality-checker`, `zh-novel-writer` | Zero-cost Chinese web novel creation toolkit: parse outlines, batch-generate 12,000+ char chapters with free APIs, 33-dimension quality review. 实战完成70万字网文，¥0 成本 | [101](https://clawhub.ai/Shine8592/novel-outliner) |
 | [**Creative Thought Partner**](./skills/creative-thought-partner) | `creative-thought-partner` | A conversational creative thought partner that reveals hidden brilliance in your ideas through critical observations and paradox hunting. Use when someone wants to explore ideas, discover breakthro... | [102](https://www.clawhub.com/vincentchan/creative-thought-partner) |
 | [**Landing Page Generator**](./skills/landing-gen) | `landing-gen` | Generate a beautiful HTML landing page from your package.json. Use when you need a quick marketing page for your project. | [101](https://www.clawhub.com/lxgicstudios/landing-gen) |
 | [**Content Advisory (Kids-In-Mind Style)**](./skills/content-advisory) | `content-advisory` | Lookup detailed content ratings for movies and TV shows (sex/nudity, violence/gore, language) from Kids-In-Mind. | [73](https://www.clawhub.com/dbhurley/content-advisory) |
@@ -1070,3 +1071,4 @@ CC0 1.0 Universal — see [LICENSE](LICENSE) for details.
 ## Credits
 
 Curated by [Sundial](https://sundialhub.com/).
+
