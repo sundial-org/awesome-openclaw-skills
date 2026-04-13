@@ -658,6 +658,7 @@ See below for skills to try! 🦞
 | [**Nudocs**](./skills/nudocs) | `nudocs` | Upload, edit, and export documents via Nudocs.ai. Use when creating shareable document links for collaborative editing, uploading markdown/docs to Nudocs for rich editing, or pulling back edited co... | [50](https://www.clawhub.com/jdrhyne/nudocs) |
 
 ## Video & YouTube
+- [CCHub](https://github.com/Moresl/cchub) - A desktop control panel for the Claude Code / Codex / Gemini CLI ecosystem. Manage MCP servers, config profiles, agent skills, CLAUDE.md, hooks, and workflow templates from a single Tauri app (Windows / macOS / Linux).
 
 | Skill | Install Name | Description | Downloads |
 |-------|--------------|-------------|-----------|
