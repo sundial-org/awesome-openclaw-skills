@@ -1,0 +1,7 @@
+anthropic>=0.40.0
+openai>=1.50.0
+feedparser>=6.0.0
+requests>=2.31.0
+python-dateutil>=2.8.0
+python-slugify>=8.0.0
+tqdm>=4.66.0

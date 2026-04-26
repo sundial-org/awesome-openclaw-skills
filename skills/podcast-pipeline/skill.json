@@ -1,0 +1,11 @@
+{
+  "name": "podcast-pipeline",
+  "version": "1.0.0",
+  "description": "Podcast-to-Everything content pipeline. Takes a podcast RSS feed or raw transcript and generates a full cross-platform content calendar with viral scoring.",
+  "author": "automation-engineer",
+  "tags": ["podcast", "content", "repurposing", "rss", "transcription", "social-media", "twitter", "linkedin", "youtube", "tiktok"],
+  "emoji": "🎙️",
+  "triggers": ["podcast", "repurpose this podcast", "turn this episode into content", "podcast content calendar", "extract clips from this episode", "podcast to social", "content from RSS feed", "batch process episodes"],
+  "license": "MIT",
+  "repository": "https://github.com/sundial-org/awesome-openclaw-skills"
+}
