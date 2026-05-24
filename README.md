@@ -1070,3 +1070,5 @@ CC0 1.0 Universal — see [LICENSE](LICENSE) for details.
 ## Credits
 
 Curated by [Sundial](https://sundialhub.com/).
+
+- [OpenClaw Monitor](https://github.com/flik2002/openclaw-monitor) — Real-time AI Agent Monitoring Dashboard for OpenClaw（支持 token 用量、会话追踪、7 天趋势）
