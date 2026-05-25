@@ -627,6 +627,7 @@ See below for skills to try! 🦞
 | [**X Algorithm**](./skills/x-algorithm) | `x-algorithm` | X (Twitter) algorithm rules, viral strategies, and article best practices. Boost engagement, avoid reach death, write posts that actually perform. | [92](https://www.clawhub.com/NextFrontierBuilds/x-algorithm) |
 | [**LinkedIn Inbox Manager**](./skills/linkedin-inbox) | `linkedin-inbox` | LinkedIn inbox management with scheduled scanning, auto-draft responses following user's communication style, and approval workflows. Use when monitoring LinkedIn messages, drafting replies, managi... | [77](https://www.clawhub.com/dylanbaker24/linkedin-inbox) |
 | [**X Algorithm Mastery**](./skills/x-mastery) | `x-mastery` | Complete X (Twitter) algorithm mastery - engagement weights, viral formulas, shadow ban avoidance, thread optimization, and growth strategies. Based on X's open-source code analysis and real creato... | [61](https://www.clawhub.com/lxgicstudios/x-mastery) |
+| [**SocialClaw**](./skills/socialclaw) | `socialclaw` | Schedule and publish social media posts across 13 platforms (X, LinkedIn, Instagram, Facebook Pages, TikTok, Discord, Telegram, YouTube, Reddit, WordPress, Pinterest) via SocialClaw. One workspace API key for campaigns, media upload, and analytics. | [GitHub](https://github.com/ndesv21/socialclaw) |
 
 ## Content & Writing
 
