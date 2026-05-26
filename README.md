@@ -838,6 +838,7 @@ See below for skills to try! 🦞
 | [**Test Master**](./skills/test-master) | `test-master` | Use when writing tests, creating test strategies, or building automation frameworks. Invoke for unit tests, integration tests, E2E, coverage analysis, performance testing, security testing. | [63](https://www.clawhub.com/Veeramanikandanr48/test-master) |
 | [**Config Guardian**](./skills/config-guardian) | `config-guardian` | Validate and safeguard OpenClaw config updates (openclaw.json or openclaw config set/apply). Use this skill whenever changing gateway config, models, channels, agents, tools, sessions, or routing. ... | [58](https://www.clawhub.com/abdhilabs/config-guardian) |
 | [**Auth Security Scanner**](./skills/auth-checker) | `auth-checker` | Audit authentication flows for security vulnerabilities | [55](https://www.clawhub.com/lxgicstudios/auth-checker) |
+| [**xProof**](./skills/xproof) | `xproof` | Pre-execution cryptographic enforcement for autonomous agents. Anchor file proofs and agent decisions on MultiversX blockchain before execution. No proof = no action. x402 payment (no account need... | [NEW](https://xproof.app) |
 
 ## Documents & Presentations
 
