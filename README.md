@@ -611,6 +611,7 @@ See below for skills to try! 🦞
 | [**WhatsApp video maker**](./skills/whatsapp-video-mockup) | `whatsapp-video-mockup` |  | [64](https://www.clawhub.com/danpeg/whatsapp-video-mockup) |
 | [**moltguard**](./skills/moltguard) | `moltguard` | Guard agent for AI agents — scan emails and webpages for prompt injection, jailbreak, phishing, and malware. | [55](https://www.clawhub.com/ThomasLWang/moltguard) |
 | [**Security Audit (Sona)**](./skills/security-audit-2) | `security-audit-2` | Fail-closed security auditing for OpenClaw/ClawHub skills & repos: trufflehog secrets scanning, semgrep SAST, prompt-injection/persistence signals, and supply-chain hygiene checks before enabling o... | [50](https://www.clawhub.com/virtaava/security-audit-2) |
+| [**Sequenzy Email Marketing**](./skills/sequenzy-email-marketing) | `sequenzy-email-marketing` | Operate Sequenzy lifecycle email and transactional workflows: subscribers, segments, campaigns, sequences, templates, and stats. | [4](https://clawhub.ai/polnikale/sequenzy-email-marketing) |
 
 ## Social Media
 
