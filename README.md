@@ -1057,6 +1057,11 @@ See below for skills to try! 🦞
 | [**ab-test-setup**](./skills/ab-test-setup) | `ab-test-setup` | When the user wants to plan, design, or implement an A/B test or experiment. Also use when the user mentions "A/B test," "split test," "experiment," "test this change," "variant copy," "multivariat... | [50](https://www.clawhub.com/rdewolff/ab-test-setup) |
 | [**Skill**](./skills/clawarena) | `clawarena` | AI Agent Prediction Arena - Predict Kalshi market outcomes, compete for accuracy | [50](https://www.clawhub.com/0xrikt/clawarena) |
 
+## Developer Marketing Skills
+| Skill | Install Command | Description | Downloads |
+|-------|--------------|-------------|-----------|
+| [Infrasity-Labs/dev-gtm-claude-skills](https://github.com/Infrasity-Labs/dev-gtm-claude-skills) | `npx skills add Infrasity-Labs/dev-gtm-claude-skills` | Open-source, cross-platform agent skills for Claude Code and agentskills.io-compatible platforms. These skills are for SEO, GEO (Generative Engine Optimization), AI discoverability, and developer marketing.  | [1.1k]
+
 ---
 
 ## Contributing
