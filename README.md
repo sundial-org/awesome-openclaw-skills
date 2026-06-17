@@ -589,6 +589,7 @@ See below for skills to try! 🦞
 
 | Skill | Install Name | Description | Downloads |
 |-------|--------------|-------------|-----------|
+| [**Sequenzy Email Marketing**](https://clawhub.ai/polnikale/sequenzy-email-marketing) | `sequenzy-email-marketing` | Authorized email automation for agents: subscribers, segments, campaigns, templates, transactional email, and analytics via Sequenzy. | [0](https://clawhub.ai/polnikale/sequenzy-email-marketing) |
 | [**Gog**](./skills/gog) | `gog` | Google Workspace CLI for Gmail, Calendar, Drive, Contacts, Sheets, and Docs. | [5,611](https://www.clawhub.com/steipete/gog) |
 | [**Caldav Calendar**](./skills/caldav-calendar) | `caldav-calendar` | Sync and query CalDAV calendars (iCloud, Google, Fastmail, Nextcloud, etc.) using vdirsyncer + khal. Works on Linux. | [2,265](https://www.clawhub.com/Asleep123/caldav-calendar) |
 | [**Slack**](./skills/slack) | `slack` | Use when you need to control Slack from Clawdbot via the slack tool, including reacting to messages or pinning/unpinning items in Slack channels or DMs. | [1,373](https://www.clawhub.com/steipete/slack) |
