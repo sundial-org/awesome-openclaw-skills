@@ -1057,6 +1057,7 @@ See below for skills to try! 🦞
 | [**ab-test-setup**](./skills/ab-test-setup) | `ab-test-setup` | When the user wants to plan, design, or implement an A/B test or experiment. Also use when the user mentions "A/B test," "split test," "experiment," "test this change," "variant copy," "multivariat... | [50](https://www.clawhub.com/rdewolff/ab-test-setup) |
 | [**Skill**](./skills/clawarena) | `clawarena` | AI Agent Prediction Arena - Predict Kalshi market outcomes, compete for accuracy | [50](https://www.clawhub.com/0xrikt/clawarena) |
 
+- **[Context Kit](https://github.com/JDDavenport/context-kit)** — Personal Context Artifacts: 4 Markdown templates (wiki, mental-models, voice, protocols) + 5 Claude Code skills. Solves context amnesia — every session starts context-full. MIT, one-command install.
 ---
 
 ## Contributing
