@@ -815,6 +815,7 @@ See below for skills to try! 🦞
 
 | Skill | Install Name | Description | Downloads |
 |-------|--------------|-------------|-----------|
+| [**deciqAI Knowledge Skills**](https://clawhub.ai/deciqai) | `first-principles` | 227 open-source reasoning frameworks — first-principles, inversion, Bayesian, BATNA/ZOPA — as executable skills; install any by name. | [67.9k](https://clawhub.ai/deciqai) |
 | [**gaokao-history-tutor**](./skills/gaokao-history-tutor) | `gaokao-history-tutor` |  | [1,162](https://www.clawhub.com/fobonacci404/gaokao-history-tutor) |
 
 ## Security
