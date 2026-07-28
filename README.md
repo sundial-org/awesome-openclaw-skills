@@ -1,10 +1,10 @@
 # Awesome OpenClaw Skills
 
-![Skills](https://img.shields.io/badge/skills-913-blue) ![Categories](https://img.shields.io/badge/categories-20-green) ![Updated](https://img.shields.io/badge/updated-daily-brightgreen) [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+![Skills](https://img.shields.io/badge/skills-910-blue) ![Categories](https://img.shields.io/badge/categories-20-green) ![Updated](https://img.shields.io/badge/updated-daily-brightgreen) [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
 > A curated collection of the top agent skills from [OpenClaw](https://www.clawhub.com/skills), regularly updated with the most popular and useful skills.
 
-These 913 skills are sourced from the OpenClaw ecosystem. We regularly curate the top most popular skills and organize them here for easy discovery.
+These 910 skills are sourced from the OpenClaw ecosystem. We regularly curate the top most popular skills and organize them here for easy discovery.
 
 ## Install
 
@@ -627,6 +627,8 @@ See below for skills to try! 🦞
 | [**X Algorithm**](./skills/x-algorithm) | `x-algorithm` | X (Twitter) algorithm rules, viral strategies, and article best practices. Boost engagement, avoid reach death, write posts that actually perform. | [92](https://www.clawhub.com/NextFrontierBuilds/x-algorithm) |
 | [**LinkedIn Inbox Manager**](./skills/linkedin-inbox) | `linkedin-inbox` | LinkedIn inbox management with scheduled scanning, auto-draft responses following user's communication style, and approval workflows. Use when monitoring LinkedIn messages, drafting replies, managi... | [77](https://www.clawhub.com/dylanbaker24/linkedin-inbox) |
 | [**X Algorithm Mastery**](./skills/x-mastery) | `x-mastery` | Complete X (Twitter) algorithm mastery - engagement weights, viral formulas, shadow ban avoidance, thread optimization, and growth strategies. Based on X's open-source code analysis and real creato... | [61](https://www.clawhub.com/lxgicstudios/x-mastery) |
+| [**Xquik X Tweet Scraper**](./skills/xquik-x-tweet-scraper) | `xquik-x-tweet-scraper` | Collect public X posts, timelines, searches, threads, and engagement data through Apify. | [Actor](https://apify.com/xquik/x-tweet-scraper) |
+| [**Xquik X Follower Scraper**](./skills/xquik-x-follower-scraper) | `xquik-x-follower-scraper` | Collect public X followers, lists, communities, and audience overlaps through Apify. | [Actor](https://apify.com/xquik/x-follower-scraper) |
 
 ## Content & Writing
 
