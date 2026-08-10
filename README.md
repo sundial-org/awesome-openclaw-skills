@@ -46,6 +46,10 @@ See below for skills to try! 🦞
 
 ## Agent Core & Memory
 
+### Open Index
+
+- [**Set up Open Index**](https://github.com/DrDroidLab/open-index/blob/main/skills/setup-open-index/SKILL.md) — Install and configure a structured context graph with read/write MCP access for domain-specific OpenClaw agents.
+
 | Skill | Install Name | Description | Downloads |
 |-------|--------------|-------------|-----------|
 | [**ByteRover**](./skills/byterover) | `byterover` | Manages project knowledge using ByteRover context tree. Provides two operations: query (retrieve knowledge) and curate (store knowledge). Invoke when user requests information lookup, pattern disco... | [14,376](https://www.clawhub.com/byteroverinc/byterover) |
