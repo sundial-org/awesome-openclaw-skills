@@ -48,6 +48,7 @@ See below for skills to try! 🦞
 
 | Skill | Install Name | Description | Downloads |
 |-------|--------------|-------------|-----------|
+| [**Mnemosyne**](https://github.com/ElonAug7/Mnemosyne-agentmemory-engine-openclaw-hermes) | `mnemosyne` | Zero-dependency cognitive memory engine for OpenClaw/Hermes. Compound-cue theory retrieval (nDCG 0.238, 5.2× over BM25), four-layer memory (short/working/medium/long), pure Markdown storage, zero API keys, data never leaves the machine. Install: `cd Mnemosyne-v6.4 && bash install.sh` | [GitHub](https://github.com/ElonAug7/Mnemosyne-agentmemory-engine-openclaw-hermes) |
 | [**ByteRover**](./skills/byterover) | `byterover` | Manages project knowledge using ByteRover context tree. Provides two operations: query (retrieve knowledge) and curate (store knowledge). Invoke when user requests information lookup, pattern disco... | [14,376](https://www.clawhub.com/byteroverinc/byterover) |
 | [**self-improving-agent**](./skills/self-improvement) | `self-improvement` | Captures learnings, errors, and corrections to enable continuous improvement. Use when: (1) A command or operation fails unexpectedly, (2) User corrects Claude ('No, that's wrong...', 'Actually...'... | [9,370](https://www.clawhub.com/pskoett/self-improvement) |
 | [**Agent Browser**](./skills/agent-browser) | `agent-browser` | A fast Rust-based headless browser automation CLI with Node.js fallback that enables AI agents to navigate, click, type, and snapshot pages via structured commands. | [4,765](https://www.clawhub.com/TheSethRose/agent-browser) |
