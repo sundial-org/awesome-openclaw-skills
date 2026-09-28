@@ -616,6 +616,7 @@ See below for skills to try! 🦞
 
 | Skill | Install Name | Description | Downloads |
 |-------|--------------|-------------|-----------|
+| [**Jev Social**](https://github.com/socai-io/jev-social/tree/v0.1.10/skills/jev-social) | `jev-social` | Research Instagram, TikTok, or LinkedIn through the user's local browser and keep the captured posts beside the report. Read-only; requires the socai CLI and a Jev provider. | [GitHub](https://github.com/socai-io/jev-social) |
 | [**X Trends**](./skills/x-trends) | `x-trends` | Fetches current top trending topics on X (Twitter) for any country using public aggregators. | [631](https://www.clawhub.com/Ani/x-trends) |
 | [**Twitter**](./skills/twitter) | `twitter` | Twitter/X platform integration. Post tweets, read timeline, manage followers, and analyze engagement. | [477](https://www.clawhub.com/0xterrybit/twitter) |
 | [**Yt Dlp Downloader**](./skills/yt-dlp-downloader) | `yt-dlp-downloader` | Download videos from YouTube, Bilibili, Twitter, and thousands of other sites using yt-dlp. Use when the user provides a video URL and wants to download it, extract audio (MP3), download subtitles,... | [388](https://www.clawhub.com/apollo1234/yt-dlp-downloader) |
