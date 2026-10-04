@@ -611,6 +611,7 @@ See below for skills to try! 🦞
 | [**WhatsApp video maker**](./skills/whatsapp-video-mockup) | `whatsapp-video-mockup` |  | [64](https://www.clawhub.com/danpeg/whatsapp-video-mockup) |
 | [**moltguard**](./skills/moltguard) | `moltguard` | Guard agent for AI agents — scan emails and webpages for prompt injection, jailbreak, phishing, and malware. | [55](https://www.clawhub.com/ThomasLWang/moltguard) |
 | [**Security Audit (Sona)**](./skills/security-audit-2) | `security-audit-2` | Fail-closed security auditing for OpenClaw/ClawHub skills & repos: trufflehog secrets scanning, semgrep SAST, prompt-injection/persistence signals, and supply-chain hygiene checks before enabling o... | [50](https://www.clawhub.com/virtaava/security-audit-2) |
+| - | [AI Group Call](https://aigroupcall.app) | An AI council you can talk to: a group voice call where agents riff with each other, answer when named, and yield when you speak. | - |
 
 ## Social Media
 
