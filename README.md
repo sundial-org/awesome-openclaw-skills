@@ -267,6 +267,7 @@ See below for skills to try! 🦞
 
 | Skill | Install Name | Description | Downloads |
 |-------|--------------|-------------|-----------|
+| [**Aident Loadout**](https://github.com/Aident-AI/aident-skill/tree/main/skills/aident-skill) | `aident-skill` | Connect OpenClaw to 1,000+ apps and 400+ expert-built Skills through [Aident Loadout](https://aident.ai) (remote MCP + CLI). Connect accounts once and reuse them across agents; credentials stay in Aident Vault, with cost preflight and an Audit log. MIT. | [GitHub](https://github.com/Aident-AI/aident-skill) |
 | [**Clawhub**](./skills/clawhub) | `clawhub` | Use the ClawHub CLI to search, install, update, and publish agent skills from clawhub.ai with advanced caching and compression. Use when you need to fetch new skills on the fly, sync installed skil... | [5,753](https://www.clawhub.com/zaycv/clawhub) |
 | [**Humanizer**](./skills/humanizer) | `humanizer` | Remove signs of AI-generated writing from text. Use when editing or reviewing text to make it sound more natural and human-written. Based on Wikipedia's comprehensive "Signs of AI writing" guide. D... | [3,659](https://www.clawhub.com/biostartechnology/humanizer) |
 | [**Clawdbot Documentation Expert**](./skills/clawddocs) | `clawddocs` | Clawdbot documentation expert with decision tree navigation, search scripts, doc fetching, version tracking, and config snippets for all Clawdbot features | [3,246](https://www.clawhub.com/NicholasSpisak/clawddocs) |
