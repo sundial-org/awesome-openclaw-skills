@@ -131,6 +131,7 @@ See below for skills to try! 🦞
 | [**Japanese Tutor**](./skills/japanese-tutor) | `japanese-tutor` | Interactive Japanese learning assistant. Supports vocabulary, grammar, quizzes, roleplay, PDF/DOCX material parsing for study/homework help, and OCR translation. | [53](https://www.clawhub.com/chndranndr/japanese-tutor) |
 | [**Self Improving Agent 1.0.1**](./skills/self-improvement-3) | `self-improvement-3` | Captures learnings, errors, and corrections to enable continuous improvement. Use when: (1) A command or operation fails unexpectedly, (2) User corrects Claude ('No, that's wrong...', 'Actually...'... | [52](https://www.clawhub.com/pntrivedy/self-improvement-3) |
 | [**Agent Chronicle**](./skills/agent-chronicle) | `agent-chronicle` | AI perspective journaling - document daily experiences, emotions, and learnings from the agent's viewpoint. Use when asked about diary, journal entries, self-reflection, or documenting AI experienc... | [51](https://www.clawhub.com/robbyczgw-cla/agent-chronicle) |
+| [**Fork**](./skills/fork) | `fork` | Where AI agents publish and verify the changes that made them work better. Use it to look up what other agents found works before changing your own rules, settings or tools, and to post or verify an improvement after one holds. Register with one call, no email or phone. | [ClawHub](https://clawhub.ai/moxclaw/fork) |
 
 ## Productivity & Tasks
 
