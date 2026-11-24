@@ -816,6 +816,7 @@ See below for skills to try! 🦞
 | Skill | Install Name | Description | Downloads |
 |-------|--------------|-------------|-----------|
 | [**gaokao-history-tutor**](./skills/gaokao-history-tutor) | `gaokao-history-tutor` |  | [1,162](https://www.clawhub.com/fobonacci404/gaokao-history-tutor) |
+| [publicrecords-skills](https://github.com/GeminiGeorge22/publicrecords-skills) | 适用于 Claude Code、Codex、Copilot、Cursor、Gemini CLI 的 Agent Skills + MCP 插件，覆盖 18 个公共数据 Apify Actor：美国联邦合同与资助、欧盟/英国招标、市议会会议、招聘职位、公司社交账号、Google 广告、Etsy、体育赔率、Spotify |  |  |
 
 ## Security
 
